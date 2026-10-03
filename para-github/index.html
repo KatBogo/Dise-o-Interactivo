@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html lang="es" class="is-loading">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Bulevar Diverso</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Onest:wght@400;500;600&display=swap">
+  <script type="module" crossorigin src="./assets/index-B_eH9EIW.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-B2U7LR1T.css">
+</head>
+<body>
+    <!-- Fondo blanco de la pantalla de carga (se desvanece cuando el personaje llega a la izquierda) -->
+    <div class="white" id="white"></div>
+
+    <canvas class="webgl"></canvas>
+
+    <header class="topbar">
+        <a class="brand" href="#">Bulevar<span>Diverso</span></a>
+        <p class="topbar-meta">Río Cali · Santiago de Cali</p>
+    </header>
+
+    <!-- Pantalla de carga -->
+    <div class="loader" id="loader" aria-live="polite">
+        <p>Cargando el bulevar</p>
+        <span class="loader-pct"><span id="loaderPct">0</span><small>%</small></span>
+    </div>
+
+    <!-- Intro de la línea de tiempo -->
+    <section class="intro" id="intro">
+        <p class="eyebrow">Línea de tiempo</p>
+        <h1>Bulevar del Río</h1>
+        <p class="lede">Casi cinco siglos a la orilla del río Cali. Baja con el scroll y camina su historia.</p>
+        <p class="scroll-cue"><span class="scroll-cue-line"></span>Desliza</p>
+    </section>
+
+    <!-- Tarjetas de los hitos (las crea script.js) -->
+    <div class="hitos" id="hitos"></div>
+
+    <!-- Sorpresa al borde de la línea -->
+    <div class="alert" id="alert" aria-hidden="true">!</div>
+
+    <!-- Barra de años -->
+    <nav class="rail" id="rail" aria-label="Años de la línea de tiempo">
+        <div class="rail-track"><div class="rail-fill" id="railFill"></div></div>
+        <ol class="rail-years" id="railYears"></ol>
+    </nav>
+
+    <!-- Nubes que tapan la caída -->
+    <div class="clouds" id="clouds">
+        <div class="veil" id="veil"></div>
+    </div>
+
+    <!-- Selección de 3 (Bulevares al inicio, experiencias más adelante): islas 3D + etiquetas mínimas -->
+    <section class="trio" id="trio" aria-hidden="true">
+        <div class="trio-title">
+            <p class="eyebrow" id="trioEyebrow">Aterrizaste en el bulevar</p>
+            <h2 id="trioHeading">Elige por dónde entrar</h2>
+        </div>
+        <div class="trio-labels" id="trioLabels"></div>
+    </section>
+
+    <!-- Tinte de color del mundo según la categoría activa -->
+    <div class="world-tint" id="worldTint" aria-hidden="true"></div>
+
+    <!-- El Bulevar 3D: lista compacta de la categoría activa (solo Rutas la usa) -->
+    <section class="world" id="world" aria-hidden="true">
+        <p class="world-hint" id="worldHint">Arrastra para girar el bulevar · Toca un punto para descubrirlo</p>
+        <ul class="world-list" id="worldList"></ul>
+        <div class="world-cta" id="worldCta" hidden>
+            <p>¿Quieres crear tu ruta?</p>
+            <button id="worldCtaYes">Sí, crear ruta</button>
+        </div>
+    </section>
+
+    <!-- Tarjeta informativa integrada al mundo 3D -->
+    <article class="card3d" id="card3d" aria-hidden="true">
+        <button class="card3d-close" id="card3dClose" aria-label="Cerrar">×</button>
+        <span class="card3d-pin" id="card3dPin" aria-hidden="true"></span>
+        <p class="card3d-tag" id="card3dTag"></p>
+        <h3 id="card3dTitle"></h3>
+        <p id="card3dText"></p>
+        <button class="card3d-add" id="card3dAdd">+ Agregar a ruta</button>
+        <div class="card3d-actions">
+            <button id="card3dAnother">¿Ver otro?</button>
+            <button id="card3dExit" class="ghost">Salir</button>
+        </div>
+    </article>
+
+    <!-- Confirmación al salir de una categoría -->
+    <div class="confirm" id="confirm" aria-hidden="true">
+        <p id="confirmText">¿Deseas seleccionar otro?</p>
+        <div class="confirm-actions">
+            <button id="confirmYes">Sí</button>
+            <button id="confirmNo">No</button>
+        </div>
+    </div>
+
+    <!-- Constructor de rutas -->
+    <aside class="routebar" id="routebar" aria-hidden="true">
+        <p class="eyebrow">Tu ruta</p>
+        <ol id="routeStops"></ol>
+        <p class="routebar-empty" id="routebarEmpty">Toca los puntos del bulevar para sumarlos a tu ruta.</p>
+        <button id="routeUpload" class="route-upload">Subir mi ruta al muro</button>
+        <button id="routeReset">Crear otra ruta</button>
+    </aside>
+
+    <!-- Compartir la ruta actual -->
+    <button class="share-fab" id="shareFab" aria-label="Subir mi ruta al muro">➤</button>
+
+    <!-- Muro de rutas de la comunidad -->
+    <div class="wall" id="wall" aria-hidden="true">
+        <div class="wall-bubble">
+            <div class="wall-head">
+                <p class="eyebrow">Muro Comunitario</p>
+                <button id="wallClose" aria-label="Cerrar muro">×</button>
+            </div>
+            <p class="wall-note">Guardado en este dispositivo — un muro de ejemplo, sin servidor detrás.</p>
+            <div class="wall-list" id="wallList"></div>
+        </div>
+    </div>
+
+    <!-- Navegación secundaria, discreta -->
+    <nav class="subnav" id="subnav" aria-hidden="true">
+        <button class="nav-back" id="navBack" aria-label="Atrás">←</button>
+        <button id="navMenu">Menú</button>
+        <button id="navWall">Muro</button>
+        <button id="navRestart">Reiniciar</button>
+    </nav>
+
+    <!-- Espacio que da el recorrido del scroll -->
+    <div class="scroll-space" aria-hidden="true"></div>
+
+</body>
+</html>
+
