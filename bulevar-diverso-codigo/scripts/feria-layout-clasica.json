@@ -1,0 +1,5 @@
+{
+  "_info": "Dónde van los pabellones de la Feria del Libro en la isla, la primera vez que se arma Assets/modelos/evento_feria_del_libro.glb: [x, z, giro, tipo] en coordenadas de la isla (tipo 0 = la carpa grande, 1 = la carpa pequeña). Calculado con feriaSpots() de src/three/events/EventDecor.jsx. Después, lo que manda es el GLB: mueve las carpas en Blender y la página las pone donde las dejes.",
+  "scale": 0.045,
+  "spots": [[-18.2, 2.016, 3.207, 0], [-15.5, 1.729, 3.2816, 1], [-12.45, 1.264, 3.2852, 0], [-10.1, 1.004, 3.2078, 1], [-7.4, 1.013, 3.0641, 0], [-1, 2.295, 2.9069, 1], [6.1, 3.037, 3.185, 0], [9.15, 2.822, 3.2206, 1], [14.2, 2.669, 3.1078, 0], [16.55, 2.797, 3.075, 1]]
+}

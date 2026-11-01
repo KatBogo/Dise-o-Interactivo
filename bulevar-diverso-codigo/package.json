@@ -1,0 +1,26 @@
+{
+  "name": "bulevar-diverso",
+  "private": true,
+  "version": "0.2.0",
+  "scripts": {
+    "sync-assets": "node scripts/sync-assets.mjs",
+    "predev": "node scripts/sync-assets.mjs && node scripts/clean-next.mjs",
+    "dev": "next dev",
+    "prebuild": "node scripts/sync-assets.mjs",
+    "build": "next build",
+    "start": "next start",
+    "github": "node scripts/sync-assets.mjs && node scripts/make-github-folder.mjs"
+  },
+  "dependencies": {
+    "@gsap/react": "^2.1.2",
+    "@react-three/drei": "^10.0.6",
+    "@react-three/fiber": "^9.1.2",
+    "cannon-es": "^0.20.0",
+    "gsap": "^3.13.0",
+    "next": "^15.3.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "three": "^0.174.0",
+    "zustand": "^5.0.3"
+  }
+}

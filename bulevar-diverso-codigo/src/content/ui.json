@@ -1,0 +1,104 @@
+{
+  "_info": "Textos de interfaz y frases de Chonti (también se leen por voz y por lector de pantalla). Tono: cercano y caleño, pero suave (tuteo, sin voseo).",
+  "brand": "Bulevar Diverso",
+  "coords": "3°27′N · 76°32′O · Río Cali",
+  "loader": {
+    "title": "Bulevar Diverso",
+    "hint": "Scrollea para acompañar a Chonti",
+    "welcome": "Activa y desactiva el asistente y el sonido en la parte superior.",
+    "touchMe": "Click aquí"
+  },
+  "fallPrompt": {
+    "eyebrow": "¡Uy! Chonti se fue de cabeza",
+    "title": "¿Deseas que Chonti te acompañe como guía?",
+    "text": "Tranquilo, que Chonti cae parado. Si quieres, vuelve como tu guía: te narra todo en voz alta, te va mostrando la ruta y te ayuda si no ves bien la pantalla.",
+    "yes": "¡De una, que me acompañe!",
+    "no": "Prefiero ir solo"
+  },
+  "menu": {
+    "locked": "🔒 Escoge un plan y te suelto la isla",
+    "unlocked": "Arrastra para darle la vuelta",
+    "back": "Volver al mapa",
+    "options": [
+      {
+        "id": "lugares",
+        "label": "Lugares",
+        "hint": "Pa' conocer",
+        "desc": "Museos, esculturas y bibliotecas del bulevar con toda su historia."
+      },
+      {
+        "id": "eventos",
+        "label": "Eventos",
+        "hint": "Pa' gozar",
+        "desc": "Descubre cómo cambia el bulevar con cada evento."
+      },
+      {
+        "id": "rutas",
+        "label": "Rutas",
+        "hint": "Pa' caminar",
+        "desc": "Recorridos para todos. Arma el tuyo y compártelo en el muro."
+      }
+    ],
+    "heroTitle": "¿Qué plan te provoca?"
+  },
+  "goToIsland": "Isla Bulevar",
+  "goToStart": "Volver al inicio",
+  "hints": {
+    "_info": "La instrucción de cada momento: sale siempre abajo, debajo de los planes (esté o no Chonti).",
+    "menu": "Escoge un plan para explorar la isla",
+    "lugares": "Selecciona un punto en la isla para explorar el lugar",
+    "eventos": "Selecciona un evento en la isla y mira cómo cambia",
+    "eventoActivo": "Toca otro evento para cambiar de ambiente",
+    "rutas": "Escoge una ruta de la lista o arma la tuya",
+    "rutaActiva": "Toca un punto de la ruta para conocer cada parada",
+    "builder": "Toca las paradas en el orden en que las quieres caminar",
+    "drag": "Arrastra para darle la vuelta",
+    "dragTouch": "Desliza para darle la vuelta",
+    "_lugar": "Cómo mover el lugar en 3D: con mouse (place) y con el dedo (placeTouch); cada frase es una línea que puede bajar a la siguiente.",
+    "place": ["Arrastra para girarlo 360°", "Scroll para acercarte", "Clic derecho para moverlo"],
+    "placeTouch": ["Desliza para girarlo 360°", "Pellizca para acercarte", "Dos dedos para moverlo"]
+  },
+  "skyReasons": {
+    "_info": "Por qué cambió la hora de la isla al escoger un plan o un evento (sale bajo el reloj de la isla).",
+    "lugares": "De día: la mejor luz para conocer los lugares.",
+    "eventos": "De noche: así se viven los eventos del bulevar.",
+    "rutas": "Al atardecer: la hora más rica para caminar el bulevar.",
+    "feria": "La Feria del Libro se disfruta de día, entre carpas y libros.",
+    "alumbrado": "El mejor momento para ver el Alumbrado es de noche.",
+    "sucursal": "El Sucursal Fest se prende al caer la tarde, con tarima y luces."
+  },
+  "routes": {
+    "pick": "Escoge un tipo de ruta",
+    "create": "Arma tu ruta",
+    "exitBuilder": "Salir de armar ruta",
+    "wall": "Muro comunitario",
+    "min": "Escoge mínimo 2 paradas.",
+    "author": "Tu nombre",
+    "authorPlaceholder": "Ej: Valentina",
+    "name": "Nombre de la ruta",
+    "namePlaceholder": "Ej: Sábado de antojos",
+    "addFromList": "Agregar desde la lista",
+    "publish": "Publicar en el muro",
+    "clear": "Eliminar",
+    "missingOne": "Te falta 1 parada para poder publicarla",
+    "missing": "Te faltan {n} paradas para poder publicarla",
+    "ready": "¡Lista para publicar!",
+    "confirmPublishTitle": "¿Tu ruta está lista?",
+    "confirmPublishText": "Así quedará en el Muro Comunitario. Revisa el orden de las paradas antes de publicarla.",
+    "confirmPublishYes": "Sí, publicarla",
+    "confirmPublishNo": "Seguir editando",
+    "confirmClearTitle": "¿Seguro que quieres eliminar la ruta?",
+    "confirmClearText": "Se van a quitar las {n} paradas que escogiste.",
+    "confirmClearYes": "Sí, eliminar",
+    "confirmClearNo": "Cancelar"
+  },
+  "guide": {
+    "arrive": "¡Llegamos! Esta es la isla del Bulevar. Escoge abajo lugares, eventos o rutas, y te suelto la isla para que la recorras.",
+    "noGuide": "Listo, vas por tu cuenta. Escoge abajo un plan para desbloquear la isla.",
+    "lugares": "Lugares. Toca un punto naranja y te muestro el lugar de cerca.",
+    "eventos": "Eventos. Escoge uno y te cambio el ambiente de toda la isla.",
+    "rutas": "Rutas. Escoge un tema, o arma tu propia ruta y compártela en el Muro Comunitario.",
+    "locked": "Volvimos al mapa general. Escoge otro plan cuando quieras.",
+    "builder": "Modo armar ruta: toca las paradas en el orden en que quieres recorrerlas. Escoge mínimo dos, de las categorías que quieras, ponle tu nombre y súbela al muro."
+  }
+}

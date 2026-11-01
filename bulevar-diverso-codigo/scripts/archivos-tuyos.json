@@ -1,0 +1,4 @@
+{
+  "_info": "Archivos de Assets/modelos que son TUYOS (los acomodaste tú): la exportación de la página (scripts/export-models.mjs) nunca los sobrescribe, y scripts/sync-assets.mjs los usa tal cual (solo los aligera para la página, sin cambiar sus formas). isla_para_acomodar = toda la isla; evento_alumbrado = el Alumbrado; escenario = las tarimas del Sucursal Fest.",
+  "files": ["isla_para_acomodar", "evento_alumbrado", "escenario", "monitos", "persona", "isla_terreno", "isla_edificios"]
+}

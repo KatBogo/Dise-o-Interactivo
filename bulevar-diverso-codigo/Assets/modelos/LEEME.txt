@@ -1,0 +1,358 @@
+﻿MODELOS 3D DE BULEVAR DIVERSO (GLB)
+====================================
+
+LA ISLA COMPLETA (actualizada el 30 oct 2026)
+  isla_bulevar-completa.glb          Toda la isla: TU isla acomodada (isla_para_acomodar.glb) con TUS
+  isla_bulevar-completa.blend        modelos originales puestos tal cual, sin tocarles la geometría
+  fbx/isla_bulevar-completa.fbx      (los de originales/: árboles, palmas, postes, semáforos, bancas,
+                                     edificios, lugares, hitos y casas de las rutas), cada uno donde
+                                     estaba en tu isla, girado y del tamaño que tenía.
+   · El .blend y el .fbx vienen en QUADS. El .glb trae triángulos porque el formato glTF solo guarda
+     triángulos: al abrirlo en Blender, Modo Edición > Seleccionar todo > Alt+J los vuelve quads.
+   · Las piezas que no salen de un modelo tuyo (calles, césped, río, túnel, puentes) y las pocas
+     copias que ya no se parecen a tu modelo (las cambiaste tú) quedan tal cual están en tu isla. La
+     lista exacta: isla_bulevar-completa.informe.json.
+   · Se rehace con scripts/isla-completa.py (también al exportar con scripts/export-models.mjs).
+   · Los modelos que pases ya no se aligeran ni se les cambia la geometría para la página: solo se
+     les ponen los colores (scripts/prepare-place-model.py).
+  (La versión anterior, hecha desde la página: originales/isla_bulevar-completa.anterior.glb)
+   · Cada edificio, cada árbol, palma, poste, semáforo, banca y mueble del Bulevar es UN objeto
+     aparte con su origen en el piso (edificios_modelo_medio_004, arboles_arbol3_012, postes_de_luz_031…),
+     con todas sus partes juntas: lo mueves o lo cambias uno por uno. Lo que se repite por cientos
+     (cebras, líneas de las calles, la baranda) viene en una malla por color.
+   · Las formas vienen cerradas (sus vértices soldados). Las que tienen textura (la Tertulia, el
+     MUCIC…) se parten en las costuras de la textura: en Blender, Malla > Limpiar > Unir por distancia.
+   · El acantilado guarda sus colores por vértice: en Blender se ven en el modo de color
+     "Attribute" (o con un nodo Color Attribute en el material).
+
+TU TERRENO (isla_terreno.glb ES TUYO)
+  isla_terreno.glb                   Tu terreno, como lo hiciste: la página pone su suelo tal cual (la base,
+                                     el césped, las calles, los andenes, las cebras, el Bulevar, la
+                                     ciclorruta, el túnel, los muros del río, los puentes — tu Puente
+                                     Ortiz pintado como la foto: blanco, el pie de las pilas en ladrillo
+                                     rojizo, los adornos de la baranda rojos) con la arcilla de Chonti.
+                                     La página ya no lo sobrescribe al exportar.
+   · Lo que se mueve o se prende lo sigue poniendo la página encima: el agua del río y sus piedras,
+     los árboles, las palmas, los postes, los semáforos, las bancas, los muebles del Bulevar y el
+     kiosco (en tu archivo se ignoran: si los quieres mover, dímelo y lo conecto).
+   · Lo que quedó lejos de la isla (una calle flotando a 23 de altura) no se pone.
+   · Lo de la página se acomoda a TU terreno: los carros solo andan por tus calles (la calle que
+     quitaste ya no tiene carros; la Carrera 3 termina en la esquina, como en tu terreno), los
+     postes van al borde de tus calles, andenes y caminos (nunca en medio), los árboles y las bancas
+     no quedan sobre tus calles ni tus caminos, y las matas que cuelgan del acantilado van en TU borde.
+     Los caminos y el círculo del kiosco de La Retreta son ahora los de tu terreno.
+   · Donde tu césped quedó hundido por debajo de la superficie (el hueco junto a la Carrera 3, al
+     sur, y uno pequeño al norte), la página lo cierra con el mismo césped a ras (isla_cesped_relleno).
+   · Las baldosas del Bulevar, la ciclorruta, los caminos y el piso del Gato se vuelven a poner del
+     mismo tamaño en todo el suelo (al moverlos en Blender salían estiradas en rayas).
+   · El Puente Ortiz: blanco, con el pie de las pilas en ladrillo (la baranda ya no sale a rayas).
+
+TUS EDIFICIOS (isla_edificios.glb ES TUYO)
+  isla_edificios.glb                 Tus edificios, acomodados por ti: la página los pone tal cual —
+                                     donde los dejaste, del tamaño que les diste — con la arcilla de
+                                     Chonti. La página ya no lo sobrescribe al exportar.
+   · Los lugares (lugar_…), los hitos (hito_…) y las casas de las rutas (ruta_…) que moviste, giraste
+     o escalaste ahí: la página los mueve igual (y sus marcadores con ellos). Los que duplicaste
+     (….001) salen como edificios más; la casa de una ruta que borraste ya no aparece.
+   · Nada de la página queda dentro de tus edificios (árboles, postes, bancas), y el pavimento de
+     las cuadras va alrededor de ellos.
+   · Cuando lo cambies, guárdalo con el mismo nombre: la página lo vuelve a leer. Si llega sin mallas
+     (solo los puntos de origen: pasa al exportar solo lo seleccionado), la página se queda con tus
+     edificios anteriores.
+
+LA ISLA EN DOS PARTES (encajan: mismas coordenadas, ábrelas juntas en Blender)
+  isla_terreno.glb                   Solo el terreno: acantilado, césped, río, calles, andenes,
+                                     árboles, faroles, puentes.
+  isla_edificios.glb                 Solo los edificios, cada uno en su sitio: la ciudad (con sus
+                                     techos), los lugares (MUCIC, Gato, Biblioteca, Tertulia), los
+                                     edificios de las rutas y La Ermita.
+   · El Túnel Mundialista es el grupo "tunel_mundialista" (muros verdes, bocas, dinteles y
+     barandas); la Av. Colombia son "calle_av_colombia_oeste" y "calle_av_colombia_este".
+   · El Bulevar peatonal ("bulevar_peatonal") trae su textura de adoquín gris; las bancas largas
+     de madera son "bancas", sus jardineras "bulevar_jardineras_concreto" y la baranda del río
+     "bulevar_baranda_blanca".
+
+   · El suelo de las cuadras es "cuadras_pavimento" (el borde de la isla queda verde) y el andén
+     que sigue al Bulevar junto a la zanja del túnel, "bulevar_corredor_tunel".
+   · La calle junto a La Ermita es "calle_ermita" (con su andén "anden_calle_ermita"); la segunda
+     calle de la orilla norte, "calle_norte_2". Dónde va cada lugar, cuánto se gira (turn) y las
+     calles extra están en src/content/island.json.
+   · Las piezas planas (césped, calles, andenes, cebras) vienen con sus triángulos limpios y
+     pocos (scripts/simplify-glb.py): misma forma y mismos colores, mucha menos malla.
+
+SOLO LA ISLA
+  isla_sola.glb                      La isla sola, sin nada encima: acantilado y rocas, césped, río
+                                     (agua, muros y piedras), calles, cebras, andenes, ciclorruta,
+                                     pavimento de las cuadras, el Bulevar peatonal, el túnel y los
+                                     puentes. Sin edificios, árboles, palmas, postes, semáforos,
+                                     bancas ni muebles. (Misma posición que las otras: encaja con ellas.)
+   · Las piezas planas ya no traen triángulos negros: todas sus caras miran hacia arriba.
+
+LA RETRETA (orilla norte, junto al Puente Ortiz)
+   · El parque: césped con samanes y ceibas, los caminos de cemento (el paseo del puente a la calle
+     de atrás y las franjas a los lados), el kiosco en su círculo, bancas y postes. En la isla son
+     "retreta_caminos" y "hito_Kiosko". Dónde va cada camino, el kiosco y las tarimas: island.json →
+     retreta.
+   · La Av. 1 Norte llega hasta el parque y sube por el lado de la cuadra hasta la segunda calle
+     ("calle_retreta"); junto al río, en el parque, ya no hay calle.
+   · El Sucursal Fest es aquí: sus dos tarimas (la grande en diagonal y la otra detrás del kiosco),
+     con mesas de picnic en el parque.
+
+LOS EDIFICIOS PARA EDITAR
+  edificios_para_editar.glb          Todos los edificios donde están, parados sobre la superficie de la
+                                     isla (calles, andenes, río, césped; sin el acantilado de abajo).
+                                     En "edificios": cada edificio es UN objeto con su origen en el piso
+                                     (edificios_modelo_bajo_001…, edificios_house_001…, los techos de teja,
+                                     hito_banco_bogota, hito_subway, lugar_mucic, ruta_champus…): muévelo,
+                                     gíralo o cámbiale el tamaño (S) desde su base. "isla_superficie" es
+                                     solo de referencia.
+
+LOS EVENTOS (para acomodarlos en Blender)
+  evento_feria_del_libro.glb         La Feria del Libro: cada pabellón es un objeto (pabellon_01…).
+                                     La página la usa tal cual la dejes (solo lo de feria_bulevar). Al
+                                     frente de cada carpa, al azar, una de las imágenes de Assets
+                                     (feria del libro-01…04.png), del ancho y el alto de su frente.
+  (Los dos vienen con la superficie de la isla debajo, en "isla_superficie", para ver dónde va cada cosa.)
+  evento_alumbrado.glb               El Alumbrado puesto sobre la isla: cada pieza es UN objeto con su
+                                     origen en el piso, donde va: arbol_navidad_01…, arco_estrellas_01…
+                                     (los arcos de estrellas rojas y verdes sobre el paseo),
+                                     poste_estrella_01…, tira_luces_01… (cada tira con sus bombillos),
+                                     flores_rio_01… (el río, por tramos), luces_edificio_001… (las
+                                     lucecitas del techo de cada edificio), luces_hito_…, luces_arbol_…
+                                     y luces_palmera_… (las de cada copa).
+  evento_sucursal_fest.glb           El Sucursal Fest en La Retreta: tarima_01 (la grande), tarima_02 y
+                                     picnic_01… (mesa, bancas y parasol juntos).
+   · Muévelos, gíralos o bórralos y pásamelos con el mismo nombre: los conecto para que la página
+     los ponga donde los dejaste (como la Feria).
+
+LA ISLA CLÁSICA (la anterior, guardada)
+  isla_clasica/                      La isla de antes y su feria. Para volver a ella: en
+                                     src/content/island.json cambia "variant": "real" por "clasica".
+  (Dónde va cada cosa en la isla real —el tramo peatonal, los lugares, la Ermita, el Puente
+   Ortiz— está en src/content/island.json.)
+
+CADA MODELO POR SEPARADO (para editarlo o reemplazarlo)
+  lugar_mucic.glb                    Lugares · MUCIC (casona colonial)
+  lugar_gato-de-tejada.glb           Lugares · El Gato de Tejada y sus novias (tal cual, con su
+                                     suelo: en la página se hunde a ras de la isla, sobre un parche
+                                     del mismo piso de piedra — "suelo_gato_del_rio" en la isla)
+  mio_verde.glb                      El bus del MIO que anda por las avenidas (verde, ventanas oscuras
+                                     a los lados, el parabrisas adelante y la ventana de atrás)
+  carros.glb                         Los carros y taxis (la carrocería clara: la página le da a cada
+                                     carro su color)
+  arbol.glb / Arbol2.glb / Arbol3.glb / Arbol4.glb
+                                     Los árboles de la isla: cada árbol es uno de los cuatro (al azar
+                                     según dónde está), con su tamaño y el color de su copa (verdes;
+                                     amarillo o rosado los guayacanes), conservando tus tonos. Livianos.
+                                     Las copas quedan cerradas (al aligerarlas ya no se abren huecos).
+                                     (Los preparados están en esta carpeta; los tuyos, en originales/.)
+  Palmera.glb                        Las palmas (junto al río en el Bulevar, en su orilla y en la franja
+                                     verde de la orilla norte): las hojas con el verde de cada palma.
+                                     Va completa, sin aligerar (las hojas ya no salen con triángulos oscuros).
+  subway.glb                         El edificio Entreceibas, el del Subway, en la esquina del Bulevar
+                                     con la calle (al lado de la casita de las empanadas): beige arena,
+                                     ventanas oscuras, locales oscuros con toldos verdes; su esquina
+                                     redonda hacia la esquina
+  postes.glb                         Los postes de luz (de noche se prende la lámpara)
+  semaforo.glb                       Los semáforos, con el brazo sobre la calle (las luces que
+                                     cambian las pone la página en la punta)
+  edificio_bajo.glb / edificio_medio.glb / edificio_alto.glb
+                                     Los edificios genéricos, al azar según el tamaño del lote, cada
+                                     uno con su color y mirando a su calle (las ventanas oscuras)
+  banco_bogota.glb                   El Banco de Bogotá (como las fotos): la torre de piedra blanca, las
+                                     fachadas de vidrio verde oscuro, la base y las columnas gris verdosa
+  boulevard_cafe.glb                 El edificio del Café Boulevard, en el Bulevar (en verde): crema,
+                                     con la esquina redonda de columnas, la pérgola, los balcones y el
+                                     zócalo vinotinto (toda la base), como el real; mira al Bulevar
+   · La ciclorruta (el antiguo carril del MIO) es "ciclorruta", con sus líneas blancas
+     ("ciclorruta_lineas") y las pirámides de los bordes ("ciclorruta_piramides").
+   · Si reemplazas un modelo que ya estaba preparado, el original anterior queda guardado como
+     originales/<nombre>.anterior.glb.
+  EL ALUMBRADO (aparecen cuando escoges el evento Alumbrado):
+  tira_luces.glb                     Las tiras de luces: su cable va de poste a poste (en el Bulevar
+                                     también de árbol a árbol, a los dos lados del paseo; en el resto
+                                     de la isla, una de cada dos) y su bombillo se repite colgando a
+                                     lo largo del cable, de colores
+  arbol_navidad.glb                  Los 5 árboles de Navidad, en el medio del paseo, entre los asientos
+  decoracion_camino.glb              Las estrellas roja y verde, junto a los asientos, una a cada lado
+                                     alternando
+  poste_estrella.glb                 Los postes con estrella: unos pocos en el paseo y otros en las calles
+  decoracion_rio.glb                 Las flores de luz del río, a lo largo de todo el río
+  (las estrellas de decoracion_camino van paradas en el piso de la ciclorruta —donde iba el MIO—,
+   una cada tanto, roja y verde; cada edificio lleva tus tiras de luces (tira_luces) por el borde de
+   su techo, a su altura; los árboles de Navidad, en los espacios libres del paseo)
+  asientos_centro.glb                El mueble del medio del Bulevar (jardinera con banca, columna
+                                     de avisos y matera), cada tanto. Entre uno y otro, la página
+                                     pone las jardineras largas con bancas de madera
+                                     ("bulevar_jardineras_largas" en la isla)
+  lugar_biblioteca-centenario.glb    Lugares · Biblioteca Centenario
+  lugar_museo-la-tertulia.glb        Lugares · Museo La Tertulia (con el teatrino): el edificio de columnas
+                                     con la misma arenisca de los otros dos, y sin la losa que tenía debajo
+  ruta_gastronomia_fonda.glb         Rutas gastronómicas · la fonda
+  ruta_cultura_casa-cultural.glb     Rutas culturales · la casa cultural
+  ruta_taller.glb                    Talleres · el taller
+  iglesia_ermita.glb                 La Ermita (tu modelo), como las fotos: muros azul claro, pilares,
+                                     pináculos y arcos blancos, techo gris, aguja azul muy clara,
+                                     puertas doradas, ventanas y vitrales oscuros, cruz de hierro. Solo
+                                     el edificio (sin base) y en diagonal: la fachada hacia el Bulevar
+                                     y el río (island.json → stops.ermita.turn)
+  sillas_centro_2.glb                La banca larga del medio del Bulevar (jardinera café oscuro con sus
+                                     matas, asientos de madera café claro): va pegada a cada mueble del
+                                     arbolito (asientos_centro), luego un espacio y el siguiente mueble.
+                                     Reemplaza las jardineras largas que ponía la página.
+  Kiosko.glb                         El kiosco de La Retreta (Parque Paseo Bolívar, junto al Puente Ortiz),
+                                     en su círculo de cemento: blanco, techo rojo oscuro, matas alrededor.
+  sillas_borde_rio.glb               Las bancas largas junto a la baranda del río (café claro donde uno
+                                     se sienta, café oscuro la estructura). Tu archivo traía también el
+                                     mueble del medio, un carro y el bus: el preparado solo deja las bancas
+  hito_puente-ortiz.glb              El Puente Ortiz
+  personaje_chonti.glb               Chonti (cuerpo con su esqueleto; los ojos, la boca y los
+                                     gorros se dibujan en la página)
+
+  (En la carpeta fbx/ están las versiones FBX de estos modelos, por si te sirven.)
+
+CÓMO ESTÁN HECHOS
+- Unidades: 1 = 1 metro de Blender. La isla mide unos 47 × 17.
+- La base de cada modelo está en el piso (altura 0) y centrada en el origen.
+- El FRENTE (la fachada que da a la calle) mira hacia -Y en Blender, o sea, hacia ti en la
+  vista frontal (tecla 1 del teclado numérico).
+- Cada material se llama color_<hex>: el color que tiene en la página.
+
+LOS MODELOS QUE YA ESTÁN EN LA PÁGINA (lugar_mucic, lugar_biblioteca-centenario,
+evento_feria_del_libro)
+  Estos archivos son la versión PREPARADA, igual a la de la página: livianos, con sus colores
+  reales (cada material se llama como lo que es: ladrillo_..., ventana_gris_..., tejas_de_barro_...)
+  y las texturas metidas en el archivo (las tejas del MUCIC con su relieve). La feria viene ya
+  puesta sobre el bulevar: cada pabellón es un objeto "pabellon_01", "pabellon_02"... dentro de
+  "feria_bulevar" (con sus carpas, frontón, paneles, tótem y banderines).
+  · Ábrelos, muévelos, cámbiales lo que quieras y guárdalos con el MISMO nombre: la página los usa
+    tal cual los dejes (no se les vuelve a cambiar nada).
+  · La textura de arcilla de Chonti (el moteado, el relieve suave, el borde de luz) se la pone la
+    página encima de los colores: en Blender verás los colores planos.
+  · Tus archivos originales están en la carpeta originales/.
+  · No borres el objeto vacío "_bulevar_preparado": es la marca de que ya está listo.
+
+PARA REEMPLAZARLOS
+1. Edítalos o hazlos de nuevo, manteniendo la base en el piso y el frente hacia -Y.
+2. Guárdalos con el MISMO nombre, en .glb (o .fbx).
+3. Pásamelos: los conecto en la página. Los modelos sueltos se ajustan solos a la altura del
+   actual; si me devuelves la isla completa editada, la uso tal cual.
+   - Colores: usa colores de material (Base Color) o texturas dentro del archivo.
+   - Que no se pase de liviana: unos miles de polígonos por modelo.
+
+(Para volver a exportarlos desde el código: scripts/export-models.mjs)
+
+LAS RUTAS
+  ruta_gastronomia_fonda.glb         La casa de cada parada de comida (fachada crema, puerta café,
+                                     aviso rojo). La de las Empanadas del Obelisco va en la esquina
+                                     frente a La Tertulia, en lugar de tu edificio edificios_modelo_medio_005.001.
+  ruta_cultura_casa-cultural.glb     La casa de cada taller (rosada, con su toldo naranja).
+  Ruta cultural: La Tertulia, el MUCIC, la Biblioteca Centenario, el Gato del Río y el Puente Ortiz
+  (sus marcadores van sobre esos lugares; las casas viejas de Jairo Varela y Paseo Bolívar quedan
+  como edificios normales, donde los dejaste).
+
+LA ISLA PARA TERMINAR DE ACOMODAR
+  isla_para_acomodar.glb             Toda la isla, como en la página, con cada tipo de cosa en su propio
+                                     grupo: arboles, postes_y_semaforos, bancas_y_muebles, edificios,
+                                     lugares_e_hitos, casas_de_las_rutas, calles, andenes_y_bulevar,
+                                     puentes, tunel, rio y terreno. En el panel de objetos (Outliner)
+                                     haz clic en el grupo para mover todo junto (todos los árboles a la
+                                     vez), o en una pieza para mover solo esa. Cada árbol, poste o
+                                     edificio es una pieza con su origen en el piso.
+  Casas de las rutas: cada una del tamaño del lote donde la dejaste (los talleres ya no salen
+  chiquitos). La parada de champús, cuya casa borraste, toma el edificio tuyo más cercano; la copia
+  que hiciste del chontaduro (ruta_chontaduro.001) es otra fonda igual. Las casas culturales viejas
+  (ruta_jairo-varela, ruta_paseo-bolivar) son ahora edificios normales, del tamaño de su lote.
+
+TU ISLA ACOMODADA (isla_para_acomodar.glb ES TUYA)
+  La página usa tu isla tal cual: el terreno, las calles, los puentes, el túnel, los árboles, los
+  postes, los semáforos, las bancas, los muebles y las piedras del río, donde los dejaste y con sus
+  formas. Solo se aligera para la página (vértices unidos, sin datos que no se ven): sin cambiar nada.
+  · El agua del río la sigue poniendo la página (corre). Los postes se prenden de noche.
+  · Los edificios, los lugares, los hitos y las casas de las rutas: donde los dejaste; los puntos de
+    las rutas van sobre ellos (scripts/edificios-origen-acomodada.json: dónde estaba cada uno cuando
+    se exportó la isla, para moverlos como tú desde ahí).
+  · La casa del cholado no está en tu isla: su punto queda donde estaba, sin casa.
+  · Cuando la cambies, guárdala con el mismo nombre: la página la vuelve a leer. La exportación de la
+    página ya no la sobrescribe (scripts/archivos-tuyos.json), ni a evento_alumbrado ni a escenario.
+
+EL ALUMBRADO (evento_alumbrado.glb ES TUYO)
+  Los árboles de Navidad (cada uno del alto que le diste), las estrellas del camino, los postes de
+  estrella y las tiras de luces de las calles van donde los dejaste (src/content/alumbrado.json).
+  Las estrellas del camino son las de tu archivo, tal cual (su forma, su sitio, su giro y su tamaño):
+  no giran con la cámara.
+  Las luces de los techos las pone la página pegadas al borde del techo de cada edificio, como estén
+  ahora: el techo real (girado como el edificio y a la altura de su borde, arriba del todo; en La
+  Tertulia, en cada uno de sus edificios). El Gato y el Café Boulevard no llevan luces. Las de las
+  copas, en los árboles de tu isla; las flores de luz del río, también.
+
+EL ESCENARIO (escenario.glb ES TUYO)
+  Las dos tarimas del Sucursal Fest en La Retreta son tu escenario, del tamaño de las tarimas, con
+  su frente hacia el río y las luces que se mueven encima.
+
+LA FERIA DEL LIBRO
+  Tus carpas van a ras del suelo de la isla (antes se subían de más y volaban). Las que quedaban
+  sobre una banca o un mueble de tu isla se corren lo justo, a lo largo del paseo o de lado.
+
+CAMBIOS CON TU ISLA (isla_para_acomodar.glb)
+  · Los lugares, los hitos y las casas de las rutas salen de tu isla tal cual (forma y tamaño que
+    les diste); la página ya no los vuelve a dibujar. Al elegir un lugar salta y crece, y luego se
+    queda quieto (ya no gira detrás de la tarjeta).
+  · Los árboles se ven redondos (sus caras suavizadas, sin cambiar su forma). Los que quedaban en el
+    aire (sobre un hundido del césped o pasado el borde) bajan al suelo o se corren un poquito.
+  · Las calles ya no salen a rayas (tu Plane va 2 mm bajo las calles; el suelo no se hace sombra a
+    sí mismo) y las ventanas de los edificios ya no titilan.
+
+FERIA DEL LIBRO
+  · También salen las piezas que pusiste fuera del grupo de la feria (los libros, los cubos).
+  · Las carpas sobre el río se quitan; las que pisaban una banca se corren solo a lo largo del
+    paseo (las filas quedan alineadas).
+
+ALUMBRADO
+  · Las luces de los techos: solo en el techo más alto de cada edificio (o en cada uno si son
+    separados); ninguna atraviesa una pared. Las de las copas, dentro de cada copa, a su altura.
+  · Una estrella que chocaba con un árbol de Navidad o una banca se corre lo justo por el camino.
+
+SUCURSAL FEST
+  · De noche. Tu escenario con los colores del festival: pantalla y borde de LED de colores que se
+    mueven, el letrero SUCURSAL FEST 2026 arriba, armazón plateado, focos rojos y rayos cian finos
+    que salen por el frente hacia el cielo (no atraviesan nada).
+  · Gente bailando frente a cada escenario: pon Assets/modelos/monitos.glb y serán tus monitos.
+  · La Retreta con torres de luces y tiras de bombillos que salen del techo del kiosco.
+
+VENTANAS, PUENTE Y SUCURSAL FEST
+  · Las ventanas y puertas oscuras de tus edificios salen 1.2 cm de la pared (las del segundo piso
+    de las tienditas quedaban un pelito detrás y no se veían; otras titilaban). De noche, más o menos
+    la mitad de las ventanas se prende con luz cálida.
+  · El Puente Ortiz: el cuerpo y los arcos en ladrillo, el piso y la baranda blancos, y los bordes
+    de los huecos de la baranda en rojo ladrillo oscuro (los aros).
+  · El escenario ya no tiene la cubierta negra de atrás; sus colores van solo al frente: por detrás
+    y por los lados es negro, también el letrero.
+  · Las luces del kiosco salen de la punta de su techo y el anillo va en el borde de su alero.
+
+ÚLTIMOS CAMBIOS
+  · La esquina del Obelisco: vuelve su edificio de siempre (un edificio medio, como estaba), donde
+    dejaste la casa de las empanadas; el punto de la ruta va sobre él (scripts/obelisco-edificio.json).
+  · El cholado (su casa no está en tu isla): su punto va sobre tu edificio más cercano, sin cambiarlo.
+  · Las rutas por la orilla sur van por el Bulevar (la Carrera 3 ya no está donde la quitaste).
+  · El Puente Ortiz como la foto: todo blanco, con los medallones rojos en la baranda.
+  · La Ermita como la foto: blanca con un toque de azul, techos azul pizarra, puertas doradas y la
+    base de piedra gris.
+  · Los escenarios con su forma completa (con su techo), en grises; los colores solo al frente.
+  · Las ventanas: como las dejaste (solo 4 mm fuera de la pared para que no titilen); de noche se
+    prenden más o menos la mitad.
+
+MÁS AJUSTES
+  · Ruta gastronómica sin el cholado. El edificio del Obelisco más pequeño (1.25 de ancho, 1.9 de
+    alto) para que no tape.
+  · Los monitos del Sucursal Fest son tu persona.glb, cada uno con ropa de un color y piel distinta.
+  · Las estrellas del alumbrado un poco más pequeñas (75 %), desde su base.
+  · La Tertulia: luces solo en el techo bajo de su pabellón, no arriba del edificio grande.
+  · Las luces de los techos van al borde real (también sobre un muro alto alrededor del techo).
+  · La Ermita sin la franja gris recta de la base.
+  · El Puente Ortiz: blanco, con un aro rojo alrededor de cada hueco de la baranda (por los dos
+    lados), como en la foto.
+  · Las ventanas que miraban hacia adentro en tu archivo ahora salen hacia afuera (no desaparecen).
+  · La base del Gato: su piso va 1 cm bajo el piso de piedra (antes los dos titilaban).
+  · Las calles: sus triángulos se rearmaron parejos (misma forma) y las rampas al túnel se suavizan;
+    las rayas que se veían eran caras muy delgadas de la rampa de la Av. Colombia en tu archivo.

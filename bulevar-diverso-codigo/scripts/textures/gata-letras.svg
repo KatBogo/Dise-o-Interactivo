@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="512" viewBox="0 0 1024 512">
+  <!-- The white gata, written in red: names of animals and verses, like the real one.
+       Left = tail end, right = head; bottom = paws, top = back. Only the SIDES of the body carry
+       words (v ≈ 0.33 – 0.68): on the back and the legs a line would stretch across and smear. -->
+  <rect width="1024" height="512" fill="#F6F4F0"/>
+  <g fill="#B0182A" font-family="Georgia, 'Times New Roman', serif" font-weight="700">
+    <text x="190" y="250" font-size="36" textLength="660" lengthAdjust="spacingAndGlyphs">Gn. 1: 24 · Hipopótamo · Lagartija</text>
+    <text x="190" y="282" font-size="34" textLength="660" lengthAdjust="spacingAndGlyphs">Job 40: 15 · Serpiente · Oveja · Mula</text>
+    <text x="190" y="314" font-size="32" textLength="660" lengthAdjust="spacingAndGlyphs">Num. 22: 28 · Burra · Águila · Zorro</text>
+    <text x="190" y="342" font-size="30" textLength="660" lengthAdjust="spacingAndGlyphs">Sal. 104: 18 · Conejo · Venado</text>
+    <text x="190" y="226" font-size="30" textLength="660" lengthAdjust="spacingAndGlyphs">Lev. 11: 19 · Cuervo · Caballo · Gallo</text>
+  </g>
+</svg>

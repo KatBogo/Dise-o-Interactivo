@@ -1,0 +1,9 @@
+{
+  "_info": "Escrito por scripts/sync-assets.mjs: las imágenes del frente de las carpas de la Feria (Assets/feria del libro-NN.png).",
+  "fronts": [
+    "textures/feria_frente_1.png",
+    "textures/feria_frente_2.png",
+    "textures/feria_frente_3.png",
+    "textures/feria_frente_4.png"
+  ]
+}

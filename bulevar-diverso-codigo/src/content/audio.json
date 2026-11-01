@@ -1,0 +1,9 @@
+{
+  "_info": "Música con grabaciones reales. Si una lista está vacía suena la música sintetizada (marimba de chonta, villancicos en caja de música, salsa). Pon tus archivos en /public/audio/ y lístalos aquí, ej: \"december\": [\"/audio/villancicos/los-peces-en-el-rio.mp3\"]. La Tutaina del Alumbrado se copia sola desde Assets/tutaina.mpeg (scripts/sync-assets.mjs). Usa solo grabaciones con derechos de uso.",
+  "music": {
+    "calm": [],
+    "december": [],
+    "salsa": [],
+    "alumbrado": ["/audio/tutaina.mp3"]
+  }
+}

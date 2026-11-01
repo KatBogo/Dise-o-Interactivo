@@ -1,0 +1,95 @@
+{
+ "_info": "Dónde estaba el pie (origen) de cada lugar, hito y casa de ruta en el isla_edificios.glb que exportó la página (x, y, z de la página). Con esto, lo que moviste en tu archivo se aplica a cada uno (scripts/sync-assets.mjs).",
+ "feet": {
+  "hito_banco_bogota": [
+   -3.798,
+   0.3,
+   4.004
+  ],
+  "hito_boulevard_cafe": [
+   10.998,
+   0.3,
+   5.29
+  ],
+  "hito_la-ermita": [
+   18.417,
+   0.3,
+   5.427
+  ],
+  "hito_subway": [
+   2.49,
+   0.3,
+   5.346
+  ],
+  "lugar_biblioteca": [
+   -10.6,
+   0.309,
+   2.14
+  ],
+  "lugar_gato": [
+   -5.797,
+   0.266,
+   -3.215
+  ],
+  "lugar_mucic": [
+   5,
+   0.31,
+   5.48
+  ],
+  "lugar_tertulia": [
+   -16.83,
+   0.29,
+   3.81
+  ],
+  "ruta_ceramica": [
+   8.592,
+   0.3,
+   5.13
+  ],
+  "ruta_champus": [
+   6.764,
+   0.3,
+   5.159
+  ],
+  "ruta_cholado": [
+   -7.208,
+   0.3,
+   3.193
+  ],
+  "ruta_chontaduro": [
+   14.574,
+   0.3,
+   4.836
+  ],
+  "ruta_fotografia": [
+   5.402,
+   0.3,
+   -2.442
+  ],
+  "ruta_grafiti": [
+   9.907,
+   0.3,
+   -2.229
+  ],
+  "ruta_jairo-varela": [
+   -8.3,
+   0.3,
+   -6.58
+  ],
+  "ruta_marranitas": [
+   1.062,
+   0.3,
+   4.907
+  ],
+  "ruta_paseo-bolivar": [
+   -1.6,
+   0.3,
+   4.55
+  ],
+  "ruta_salsa": [
+   -3.224,
+   0.3,
+   -6.053
+  ]
+ }
+}

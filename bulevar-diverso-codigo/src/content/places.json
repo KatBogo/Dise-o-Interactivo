@@ -1,0 +1,111 @@
+{
+  "_info": "Lugares. size = lo ancho que ocupa el modelo real en la isla (su lado más largo; sin size se ajusta a la medida del placeholder). location = { along: posición a lo largo del río (-20..20), across: distancia al río (+ orilla del paseo, - orilla de atrás) }. model = ruta a un .glb en /public (ej: /models/mucic.glb) o null → se usa el placeholder 'placeholder'. scale = tamaño sobre la isla. slides = las partes de la tarjeta (01 02 03); su 'title' solo se usa como nombre accesible del botón. story = la historia completa: sus párrafos se reparten en orden entre los slides (2 por slide), para leerse sin scroll. Tono: tuteo, caleño suave. TODO: validar datos con el equipo de contenido.",
+  "items": [
+    {
+      "id": "mucic",
+      "name": "MUCIC",
+      "tag": "Museo",
+      "placeholder": "mucic",
+      "model": "/models/lugar_mucic.glb",
+      "scale": 0.95,
+      "location": {
+        "along": -11.2,
+        "across": 4.3
+      },
+      "guide": "Este es el MUCIC. Pasa con calma, que aquí la ciudad se cuenta sola.",
+      "slides": [
+        { "title": "Un museo para la ciudad" },
+        { "title": "Las salas" },
+        { "title": "La visita" }
+      ],
+      "story": [
+        "El MUCIC es de esos lugares que uno pasa caminando por el bulevar sin imaginar todo lo que guarda. Su nombre lo dice: es el museo de la cultura y la identidad de Cali.",
+        "Adentro la ciudad se cuenta desde sus objetos, sus oficios y sus fiestas, como quien abre el álbum familiar de Cali y va reconociendo caras, calles y costumbres.",
+        "Las salas se recorren sin afán. Hay piezas que hablan del río, de los barrios que crecieron a su orilla y de la gente que llegó de todas partes a darle a Cali su ritmo.",
+        "Las exposiciones temporales van cambiando, así que cada visita trae algo distinto: fotografía, música, artes populares y la memoria de las fiestas de la ciudad.",
+        "Lo mejor es ir entre semana por la mañana, cuando está más tranquilo, y preguntar en la entrada por las visitas guiadas y las actividades para niños.",
+        "Al salir quedas a pocos pasos del agua. Un champús en la mano, una caminada por el bulevar y sigues el recorrido hacia el Gato del Río o hacia La Ermita."
+      ]
+    },
+    {
+      "id": "gato",
+      "name": "Gato de Tejada",
+      "tag": "Escultura",
+      "placeholder": "gato",
+      "model": "/models/lugar_gato-de-tejada.glb",
+      "size": 2.8,
+      "scale": 0.45,
+      "location": {
+        "along": 8.6,
+        "across": -3.4
+      },
+      "guide": "Mira quién está aquí: el Gato del Río. Salúdalo, que es el anfitrión del bulevar.",
+      "slides": [
+        { "title": "El Gato del Río" },
+        { "title": "Las novias del gato" },
+        { "title": "Un símbolo de Cali" }
+      ],
+      "story": [
+        "El Gato del Río es obra del maestro Hernando Tejada, uno de los artistas más queridos de Cali. Es una escultura de bronce de más de tres metros que mira tranquila hacia el agua.",
+        "Lo instalaron en 1996 a la orilla del Río Cali y desde entonces se volvió punto de encuentro, referencia para dar direcciones y la foto obligada de quien visita la ciudad.",
+        "Con los años le llegaron sus novias: esculturas de gatas intervenidas por diferentes artistas, cada una con su propio estilo, que se repartieron por la ribera del río.",
+        "Buscarlas todas se volvió un plan de tarde. Algunas cambiaron de lugar con el tiempo, así que encontrarlas es casi como un juego del tesoro por el bulevar.",
+        "El gato es más que una escultura: es la forma en que la ciudad se apropió de su río y de su arte público. Mucha gente lo saluda y hasta lo visten en fechas especiales.",
+        "El mejor momento para visitarlo es al final de la tarde, cuando la luz se pone naranja, el río brilla detrás y la brisa empieza a bajar de los cerros."
+      ]
+    },
+    {
+      "id": "biblioteca",
+      "name": "Biblioteca Centenario",
+      "tag": "Biblioteca",
+      "placeholder": "biblioteca",
+      "model": "/models/lugar_biblioteca-centenario.glb",
+      "scale": 0.9,
+      "location": {
+        "along": 1.2,
+        "across": -3.9
+      },
+      "guide": "Llegamos a la Biblioteca Centenario. Aquí se lee con brisa de río.",
+      "slides": [
+        { "title": "Un rincón de silencio" },
+        { "title": "Mucho más que libros" },
+        { "title": "Un plan sencillo" }
+      ],
+      "story": [
+        "La Biblioteca Centenario es un rincón de silencio en medio del centro de Cali. Por fuera conserva un aire republicano, con su pórtico y sus columnas mirando hacia el río.",
+        "Las mesas junto a las ventanas y la brisa que sube del agua hacen que leer aquí se sienta distinto: el ruido de la ciudad se queda afuera y el tiempo pasa más despacio.",
+        "Además de prestar libros, tiene programación cultural durante todo el año: clubes de lectura, talleres de escritura, charlas con autores y actividades para niños.",
+        "Vale la pena preguntar por la agenda del mes. Muchas actividades son gratuitas y son una buena forma de conocer gente que también anda buscando qué leer.",
+        "Es un buen lugar para estudiar, hacer tareas o simplemente sentarse un rato a hojear algo nuevo antes de seguir caminando por el bulevar.",
+        "El plan perfecto es sencillo: un libro prestado, una banca a la orilla del río y una lulada bien fría para acompañar la lectura."
+      ]
+    },
+    {
+      "id": "tertulia",
+      "name": "Museo La Tertulia",
+      "tag": "Museo de arte",
+      "placeholder": "tertulia",
+      "model": "/models/lugar_museo-la-tertulia.glb",
+      "size": 3.2,
+      "scale": 1,
+      "location": {
+        "along": 17.2,
+        "across": 4.2
+      },
+      "guide": "Este es La Tertulia. Arte, cine y teatro al aire libre, todo en el mismo lugar.",
+      "slides": [
+        { "title": "Desde 1956" },
+        { "title": "Cine y tarima" },
+        { "title": "La visita" }
+      ],
+      "story": [
+        "El Museo La Tertulia nació en 1956 como un lugar de encuentro de artistas y amigos del arte. Con los años se convirtió en una casa fundamental del arte moderno en Cali.",
+        "Sus salas reciben exposiciones de artistas locales, nacionales e internacionales, y su colección permite recorrer buena parte de la historia del arte en la región.",
+        "La cinemateca es un clásico de la ciudad: cine de autor, ciclos temáticos y películas que no se ven en el centro comercial, con un público que conversa a la salida.",
+        "El teatro al aire libre, escalonado sobre la ladera, recibe conciertos, obras y funciones bajo el cielo caleño. Llevar algo para sentarse nunca sobra.",
+        "Llega con tiempo y recorre las salas sin afán: el edificio de ladrillo y sus galerías también son parte de la obra.",
+        "Y quédate al atardecer: la vista hacia el río y los cerros, con la luz naranja de las seis, es parte de la experiencia de La Tertulia."
+      ]
+    }
+  ]
+}

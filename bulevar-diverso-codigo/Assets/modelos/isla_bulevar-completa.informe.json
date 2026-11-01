@@ -1,0 +1,1554 @@
+{
+ "cambiados": {
+  "Arbol2": [
+   {
+    "pieza": "arboles_arbol2_001",
+    "escala": 0.1137,
+    "desajuste": 0.00035
+   },
+   {
+    "pieza": "arboles_arbol2_001.001",
+    "escala": 0.1137,
+    "desajuste": 0.00035
+   },
+   {
+    "pieza": "arboles_arbol2_001.002",
+    "escala": 0.1137,
+    "desajuste": 0.00035
+   },
+   {
+    "pieza": "arboles_arbol2_001.003",
+    "escala": 0.1137,
+    "desajuste": 0.00035
+   },
+   {
+    "pieza": "arboles_arbol2_001.004",
+    "escala": 0.1137,
+    "desajuste": 0.00035
+   },
+   {
+    "pieza": "arboles_arbol2_001.005",
+    "escala": 0.1137,
+    "desajuste": 0.00024
+   },
+   {
+    "pieza": "arboles_arbol2_002",
+    "escala": 0.0949,
+    "desajuste": 2e-05
+   },
+   {
+    "pieza": "arboles_arbol2_003",
+    "escala": 0.0965,
+    "desajuste": 0.00012
+   },
+   {
+    "pieza": "arboles_arbol2_004",
+    "escala": 0.1877,
+    "desajuste": 0.00017
+   },
+   {
+    "pieza": "arboles_arbol2_006",
+    "escala": 0.0804,
+    "desajuste": 7e-05
+   },
+   {
+    "pieza": "arboles_arbol2_007",
+    "escala": 0.0966,
+    "desajuste": 0.00042
+   },
+   {
+    "pieza": "arboles_arbol2_008",
+    "escala": 0.1389,
+    "desajuste": 0.00039
+   },
+   {
+    "pieza": "arboles_arbol2_009",
+    "escala": 0.1371,
+    "desajuste": 0.00019
+   },
+   {
+    "pieza": "arboles_arbol2_009.001",
+    "escala": 0.1371,
+    "desajuste": 0.00019
+   },
+   {
+    "pieza": "arboles_arbol2_010",
+    "escala": 0.1114,
+    "desajuste": 0.00037
+   },
+   {
+    "pieza": "arboles_arbol2_011",
+    "escala": 0.0871,
+    "desajuste": 0.00012
+   },
+   {
+    "pieza": "arboles_arbol2_012",
+    "escala": 0.1586,
+    "desajuste": 0.00035
+   },
+   {
+    "pieza": "arboles_arbol2_013",
+    "escala": 0.1849,
+    "desajuste": 0.00037
+   }
+  ],
+  "Arbol3": [
+   {
+    "pieza": "arboles_arbol3_001",
+    "escala": 0.1106,
+    "desajuste": 7e-05
+   },
+   {
+    "pieza": "arboles_arbol3_002_copia1",
+    "escala": 0.1122,
+    "desajuste": 0.00023
+   },
+   {
+    "pieza": "arboles_arbol3_002_copia2",
+    "escala": 0.1752,
+    "desajuste": 0.00023
+   },
+   {
+    "pieza": "arboles_arbol3_002_copia3",
+    "escala": 0.1122,
+    "desajuste": 0.00023
+   },
+   {
+    "pieza": "arboles_arbol3_002_copia4",
+    "escala": 0.1122,
+    "desajuste": 0.00023
+   },
+   {
+    "pieza": "arboles_arbol3_002_copia5",
+    "escala": 0.1122,
+    "desajuste": 0.00023
+   },
+   {
+    "pieza": "arboles_arbol3_003",
+    "escala": 0.2036,
+    "desajuste": 0.00017
+   },
+   {
+    "pieza": "arboles_arbol3_004",
+    "escala": 0.1126,
+    "desajuste": 9e-05
+   },
+   {
+    "pieza": "arboles_arbol3_004.001",
+    "escala": 0.164,
+    "desajuste": 9e-05
+   },
+   {
+    "pieza": "arboles_arbol3_004.002",
+    "escala": 0.1126,
+    "desajuste": 9e-05
+   },
+   {
+    "pieza": "arboles_arbol3_004.003",
+    "escala": 0.1126,
+    "desajuste": 9e-05
+   },
+   {
+    "pieza": "arboles_arbol3_004.004",
+    "escala": 0.1126,
+    "desajuste": 9e-05
+   },
+   {
+    "pieza": "arboles_arbol3_004.005",
+    "escala": 0.1126,
+    "desajuste": 9e-05
+   },
+   {
+    "pieza": "arboles_arbol3_004.006",
+    "escala": 0.1126,
+    "desajuste": 9e-05
+   },
+   {
+    "pieza": "arboles_arbol3_005",
+    "escala": 0.1143,
+    "desajuste": 0.00023
+   },
+   {
+    "pieza": "arboles_arbol3_006",
+    "escala": 0.2055,
+    "desajuste": 3e-05
+   },
+   {
+    "pieza": "arboles_arbol3_007",
+    "escala": 0.2168,
+    "desajuste": 0.00018
+   },
+   {
+    "pieza": "arboles_arbol3_008",
+    "escala": 0.1264,
+    "desajuste": 0.00016
+   },
+   {
+    "pieza": "arboles_arbol3_009",
+    "escala": 0.1025,
+    "desajuste": 2e-05
+   },
+   {
+    "pieza": "arboles_arbol3_010",
+    "escala": 0.1746,
+    "desajuste": 0.00011
+   },
+   {
+    "pieza": "arboles_arbol3_011",
+    "escala": 0.0995,
+    "desajuste": 0.00024
+   },
+   {
+    "pieza": "arboles_arbol3_012",
+    "escala": 0.1041,
+    "desajuste": 7e-05
+   },
+   {
+    "pieza": "arboles_arbol3_012.001",
+    "escala": 0.1041,
+    "desajuste": 7e-05
+   },
+   {
+    "pieza": "arboles_arbol3_013",
+    "escala": 0.1053,
+    "desajuste": 0.00025
+   },
+   {
+    "pieza": "arboles_arbol3_014",
+    "escala": 0.1122,
+    "desajuste": 5e-05
+   },
+   {
+    "pieza": "arboles_arbol3_015_copia2",
+    "escala": 0.0976,
+    "desajuste": 0.00011
+   },
+   {
+    "pieza": "arboles_arbol3_015_copia3",
+    "escala": 0.0976,
+    "desajuste": 0.00011
+   },
+   {
+    "pieza": "arboles_arbol3_015_copia4",
+    "escala": 0.0976,
+    "desajuste": 0.00011
+   },
+   {
+    "pieza": "arboles_arbol3_015.001",
+    "escala": 0.0976,
+    "desajuste": 0.00011
+   }
+  ],
+  "Arbol4": [
+   {
+    "pieza": "arboles_arbol4_001",
+    "escala": 0.2201,
+    "desajuste": 0.00032
+   },
+   {
+    "pieza": "arboles_arbol4_002",
+    "escala": 0.1872,
+    "desajuste": 0.00017
+   },
+   {
+    "pieza": "arboles_arbol4_003",
+    "escala": 0.1072,
+    "desajuste": 0.0002
+   },
+   {
+    "pieza": "arboles_arbol4_004",
+    "escala": 0.1177,
+    "desajuste": 0.00015
+   },
+   {
+    "pieza": "arboles_arbol4_005",
+    "escala": 0.1172,
+    "desajuste": 0.00011
+   },
+   {
+    "pieza": "arboles_arbol4_007",
+    "escala": 0.1062,
+    "desajuste": 0.00025
+   },
+   {
+    "pieza": "arboles_arbol4_008",
+    "escala": 0.1012,
+    "desajuste": 9e-05
+   },
+   {
+    "pieza": "arboles_arbol4_009",
+    "escala": 0.1656,
+    "desajuste": 0.00022
+   },
+   {
+    "pieza": "arboles_arbol4_010",
+    "escala": 0.0966,
+    "desajuste": 0.00013
+   },
+   {
+    "pieza": "arboles_arbol4_011",
+    "escala": 0.0962,
+    "desajuste": 0.00028
+   },
+   {
+    "pieza": "arboles_arbol4_012",
+    "escala": 0.0883,
+    "desajuste": 0.00026
+   },
+   {
+    "pieza": "arboles_arbol4_013",
+    "escala": 0.1846,
+    "desajuste": 3e-05
+   },
+   {
+    "pieza": "arboles_arbol4_014",
+    "escala": 0.0935,
+    "desajuste": 0.00035
+   },
+   {
+    "pieza": "arboles_arbol4_015_copia1",
+    "escala": 0.1895,
+    "desajuste": 0.00012
+   },
+   {
+    "pieza": "arboles_arbol4_015_copia2",
+    "escala": 0.1545,
+    "desajuste": 0.00012
+   },
+   {
+    "pieza": "arboles_arbol4_015_copia3",
+    "escala": 0.2037,
+    "desajuste": 0.00012
+   }
+  ],
+  "arbol": [
+   {
+    "pieza": "arboles_arbol_001",
+    "escala": 0.2599,
+    "desajuste": 0.00015
+   },
+   {
+    "pieza": "arboles_arbol_002",
+    "escala": 0.1346,
+    "desajuste": 0.0
+   },
+   {
+    "pieza": "arboles_arbol_003",
+    "escala": 0.2365,
+    "desajuste": 0.00014
+   },
+   {
+    "pieza": "arboles_arbol_004",
+    "escala": 0.1343,
+    "desajuste": 0.00035
+   },
+   {
+    "pieza": "arboles_arbol_004.001_copia1",
+    "escala": 0.1343,
+    "desajuste": 0.00035
+   },
+   {
+    "pieza": "arboles_arbol_004.001_copia2",
+    "escala": 0.1343,
+    "desajuste": 0.00035
+   },
+   {
+    "pieza": "arboles_arbol_004.001_copia3",
+    "escala": 0.1343,
+    "desajuste": 0.00032
+   },
+   {
+    "pieza": "arboles_arbol_004.001_copia4",
+    "escala": 0.1343,
+    "desajuste": 0.00032
+   },
+   {
+    "pieza": "arboles_arbol_004.001_copia5",
+    "escala": 0.1343,
+    "desajuste": 0.00032
+   },
+   {
+    "pieza": "arboles_arbol_005",
+    "escala": 0.2333,
+    "desajuste": 0.00033
+   },
+   {
+    "pieza": "arboles_arbol_006",
+    "escala": 0.1594,
+    "desajuste": 0.00033
+   },
+   {
+    "pieza": "arboles_arbol_006.001",
+    "escala": 0.1594,
+    "desajuste": 0.00033
+   },
+   {
+    "pieza": "arboles_arbol_007",
+    "escala": 0.1355,
+    "desajuste": 0.00043
+   },
+   {
+    "pieza": "arboles_arbol_008",
+    "escala": 0.1379,
+    "desajuste": 1e-05
+   },
+   {
+    "pieza": "arboles_arbol_009",
+    "escala": 0.1218,
+    "desajuste": 5e-05
+   },
+   {
+    "pieza": "arboles_arbol_010",
+    "escala": 0.1954,
+    "desajuste": 0.00015
+   },
+   {
+    "pieza": "arboles_arbol_011",
+    "escala": 0.1285,
+    "desajuste": 0.00018
+   },
+   {
+    "pieza": "arboles_arbol_012",
+    "escala": 0.1308,
+    "desajuste": 0.00017
+   },
+   {
+    "pieza": "arboles_arbol_013",
+    "escala": 0.2347,
+    "desajuste": 8e-05
+   },
+   {
+    "pieza": "arboles_arbol_014",
+    "escala": 0.236,
+    "desajuste": 0.00025
+   },
+   {
+    "pieza": "arboles_arbol_015",
+    "escala": 0.2062,
+    "desajuste": 0.00023
+   },
+   {
+    "pieza": "arboles_arbol_016",
+    "escala": 0.1224,
+    "desajuste": 1e-05
+   }
+  ],
+  "Palmera": [
+   {
+    "pieza": "palmeras_001",
+    "escala": 0.1675,
+    "desajuste": 2e-05
+   },
+   {
+    "pieza": "palmeras_001.001",
+    "escala": 0.1675,
+    "desajuste": 2e-05
+   },
+   {
+    "pieza": "palmeras_001.002",
+    "escala": 0.1675,
+    "desajuste": 2e-05
+   },
+   {
+    "pieza": "palmeras_002",
+    "escala": 0.1745,
+    "desajuste": 0.00025
+   },
+   {
+    "pieza": "palmeras_003",
+    "escala": 0.1122,
+    "desajuste": 0.0001
+   },
+   {
+    "pieza": "palmeras_004",
+    "escala": 0.159,
+    "desajuste": 0.00013
+   },
+   {
+    "pieza": "palmeras_005",
+    "escala": 0.1695,
+    "desajuste": 0.00022
+   }
+  ],
+  "asientos_centro": [
+   {
+    "pieza": "bulevar_asientos_centro_001",
+    "escala": 0.0331,
+    "desajuste": 0.0001
+   },
+   {
+    "pieza": "bulevar_asientos_centro_002",
+    "escala": 0.0331,
+    "desajuste": 0.00033
+   },
+   {
+    "pieza": "bulevar_asientos_centro_002.001",
+    "escala": 0.0331,
+    "desajuste": 0.00014
+   },
+   {
+    "pieza": "bulevar_asientos_centro_003",
+    "escala": 0.0331,
+    "desajuste": 0.0003
+   },
+   {
+    "pieza": "bulevar_asientos_centro_003.001",
+    "escala": 0.0331,
+    "desajuste": 0.0003
+   },
+   {
+    "pieza": "bulevar_asientos_centro_004",
+    "escala": 0.0331,
+    "desajuste": 0.00039
+   },
+   {
+    "pieza": "bulevar_asientos_centro_004.001",
+    "escala": 0.0331,
+    "desajuste": 0.00018
+   }
+  ],
+  "sillas_borde_rio": [
+   {
+    "pieza": "bulevar_bancas_rio_001",
+    "escala": 0.0776,
+    "desajuste": 0.00036
+   },
+   {
+    "pieza": "bulevar_bancas_rio_002",
+    "escala": 0.0776,
+    "desajuste": 0.00012
+   },
+   {
+    "pieza": "bulevar_bancas_rio_003",
+    "escala": 0.0776,
+    "desajuste": 0.00024
+   },
+   {
+    "pieza": "bulevar_bancas_rio_004",
+    "escala": 0.0776,
+    "desajuste": 0.00026
+   },
+   {
+    "pieza": "bulevar_bancas_rio_005_copia1",
+    "escala": 0.0776,
+    "desajuste": 0.00032
+   },
+   {
+    "pieza": "bulevar_bancas_rio_005_copia2",
+    "escala": 0.0776,
+    "desajuste": 0.00011
+   },
+   {
+    "pieza": "bulevar_bancas_rio_006",
+    "escala": 0.0776,
+    "desajuste": 0.00043
+   },
+   {
+    "pieza": "bulevar_bancas_rio_006.001",
+    "escala": 0.0776,
+    "desajuste": 0.00043
+   },
+   {
+    "pieza": "bulevar_bancas_rio_006.002",
+    "escala": 0.0776,
+    "desajuste": 0.00025
+   },
+   {
+    "pieza": "bulevar_bancas_rio_007",
+    "escala": 0.0776,
+    "desajuste": 0.00027
+   },
+   {
+    "pieza": "bulevar_bancas_rio_008",
+    "escala": 0.0776,
+    "desajuste": 0.0001
+   },
+   {
+    "pieza": "bulevar_bancas_rio_009_copia1",
+    "escala": 0.0776,
+    "desajuste": 5e-05
+   },
+   {
+    "pieza": "bulevar_bancas_rio_009_copia2",
+    "escala": 0.0776,
+    "desajuste": 5e-05
+   },
+   {
+    "pieza": "bulevar_bancas_rio_010_copia1",
+    "escala": 0.0776,
+    "desajuste": 5e-05
+   },
+   {
+    "pieza": "bulevar_bancas_rio_010_copia2",
+    "escala": 0.0776,
+    "desajuste": 0.00022
+   }
+  ],
+  "ruta_cultura_casa-cultural": [
+   {
+    "pieza": "ruta_ceramica",
+    "escala": 0.0946,
+    "desajuste": 3e-05
+   },
+   {
+    "pieza": "ruta_fotografia",
+    "escala": 0.0884,
+    "desajuste": 0.00029
+   },
+   {
+    "pieza": "ruta_grafiti",
+    "escala": 0.1018,
+    "desajuste": 0.00022
+   },
+   {
+    "pieza": "ruta_salsa",
+    "escala": 0.081,
+    "desajuste": 7e-05
+   }
+  ],
+  "ruta_gastronomia_fonda": [
+   {
+    "pieza": "ruta_champus",
+    "escala": 0.0555,
+    "desajuste": 0.00037
+   },
+   {
+    "pieza": "ruta_chontaduro",
+    "escala": 0.0598,
+    "desajuste": 0.00063
+   },
+   {
+    "pieza": "ruta_marranitas",
+    "escala": 0.0556,
+    "desajuste": 0.00028
+   },
+   {
+    "pieza": "ruta_obelisco",
+    "escala": 0.063,
+    "desajuste": 0.00047
+   }
+  ],
+  "edificio_bajo": [
+   {
+    "pieza": "ruta_jairo-varela",
+    "escala": [
+     0.0169,
+     0.0194,
+     0.019
+    ],
+    "desajuste": 0.00422
+   },
+   {
+    "pieza": "edificios_modelo_bajo_001",
+    "escala": [
+     0.0254,
+     0.0264,
+     0.0286
+    ],
+    "desajuste": 0.00488
+   },
+   {
+    "pieza": "edificios_modelo_bajo_002",
+    "escala": [
+     0.0252,
+     0.0262,
+     0.0265
+    ],
+    "desajuste": 0.00061
+   },
+   {
+    "pieza": "edificios_modelo_bajo_004",
+    "escala": [
+     0.0281,
+     0.0292,
+     0.0302
+    ],
+    "desajuste": 0.00358
+   },
+   {
+    "pieza": "edificios_modelo_bajo_004001",
+    "escala": [
+     0.028,
+     0.0292,
+     0.0302
+    ],
+    "desajuste": 0.00211
+   },
+   {
+    "pieza": "edificios_modelo_bajo_005",
+    "escala": [
+     0.0335,
+     0.0349,
+     0.036
+    ],
+    "desajuste": 0.0023
+   },
+   {
+    "pieza": "edificios_modelo_bajo_006",
+    "escala": [
+     0.0308,
+     0.0321,
+     0.0374
+    ],
+    "desajuste": 0.00189
+   },
+   {
+    "pieza": "edificios_modelo_bajo_007",
+    "escala": [
+     0.0252,
+     0.0262,
+     0.0248
+    ],
+    "desajuste": 0.00069
+   },
+   {
+    "pieza": "edificios_modelo_bajo_007.001",
+    "escala": [
+     0.0253,
+     0.0263,
+     0.0248
+    ],
+    "desajuste": 0.00228
+   },
+   {
+    "pieza": "edificios_modelo_bajo_007002",
+    "escala": [
+     0.0288,
+     0.03,
+     0.0283
+    ],
+    "desajuste": 0.00166
+   },
+   {
+    "pieza": "edificios_modelo_bajo_008",
+    "escala": [
+     0.0301,
+     0.0314,
+     0.0333
+    ],
+    "desajuste": 0.00422
+   },
+   {
+    "pieza": "edificios_modelo_bajo_009",
+    "escala": [
+     0.0352,
+     0.0366,
+     0.0389
+    ],
+    "desajuste": 0.00226
+   },
+   {
+    "pieza": "edificios_modelo_bajo_009001",
+    "escala": [
+     0.0331,
+     0.0344,
+     0.0365
+    ],
+    "desajuste": 0.00235
+   },
+   {
+    "pieza": "edificios_modelo_bajo_010",
+    "escala": [
+     0.0327,
+     0.034,
+     0.0399
+    ],
+    "desajuste": 0.00052
+   },
+   {
+    "pieza": "edificios_modelo_bajo_011",
+    "escala": [
+     0.0309,
+     0.0321,
+     0.0353
+    ],
+    "desajuste": 0.00151
+   },
+   {
+    "pieza": "edificios_modelo_bajo_012",
+    "escala": [
+     0.0359,
+     0.0373,
+     0.0415
+    ],
+    "desajuste": 0.00058
+   },
+   {
+    "pieza": "edificios_modelo_bajo_013",
+    "escala": [
+     0.0285,
+     0.0326,
+     0.0306
+    ],
+    "desajuste": 0.00223
+   },
+   {
+    "pieza": "edificios_modelo_bajo_014",
+    "escala": [
+     0.0298,
+     0.0341,
+     0.0331
+    ],
+    "desajuste": 0.00031
+   },
+   {
+    "pieza": "edificios_modelo_bajo_014002",
+    "escala": [
+     0.0283,
+     0.0324,
+     0.0315
+    ],
+    "desajuste": 0.00018
+   },
+   {
+    "pieza": "edificios_modelo_bajo_014003",
+    "escala": [
+     0.021,
+     0.022,
+     0.0267
+    ],
+    "desajuste": 0.00473
+   },
+   {
+    "pieza": "edificios_modelo_bajo_015",
+    "escala": [
+     0.0313,
+     0.0358,
+     0.0315
+    ],
+    "desajuste": 0.00222
+   },
+   {
+    "pieza": "edificios_modelo_bajo_016",
+    "escala": [
+     0.031,
+     0.0355,
+     0.0347
+    ],
+    "desajuste": 0.00422
+   },
+   {
+    "pieza": "edificios_modelo_bajo_016001",
+    "escala": [
+     0.0295,
+     0.0338,
+     0.0333
+    ],
+    "desajuste": 0.0006
+   },
+   {
+    "pieza": "edificios_modelo_bajo_017001",
+    "escala": [
+     0.0242,
+     0.0278,
+     0.0237
+    ],
+    "desajuste": 0.00464
+   },
+   {
+    "pieza": "edificios_modelo_bajo_017002",
+    "escala": [
+     0.0241,
+     0.0276,
+     0.0237
+    ],
+    "desajuste": 0.0
+   },
+   {
+    "pieza": "edificios_modelo_bajo_017003",
+    "escala": [
+     0.0241,
+     0.0276,
+     0.0237
+    ],
+    "desajuste": 0.00045
+   },
+   {
+    "pieza": "edificios_modelo_bajo_018",
+    "escala": [
+     0.0242,
+     0.0277,
+     0.025
+    ],
+    "desajuste": 0.00278
+   },
+   {
+    "pieza": "edificios_modelo_bajo_019_copia2",
+    "escala": [
+     0.0252,
+     0.0289,
+     0.0263
+    ],
+    "desajuste": 0.00244
+   }
+  ],
+  "edificio_medio": [
+   {
+    "pieza": "ruta_paseo-bolivar",
+    "escala": [
+     0.0161,
+     0.0153,
+     0.0276
+    ],
+    "desajuste": 0.00217
+   },
+   {
+    "pieza": "edificios_modelo_medio_001",
+    "escala": [
+     0.0462,
+     0.0441,
+     0.0776
+    ],
+    "desajuste": 0.00105
+   },
+   {
+    "pieza": "edificios_modelo_medio_001001",
+    "escala": [
+     0.0351,
+     0.0334,
+     0.0589
+    ],
+    "desajuste": 0.00078
+   },
+   {
+    "pieza": "edificios_modelo_medio_002",
+    "escala": [
+     0.0426,
+     0.0406,
+     0.0731
+    ],
+    "desajuste": 0.0023
+   },
+   {
+    "pieza": "edificios_modelo_medio_002001",
+    "escala": [
+     0.0365,
+     0.0347,
+     0.0628
+    ],
+    "desajuste": 0.00128
+   },
+   {
+    "pieza": "edificios_modelo_medio_002002",
+    "escala": [
+     0.0399,
+     0.038,
+     0.0687
+    ],
+    "desajuste": 0.0015
+   },
+   {
+    "pieza": "edificios_modelo_medio_002003",
+    "escala": [
+     0.0457,
+     0.0435,
+     0.0787
+    ],
+    "desajuste": 0.001
+   },
+   {
+    "pieza": "edificios_modelo_medio_002004",
+    "escala": [
+     0.0411,
+     0.0392,
+     0.0705
+    ],
+    "desajuste": 0.00237
+   },
+   {
+    "pieza": "edificios_modelo_medio_002005",
+    "escala": [
+     0.0363,
+     0.0346,
+     0.0628
+    ],
+    "desajuste": 0.00015
+   },
+   {
+    "pieza": "edificios_modelo_medio_003",
+    "escala": [
+     0.034,
+     0.0324,
+     0.0478
+    ],
+    "desajuste": 0.00295
+   },
+   {
+    "pieza": "edificios_modelo_medio_003001",
+    "escala": [
+     0.0291,
+     0.0278,
+     0.041
+    ],
+    "desajuste": 0.00256
+   },
+   {
+    "pieza": "edificios_modelo_medio_003002",
+    "escala": [
+     0.0274,
+     0.0261,
+     0.0388
+    ],
+    "desajuste": 0.00041
+   },
+   {
+    "pieza": "edificios_modelo_medio_004",
+    "escala": [
+     0.0333,
+     0.0333,
+     0.0499
+    ],
+    "desajuste": 0.00098
+   },
+   {
+    "pieza": "edificios_modelo_medio_005",
+    "escala": [
+     0.0319,
+     0.0319,
+     0.0494
+    ],
+    "desajuste": 0.00169
+   },
+   {
+    "pieza": "edificios_modelo_medio_005002",
+    "escala": [
+     0.0376,
+     0.0376,
+     0.0586
+    ],
+    "desajuste": 0.00015
+   },
+   {
+    "pieza": "edificios_modelo_medio_005003",
+    "escala": [
+     0.0351,
+     0.0351,
+     0.0544
+    ],
+    "desajuste": 0.00197
+   },
+   {
+    "pieza": "edificios_modelo_medio_006",
+    "escala": [
+     0.0392,
+     0.0392,
+     0.0558
+    ],
+    "desajuste": 0.00135
+   },
+   {
+    "pieza": "edificios_modelo_medio_006001",
+    "escala": [
+     0.0359,
+     0.0359,
+     0.0511
+    ],
+    "desajuste": 0.00044
+   },
+   {
+    "pieza": "edificios_modelo_medio_006002",
+    "escala": [
+     0.0368,
+     0.0368,
+     0.0524
+    ],
+    "desajuste": 0.00058
+   },
+   {
+    "pieza": "edificios_modelo_medio_006003",
+    "escala": [
+     0.036,
+     0.036,
+     0.0511
+    ],
+    "desajuste": 0.00174
+   }
+  ],
+  "edificio_alto": [
+   {
+    "pieza": "edificios_modelo_alto_001",
+    "escala": [
+     0.0309,
+     0.0268,
+     0.0619
+    ],
+    "desajuste": 0.00101
+   },
+   {
+    "pieza": "edificios_modelo_alto_002",
+    "escala": [
+     0.0382,
+     0.0331,
+     0.0764
+    ],
+    "desajuste": 0.0003
+   },
+   {
+    "pieza": "edificios_modelo_alto_002001",
+    "escala": [
+     0.0405,
+     0.0351,
+     0.0809
+    ],
+    "desajuste": 0.0006
+   },
+   {
+    "pieza": "edificios_modelo_alto_003",
+    "escala": [
+     0.0387,
+     0.0336,
+     0.0729
+    ],
+    "desajuste": 0.00051
+   },
+   {
+    "pieza": "edificios_modelo_alto_003001",
+    "escala": [
+     0.0309,
+     0.0268,
+     0.0579
+    ],
+    "desajuste": 0.00103
+   },
+   {
+    "pieza": "edificios_modelo_alto_003002",
+    "escala": [
+     0.0309,
+     0.0268,
+     0.0579
+    ],
+    "desajuste": 0.00094
+   }
+  ],
+  "banco_bogota": [
+   {
+    "pieza": "hito_banco_bogota",
+    "escala": 0.2703,
+    "desajuste": 0.00017
+   }
+  ],
+  "boulevard_cafe": [
+   {
+    "pieza": "hito_boulevard_cafe",
+    "escala": 0.249,
+    "desajuste": 0.00031
+   }
+  ],
+  "Kiosko": [
+   {
+    "pieza": "hito_Kiosko",
+    "escala": 0.0904,
+    "desajuste": 0.00011
+   }
+  ],
+  "iglesia_ermita": [
+   {
+    "pieza": "hito_la-ermita",
+    "escala": 0.6394,
+    "desajuste": 0.00018
+   }
+  ],
+  "subway": [
+   {
+    "pieza": "hito_subway",
+    "escala": 0.077,
+    "desajuste": 0.00085
+   }
+  ],
+  "lugar_biblioteca-centenario": [
+   {
+    "pieza": "lugar_biblioteca",
+    "escala": 0.4557,
+    "desajuste": 0.0002
+   }
+  ],
+  "lugar_gato-de-tejada": [
+   {
+    "pieza": "lugar_gato",
+    "escala": 0.1342,
+    "desajuste": 0.00115
+   }
+  ],
+  "lugar_mucic": [
+   {
+    "pieza": "lugar_mucic",
+    "escala": 0.548,
+    "desajuste": 0.00026
+   }
+  ],
+  "lugar_museo-la-tertulia": [
+   {
+    "pieza": "lugar_tertulia",
+    "escala": 0.139,
+    "desajuste": 0.00367
+   }
+  ],
+  "postes": [
+   {
+    "pieza": "postes_de_luz_001",
+    "escala": 0.0523,
+    "desajuste": 0.00019
+   },
+   {
+    "pieza": "postes_de_luz_003_copia2",
+    "escala": 0.0523,
+    "desajuste": 0.00133
+   },
+   {
+    "pieza": "postes_de_luz_003_copia3",
+    "escala": 0.0523,
+    "desajuste": 0.00109
+   },
+   {
+    "pieza": "postes_de_luz_004",
+    "escala": 0.0523,
+    "desajuste": 0.00019
+   },
+   {
+    "pieza": "postes_de_luz_005_copia1",
+    "escala": 0.0523,
+    "desajuste": 0.00024
+   },
+   {
+    "pieza": "postes_de_luz_005_copia2",
+    "escala": 0.0523,
+    "desajuste": 0.00115
+   },
+   {
+    "pieza": "postes_de_luz_006",
+    "escala": 0.0523,
+    "desajuste": 0.00025
+   },
+   {
+    "pieza": "postes_de_luz_007",
+    "escala": 0.0523,
+    "desajuste": 5e-05
+   },
+   {
+    "pieza": "postes_de_luz_008",
+    "escala": 0.0523,
+    "desajuste": 0.00014
+   },
+   {
+    "pieza": "postes_de_luz_009",
+    "escala": 0.0523,
+    "desajuste": 0.00029
+   },
+   {
+    "pieza": "postes_de_luz_010",
+    "escala": 0.0523,
+    "desajuste": 3e-05
+   },
+   {
+    "pieza": "postes_de_luz_011",
+    "escala": 0.0523,
+    "desajuste": 5e-05
+   },
+   {
+    "pieza": "postes_de_luz_012",
+    "escala": 0.0523,
+    "desajuste": 3e-05
+   },
+   {
+    "pieza": "postes_de_luz_014",
+    "escala": 0.0523,
+    "desajuste": 0.00037
+   },
+   {
+    "pieza": "postes_de_luz_015",
+    "escala": 0.0523,
+    "desajuste": 6e-05
+   },
+   {
+    "pieza": "postes_de_luz_016",
+    "escala": 0.0523,
+    "desajuste": 4e-05
+   },
+   {
+    "pieza": "postes_de_luz_017",
+    "escala": 0.0523,
+    "desajuste": 0.00016
+   },
+   {
+    "pieza": "postes_de_luz_018",
+    "escala": 0.0523,
+    "desajuste": 0.00011
+   },
+   {
+    "pieza": "postes_de_luz_019_copia1",
+    "escala": 0.0523,
+    "desajuste": 0.00029
+   },
+   {
+    "pieza": "postes_de_luz_019_copia2",
+    "escala": 0.0523,
+    "desajuste": 0.00119
+   },
+   {
+    "pieza": "postes_de_luz_019_copia3",
+    "escala": 0.0523,
+    "desajuste": 0.00118
+   },
+   {
+    "pieza": "postes_de_luz_020",
+    "escala": 0.0523,
+    "desajuste": 0.0001
+   },
+   {
+    "pieza": "postes_de_luz_021",
+    "escala": 0.0523,
+    "desajuste": 0.00019
+   },
+   {
+    "pieza": "postes_de_luz_022",
+    "escala": 0.0523,
+    "desajuste": 9e-05
+   },
+   {
+    "pieza": "postes_de_luz_023_copia1",
+    "escala": 0.0523,
+    "desajuste": 0.00021
+   },
+   {
+    "pieza": "postes_de_luz_023_copia2",
+    "escala": 0.0523,
+    "desajuste": 0.00112
+   },
+   {
+    "pieza": "postes_de_luz_023_copia3",
+    "escala": 0.0523,
+    "desajuste": 0.00112
+   },
+   {
+    "pieza": "postes_de_luz_023_copia4",
+    "escala": 0.0523,
+    "desajuste": 0.00112
+   },
+   {
+    "pieza": "postes_de_luz_024_copia1",
+    "escala": 0.0523,
+    "desajuste": 6e-05
+   },
+   {
+    "pieza": "postes_de_luz_024_copia2",
+    "escala": 0.0523,
+    "desajuste": 0.00102
+   },
+   {
+    "pieza": "postes_de_luz_026",
+    "escala": 0.0523,
+    "desajuste": 0.00011
+   },
+   {
+    "pieza": "postes_de_luz_027",
+    "escala": 0.0523,
+    "desajuste": 0.00011
+   },
+   {
+    "pieza": "postes_de_luz_028",
+    "escala": 0.0523,
+    "desajuste": 0.00024
+   },
+   {
+    "pieza": "postes_de_luz_029_copia2",
+    "escala": 0.0523,
+    "desajuste": 0.00125
+   },
+   {
+    "pieza": "postes_de_luz_029_copia3",
+    "escala": 0.0523,
+    "desajuste": 0.00125
+   },
+   {
+    "pieza": "postes_de_luz_031_copia2",
+    "escala": 0.0523,
+    "desajuste": 0.00103
+   },
+   {
+    "pieza": "postes_de_luz_032",
+    "escala": 0.0523,
+    "desajuste": 0.00019
+   },
+   {
+    "pieza": "postes_de_luz_033",
+    "escala": 0.0523,
+    "desajuste": 0.00015
+   },
+   {
+    "pieza": "postes_de_luz_035_copia2",
+    "escala": 0.0523,
+    "desajuste": 0.00101
+   },
+   {
+    "pieza": "postes_de_luz_035_copia3",
+    "escala": 0.0523,
+    "desajuste": 0.00101
+   },
+   {
+    "pieza": "postes_de_luz_036",
+    "escala": 0.0523,
+    "desajuste": 0.00015
+   }
+  ],
+  "semaforo": [
+   {
+    "pieza": "semaforos_001",
+    "escala": 0.0823,
+    "desajuste": 9e-05
+   },
+   {
+    "pieza": "semaforos_002",
+    "escala": 0.0823,
+    "desajuste": 0.00043
+   },
+   {
+    "pieza": "semaforos_003",
+    "escala": 0.0823,
+    "desajuste": 0.0001
+   },
+   {
+    "pieza": "semaforos_004",
+    "escala": 0.0823,
+    "desajuste": 0.00025
+   },
+   {
+    "pieza": "semaforos_005",
+    "escala": 0.0823,
+    "desajuste": 0.00013
+   },
+   {
+    "pieza": "semaforos_006",
+    "escala": 0.0823,
+    "desajuste": 0.00021
+   },
+   {
+    "pieza": "semaforos_007",
+    "escala": 0.0823,
+    "desajuste": 0.00036
+   },
+   {
+    "pieza": "semaforos_008",
+    "escala": 0.0823,
+    "desajuste": 0.00037
+   },
+   {
+    "pieza": "semaforos_009",
+    "escala": 0.0823,
+    "desajuste": 9e-05
+   },
+   {
+    "pieza": "semaforos_010",
+    "escala": 0.0823,
+    "desajuste": 0.00043
+   }
+  ]
+ },
+ "sin_cambiar": [
+  {
+   "pieza": "arboles_arbol2_005",
+   "modelo": "Arbol2",
+   "desajuste": 0.0401
+  },
+  {
+   "pieza": "arboles_arbol3_015_copia1",
+   "modelo": "Arbol3",
+   "desajuste": 0.0057
+  },
+  {
+   "pieza": "arboles_arbol4_006",
+   "modelo": "Arbol4",
+   "desajuste": 0.0234
+  },
+  {
+   "pieza": "bulevar_sillas_centro_2_01",
+   "modelo": "sillas_centro_2",
+   "desajuste": 0.0441
+  },
+  {
+   "pieza": "bulevar_sillas_centro_2_02",
+   "modelo": "sillas_centro_2",
+   "desajuste": 0.0441
+  },
+  {
+   "pieza": "bulevar_sillas_centro_2_03",
+   "modelo": "sillas_centro_2",
+   "desajuste": 0.0452
+  },
+  {
+   "pieza": "bulevar_sillas_centro_2_04",
+   "modelo": "sillas_centro_2",
+   "desajuste": 0.0473
+  },
+  {
+   "pieza": "bulevar_sillas_centro_2_05",
+   "modelo": "sillas_centro_2",
+   "desajuste": 0.0582
+  },
+  {
+   "pieza": "edificios_modelo_bajo_014001",
+   "modelo": "edificio_bajo",
+   "desajuste": 0.0054
+  },
+  {
+   "pieza": "edificios_modelo_bajo_017",
+   "modelo": "edificio_bajo",
+   "desajuste": 0.0051
+  },
+  {
+   "pieza": "edificios_modelo_bajo_019_copia1",
+   "modelo": "edificio_bajo",
+   "desajuste": 0.0727
+  },
+  {
+   "pieza": "postes_de_luz_002",
+   "modelo": "postes",
+   "desajuste": 0.2445
+  },
+  {
+   "pieza": "postes_de_luz_003_copia1",
+   "modelo": "postes",
+   "desajuste": 0.2432
+  },
+  {
+   "pieza": "postes_de_luz_013",
+   "modelo": "postes",
+   "desajuste": 0.2592
+  },
+  {
+   "pieza": "postes_de_luz_025",
+   "modelo": "postes",
+   "desajuste": 0.0974
+  },
+  {
+   "pieza": "postes_de_luz_029_copia1",
+   "modelo": "postes",
+   "desajuste": 0.1542
+  },
+  {
+   "pieza": "postes_de_luz_030",
+   "modelo": "postes",
+   "desajuste": 0.0269
+  },
+  {
+   "pieza": "postes_de_luz_031_copia1",
+   "modelo": "postes",
+   "desajuste": 0.1333
+  },
+  {
+   "pieza": "postes_de_luz_034",
+   "modelo": "postes",
+   "desajuste": 0.1986
+  },
+  {
+   "pieza": "postes_de_luz_035_copia1",
+   "modelo": "postes",
+   "desajuste": 0.1662
+  }
+ ],
+ "sin_original": [],
+ "caras": {
+  "quads": 622806,
+  "triangulos": 143582
+ },
+ "cambiados_total": 236
+}

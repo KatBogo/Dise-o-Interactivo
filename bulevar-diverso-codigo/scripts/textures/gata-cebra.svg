@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="512" viewBox="0 0 1024 512">
+  <!-- The zebra gata: wide black and white bands across the body and a red one around its middle (only the body: v > 0.36, never down the legs).
+       Left = tail end, right = head. -->
+  <rect width="1024" height="512" fill="#F4F4F0"/>
+  <g fill="#1C1C1C">
+    <rect x="0" y="0" width="70" height="512"/>
+    <rect x="140" y="0" width="70" height="512"/>
+    <rect x="280" y="0" width="70" height="512"/>
+    <rect x="420" y="0" width="60" height="512"/>
+    <rect x="690" y="0" width="70" height="512"/>
+    <rect x="830" y="0" width="70" height="512"/>
+    <rect x="960" y="0" width="64" height="512"/>
+  </g>
+  <rect x="540" y="0" width="90" height="330" fill="#D4232B"/>
+</svg>

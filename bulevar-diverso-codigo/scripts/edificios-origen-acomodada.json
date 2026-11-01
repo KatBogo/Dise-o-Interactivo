@@ -1,0 +1,110 @@
+{
+ "_info": "D\u00f3nde estaba cada lugar, hito y casa de las rutas cuando se export\u00f3 isla_para_acomodar.glb (Assets/modelos/isla_bulevar-completa.glb de esa misma exportaci\u00f3n): la p\u00e1gina los mueve, gira y escala como t\u00fa desde ah\u00ed.",
+ "feet": {
+  "hito_banco_bogota": [
+   -3.5723,
+   0.3,
+   4.2609
+  ],
+  "hito_boulevard_cafe": [
+   10.9396,
+   0.3,
+   5.3029
+  ],
+  "hito_Kiosko": [
+   19.7006,
+   0.3,
+   -1.2443
+  ],
+  "hito_la-ermita": [
+   17.7713,
+   0.3,
+   5.772
+  ],
+  "hito_subway": [
+   2.3654,
+   0.3,
+   5.4524
+  ],
+  "lugar_biblioteca": [
+   -9.4431,
+   0.311,
+   2.14
+  ],
+  "lugar_gato": [
+   -4.1217,
+   0.2655,
+   -2.8913
+  ],
+  "lugar_mucic": [
+   5.0844,
+   0.312,
+   6.576
+  ],
+  "lugar_tertulia": [
+   -17.2481,
+   0.2911,
+   3.8583
+  ],
+  "ruta_ceramica": [
+   9.5617,
+   0.31,
+   4.8925
+  ],
+  "ruta_champus": [
+   6.144,
+   0.31,
+   5.2743
+  ],
+  "ruta_cholado": [
+   -1.0448,
+   0.31,
+   4.2772
+  ],
+  "ruta_chontaduro": [
+   15.5155,
+   0.31,
+   4.9511
+  ],
+  "ruta_chontaduro.001": [
+   8.7392,
+   0.31,
+   5.0147
+  ],
+  "ruta_fotografia": [
+   4.6092,
+   0.31,
+   -2.2024
+  ],
+  "ruta_grafiti": [
+   15.8833,
+   0.31,
+   -2.5233
+  ],
+  "ruta_jairo-varela": [
+   -7.6631,
+   0.3,
+   -6.387
+  ],
+  "ruta_marranitas": [
+   1.3149,
+   0.31,
+   4.8283
+  ],
+  "ruta_obelisco": [
+   -12.5344,
+   0.31,
+   2.3631
+  ],
+  "ruta_paseo-bolivar": [
+   0.7035,
+   0.3,
+   4.7284
+  ],
+  "ruta_salsa": [
+   -4.0123,
+   0.31,
+   -5.7868
+  ]
+ }
+}

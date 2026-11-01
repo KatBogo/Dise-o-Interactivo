@@ -1,0 +1,9 @@
+node_modules/
+.next/
+dist/
+capturas/
+bulevar-diverso-github/
+*.zip
+*.blend1
+Assets/modelos/originales/
+Assets/modelos/fbx/

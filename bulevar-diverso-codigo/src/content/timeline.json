@@ -1,0 +1,56 @@
+{
+  "_info": "Línea del tiempo del intro. year = la fecha o el rango · name = el nombre del momento · title · text · image = ruta dentro de /public SIN barra al inicio · imageAlt = qué muestra la foto. Las fotos reales se ponen en Assets/timeline/ con el mismo nombre (01_puente-ortiz.jpg…): scripts/sync-assets.mjs las copia a public/timeline/ y reemplazan las ilustraciones provisionales hechas con la isla 3D.",
+  "eyebrow": "Línea de tiempo",
+  "title": "La historia del Bulevar",
+  "lead": "Baja despacio y descubre con Chonti cómo nació el Bulevar.",
+  "items": [
+    {
+      "year": "1835 – 1845",
+      "name": "El Puente Ortiz",
+      "title": "Nace la primera conexión sobre el río",
+      "text": "Fray José Ignacio Ortiz lideró la construcción del primer puente de mampostería sobre el río Cali. Esta estructura conectó por primera vez el centro histórico con el norte de la ciudad, convirtiéndose en el cimiento del patrimonio urbano.",
+      "image": "timeline/01_puente-ortiz.jpg",
+      "imageAlt": "Vista histórica del Puente Ortiz"
+    },
+    {
+      "year": "1950 – 2010",
+      "name": "La Avenida Colombia",
+      "title": "La era vehicular y el tráfico pesado",
+      "text": "La Avenida Colombia se convirtió en una de las calles más transitadas de Cali. Durante décadas, el flujo constante de vehículos creó una barrera de ruido y congestión que separó a los ciudadanos de la ribera del río.",
+      "image": "timeline/02_avenida-colombia.jpg",
+      "imageAlt": "Avenida Colombia y Puente Ortiz"
+    },
+    {
+      "year": "2011 – 2012",
+      "name": "Las Obras y los Hallazgos",
+      "title": "El redescubrimiento del patrimonio",
+      "text": "Diseñado por la arquitecta Elly Burckhardt, arrancó el proyecto de hundimiento vial. Durante las excavaciones para el túnel se redescubrieron los muros y cimientos originales del Puente Ortiz de 1840 junto a vestigios arqueológicos de la Cali antigua.",
+      "image": "timeline/03_obras-y-hallazgos.jpg",
+      "imageAlt": "Excavaciones y vestigios del Puente Ortiz"
+    },
+    {
+      "year": "2013",
+      "name": "Inauguración del Bulevar",
+      "title": "De vía congestionada a paseo peatonal",
+      "text": "El 16 de mayo de 2013 se inauguró el Bulevar del Río junto al Túnel Mundialista. El espacio sobre la Avenida Colombia se transformó en un paseo peatonal abierto, devolviéndole a la ciudad la brisa y el encuentro ciudadano junto al agua.",
+      "image": "timeline/04_inauguracion-bulevar.jpg",
+      "imageAlt": "Vista general del Bulevar del Río Cali"
+    },
+    {
+      "year": "2014 – 2023",
+      "name": "Corredor Festivo y Cultural",
+      "title": "El epicentro de la cultura caleña",
+      "text": "El Bulevar se consolidó como el escenario al aire libre para los eventos más representativos de la ciudad: el Alumbrado Navideño, la Feria Internacional del Libro (CaliLee) y el festival urbano Sucursal Fest.",
+      "image": "timeline/05_corredor-festivo.jpg",
+      "imageAlt": "Bulevar del Río iluminado"
+    },
+    {
+      "year": "2024",
+      "name": "La COP16",
+      "title": "Pabellón global de la biodiversidad",
+      "text": "El Bulevar fue elegido como el corazón de la Zona Verde durante la Cumbre de Biodiversidad COP16. El paseo peatonal albergó emprendimientos sostenibles, pedagogía ambiental y cultura comunitaria ante visitantes de todo el mundo.",
+      "image": "timeline/06_cop16-zona-verde.jpg",
+      "imageAlt": "Zona Verde en el Bulevar del Río"
+    }
+  ]
+}

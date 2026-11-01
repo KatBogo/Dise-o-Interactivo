@@ -1,0 +1,83 @@
+{
+  "_info": "Qué isla se muestra. variant = \"real\" (la del mapa real del Bulevar del Río) o \"clasica\" (la isla anterior, guardada tal cual). pedestrian = desde dónde hasta dónde va el Bulevar peatonal (along: -23 oeste … 23 este); fuera de ese tramo, la orilla sur es zona verde con un andén junto al río. places / stops = dónde va cada lugar o parada en esa isla (along a lo largo del río, across: + orilla sur, - orilla norte), encima de lo que dicen places.json y routes.json. size = lo ancho que ocupa un lugar con modelo real. sink = cuánto se hunde en la isla (un modelo con su propio suelo queda con el suelo a ras).",
+  "variant": "real",
+  "variants": {
+    "clasica": {
+      "pedestrian": [-23, 23],
+      "places": {},
+      "stops": {}
+    },
+    "real": {
+      "_ref": "Marcas sobre la isla: el Bulevar peatonal solo en su tramo, con el Túnel Mundialista entrando y saliendo en sus dos extremos · La Ermita al final (orilla sur) · Biblioteca Centenario · Museo La Tertulia · el Gato del Río en la franja verde junto al río (orilla norte) · Puente Ortiz al final.",
+      "pedestrian": [-6.3, 19.3],
+      "_tunel": "La Av. Colombia por la orilla sur: a la vista fuera del Bulevar peatonal; entra al Túnel Mundialista en tunnels[0] (al inicio del Bulevar) y sale en tunnels[1] (al final). offsets = de dónde a dónde va la calzada, medido desde el centro del río.",
+      "southRoad": { "offsets": [1.05, 2.25], "tunnels": [[-9.4, -6.3], [19.3, 22.0]] },
+      "_norte": "La Av. 4 Oeste (orilla norte) se separa del río al oeste de x (by = cuánto; blend = qué tan larga es la curva), dejando la franja verde junto al agua donde está el Gato del Río. En la curva la calle conserva su ancho.",
+      "northShift": { "x": -3.0, "blend": 2.6, "by": -2.1 },
+      "_edificios": "extraRows = más filas de edificios en un tramo (offset desde el río, de x0 a x1). emptyLots = qué parte de los lotes queda vacía (0 a 1).",
+      "extraRows": [{ "offset": 3.35, "x": [-22.5, -6.6] }, { "offset": 5.75, "x": [3.9, 18.2] }],
+      "emptyLots": 0.14,
+      "_alturas": "buildingHeights = qué tan alto se ve uno de tus edificios (de Assets/modelos/isla_para_acomodar.glb), como parte de su altura: 0.6 = al 60 %. Su base no se mueve.",
+      "buildingHeights": { "edificios_modelo_medio_002003": 0.6 },
+      "_calles": "carrera3West / carrera3East = de dónde a dónde va la Carrera 3 (de una calle a otra: al oeste, el Museo La Tertulia y sus jardines; al este, la segunda fila de la cuadra). northStreet = la segunda calle de la orilla norte, detrás de la primera cuadra (offsets: de dónde a dónde va, x: el tramo donde cabe). streets = otras calles, como una línea de puntos [along, across] con su ancho (la de la Ermita).",
+      "carrera3West": -13.33,
+      "carrera3East": -5.47,
+      "northStreet": { "offsets": [-6.25, -5.55], "x": [3.23, 23] },
+      "_av1Norte": "av1Norte.to = dónde termina la Av. 1 Norte (la primera calle de la orilla norte, junto al río) en el este: donde empieza el parque de La Retreta. Ahí la calle sube por el lado de la cuadra hasta la segunda calle (calle_retreta en streets). Junto al río, en el parque, no hay calle.",
+      "av1Norte": { "to": 16.13 },
+      "_retreta": "La Retreta (Parque Paseo Bolívar), en la orilla norte junto al Puente Ortiz: x = desde dónde va el parque (hasta el final de la isla), back = hasta dónde llega (antes de la segunda calle). paths = los caminos de cemento (como en tu terreno), cada uno [desde along, hasta along, desde across, hasta across]; kiosk = el círculo de cemento del kiosco (centro along/across, radio). stages = las tarimas del Sucursal Fest: dónde va su centro, size = tamaño, yaw = hacia dónde mira (grados: 0 = hacia el río).",
+      "retreta": {
+        "x": 16.13,
+        "back": -5.4,
+        "paths": [
+          [17.9, 19.1, -5.6, -0.85],
+          [17.2, 22.95, -4.05, -3.25]
+        ],
+        "kiosk": { "along": 19.7, "across": -2.0, "radius": 0.42 },
+        "stages": [
+          { "along": 21.75, "across": -1.7, "size": 0.55, "yaw": -139 },
+          { "along": 19.7, "across": -2.95, "size": 0.42, "yaw": 0 }
+        ]
+      },
+      "streets": [
+        { "name": "calle_ermita", "points": [[20.75, 6.0], [20.85, 4.6], [21.25, 3.4], [22.0, 2.85], [23.2, 2.7]], "width": 0.7 },
+        { "name": "calle_retreta", "points": [[15.75, -1.8], [15.75, -6.0]], "width": 0.75 }
+      ],
+      "_corredor": "corridor = el andén del Bulevar que sigue después de su final, junto a la zanja del túnel, hasta la calle de la Ermita (x: de dónde a dónde; across: de la zanja hacia afuera).",
+      "corridor": { "x": [19.3, 21.9], "across": [2.25, 3.9] },
+      "_lugares": "turn = cuánto se gira el lugar (grados) sobre como queda por defecto. floor (el Gato) = de dónde a dónde va el piso de piedra debajo de él, a lo largo de la franja verde. pave = [ancho, fondo] del pavimento debajo del lugar (y un poco alrededor). En stops, la Ermita también tiene turn (grados: -45 = en diagonal, la fachada hacia el Bulevar y el río).",
+      "places": {
+        "biblioteca": { "along": -10.6, "across": 3.3, "turn": 180 },
+        "tertulia": { "along": -16.83, "across": 4.11, "size": 5.3, "turn": 173.8, "sink": 0.02, "pave": [5.3, 3.0] },
+        "gato": { "along": -5.8, "across": -2.22, "size": 1.95, "sink": 0.039, "floor": [-7.5, -0.45] },
+        "mucic": { "along": 5.0, "across": 4.62, "size": 1.3, "turn": 180 }
+      },
+      "stops": {
+        "ermita": { "along": 18.6, "across": 4.9, "turn": -45 },
+        "puente-ortiz": { "along": 18.2, "across": 0 },
+        "champus": { "along": 6.8, "across": 4.6 },
+        "marranitas": { "along": 1.05, "across": 4.6 },
+        "grafiti": { "along": 9.9, "across": -2.93 },
+        "jairo-varela": { "along": -8.3, "across": -5.35 },
+        "salsa": { "along": -3.2, "across": -5.7 },
+        "paseo-bolivar": { "along": -1.6, "across": 4.6 },
+        "ceramica": { "along": 8.6, "across": 4.6 }
+      },
+      "_cambios": "buildingSwaps = un edificio genérico cambiado a mano: el más cercano a 'at' [along, across] pasa a ser el modelo 'model' (bajo, medio o alto), mirando hacia 'face' (rio, calle_este, calle_oeste o atras).",
+      "buildingSwaps": [
+        { "at": [2.29, -4.75], "model": "medio", "face": "calle_este" }
+      ],
+      "_hitos":"Edificios icónicos (sus GLB en Assets/modelos): dónde va cada uno (along, across), lo ancho (size) y cuánto se gira (turn, grados). Solo aparecen cuando su archivo está.",
+      "landmarks": [
+        { "model": "banco_bogota", "name": "Banco de Bogotá", "along": -3.85, "across": 4.6, "size": 1.3 },
+        { "model": "boulevard_cafe", "name": "Edificio del Café Boulevard", "along": 11.0, "across": 4.78, "size": 1.65, "turn": 180 },
+        { "model": "subway", "name": "Edificio Entreceibas (Subway)", "along": 2.5, "across": 4.6, "size": 1.3, "turn": 90 },
+        { "model": "Kiosko", "name": "Kiosco de La Retreta", "along": 19.7, "across": -2.0, "size": 0.85 }
+      ],
+      "_eventos": "events = dónde va el marcador de cada evento en esta isla (encima de events.json).",
+      "events": {
+        "sucursal": { "along": 20.6, "across": -2.5 }
+      }
+    }
+  }
+}

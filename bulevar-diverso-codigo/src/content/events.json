@@ -1,0 +1,44 @@
+{
+  "_info": "Eventos. dates = cuándo pasa (la época aproximada si no hay fecha exacta) y place = dónde; salen en la tarjeta del evento.'id' debe coincidir con un ambiente en three/Atmosphere.jsx (feria | alumbrado | sucursal) y su decoración en three/events/EventDecor.jsx.",
+  "items": [
+    {
+      "id": "feria",
+      "name": "Feria del libro",
+      "when": "CaliLee",
+      "dates": "Mediados de octubre, suele durar 11 días",
+      "place": "Bulevar del Río",
+      "location": {
+        "along": -2.4,
+        "across": 2.2
+      },
+      "guide": "Se armó la Feria del Libro: pabellones de libros a lo largo del bulevar, banderines de colores y hojas volando.",
+      "body": "Carpas, autores y libros a la orilla del río. Lleva bolso grande."
+    },
+    {
+      "id": "alumbrado",
+      "name": "Alumbrado",
+      "when": "Diciembre",
+      "dates": "De principios de diciembre a principios de enero",
+      "place": "Bulevar del Río",
+      "location": {
+        "along": 0.6,
+        "across": 1.7
+      },
+      "guide": "Se hizo de noche y prendieron el alumbrado. ¡Tutaina tuturumá! Mira cómo brilla el río.",
+      "body": "En diciembre el río se prende. Camínalo de noche y déjate deslumbrar."
+    },
+    {
+      "id": "sucursal",
+      "name": "Sucursal Fest",
+      "when": "Fin de semana",
+      "dates": "Un fin de semana de fiesta (fecha por confirmar)",
+      "place": "La Retreta (Paseo Bolívar), junto al Puente Ortiz",
+      "location": {
+        "along": 7.8,
+        "across": 1.5
+      },
+      "guide": "¡Llegó el Sucursal Fest! Tarimas con luces, salsa y baile hasta que el cuerpo aguante.",
+      "body": "Salsa, luces y gente bailando en la calle. Lleva zapatos cómodos."
+    }
+  ]
+}

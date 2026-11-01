@@ -1,0 +1,222 @@
+{
+  "_info": "Rutas por categoría. placeholder = food (fonda) | monument (casa cultural) | tent (taller): el edificio de la parada, en su manzana; model = .glb opcional. landmark: true = la parada ya está modelada en la isla (La Ermita, Puente Ortiz). Los nombres de comida/talleres son genéricos (no negocios reales). desc = la explicación de la parada (sale en su tarjeta al tocarla, con o sin guía). Culturales: los lugares (place = cuál) y el Puente Ortiz. hitos = La Ermita (en la isla, fuera de las rutas). replaces = el edificio de tus edificios que la parada reemplaza (la de las empanadas del Obelisco). model = el modelo de la casa de la parada.",
+  "categories": [
+    {
+      "id": "gastronomico",
+      "name": "Gastronómicas",
+      "placeholder": "food",
+      "guide": "Ruta gastronómica activada. Ven con hambre, que esto es de picar en picar.",
+      "stops": [
+        {
+          "id": "champus",
+          "name": "Champús y lulada",
+          "location": {
+            "along": -15.6,
+            "across": 4.6
+          },
+          "note": "Pa' arrancar fresquito.",
+          "desc": "Una fonda de toda la vida donde sirven champús —maíz, lulo, piña y canela— y lulada bien fría. Es la bebida más vallecaucana que hay y la mejor forma de arrancar el recorrido.",
+          "model": "/models/ruta_gastronomia_fonda.glb"
+        },
+        {
+          "id": "marranitas",
+          "name": "Empanadas y marranitas",
+          "location": {
+            "along": 1.6,
+            "across": 4.6
+          },
+          "note": "Con ají, obvio.",
+          "desc": "Empanadas de maíz recién fritas y marranitas, bolitas de plátano verde rellenas de chicharrón. Se comen calienticas, con ají y limón, de pie en el mostrador.",
+          "model": "/models/ruta_gastronomia_fonda.glb"
+        },
+        {
+          "id": "chontaduro",
+          "name": "Chontaduro con sal y miel",
+          "location": {
+            "along": 14.6,
+            "across": 4.6
+          },
+          "note": "El de la casa. Ni se pregunta.",
+          "desc": "El chontaduro es la fruta de una palma del Pacífico que se come cocinada, con sal y miel. Dicen que da energía pa todo el día; aquí se prueba al lado del río, como manda la tradición.",
+          "model": "/models/ruta_gastronomia_fonda.glb"
+        },
+        {
+          "id": "obelisco",
+          "name": "Empanadas del Obelisco",
+          "replaces": "edificios_modelo_medio_005.001",
+          "location": {
+            "along": -12.5,
+            "across": 2
+          },
+          "note": "Las empanadas más famosas de Cali.",
+          "desc": "En la esquina del Obelisco, frente a La Tertulia, se venden las famosas empanadas: crocantes, de maíz, con ají y limón. Se comen de pie y calienticas.",
+          "model": "/models/ruta_gastronomia_fonda.glb"
+        }
+      ]
+    },
+    {
+      "id": "culturales",
+      "name": "Culturales",
+      "placeholder": "monument",
+      "guide": "Ruta cultural. Te voy mostrando los rincones con historia del bulevar.",
+      "stops": [
+        {
+          "id": "tertulia",
+          "name": "Museo La Tertulia",
+          "place": "tertulia",
+          "landmark": true,
+          "location": {
+            "along": 0,
+            "across": 0
+          },
+          "note": "Arte moderno a la orilla del río.",
+          "desc": "El museo de arte moderno de Cali, entre árboles y con su teatrino al aire libre. Exposiciones, cine y tardes de cultura a pocos pasos del río."
+        },
+        {
+          "id": "mucic",
+          "name": "MUCIC",
+          "place": "mucic",
+          "landmark": true,
+          "location": {
+            "along": 0,
+            "across": 0
+          },
+          "note": "La historia de Cali en una casona.",
+          "desc": "El Museo de la Ciudad de Cali, en una casona colonial: la historia de la ciudad contada en sus salas y su patio."
+        },
+        {
+          "id": "biblioteca",
+          "name": "Biblioteca Centenario",
+          "place": "biblioteca",
+          "landmark": true,
+          "location": {
+            "along": 0,
+            "across": 0
+          },
+          "note": "Libros con vista al río.",
+          "desc": "Una biblioteca pública junto al río, de ladrillo y con salas para leer, estudiar y quedarse un rato en silencio."
+        },
+        {
+          "id": "gato",
+          "name": "El Gato del Río",
+          "place": "gato",
+          "landmark": true,
+          "location": {
+            "along": 0,
+            "across": 0
+          },
+          "note": "El gato de Tejada y sus novias.",
+          "desc": "La escultura de Hernando Tejada, el gato que se volvió símbolo de Cali, acompañado de sus novias pintadas por artistas de la ciudad."
+        },
+        {
+          "id": "puente-ortiz",
+          "name": "Puente Ortiz",
+          "landmark": true,
+          "location": {
+            "along": -16.5,
+            "across": 0
+          },
+          "note": "El clásico pa' cruzar el río.",
+          "desc": "Uno de los puentes más antiguos de Cali, de ladrillo y con arcos sobre el río. Hoy es peatonal: perfecto para cruzar despacio y quedarse un rato mirando el agua."
+        }
+      ]
+    },
+    {
+      "id": "talleres",
+      "name": "Talleres",
+      "placeholder": "tent",
+      "guide": "Talleres y experiencias. Aquí no se mira: aquí se hace.",
+      "stops": [
+        {
+          "id": "salsa",
+          "name": "Clase de salsa caleña",
+          "location": {
+            "along": -3.2,
+            "across": -3.45
+          },
+          "note": "Un, dos, tres… y el pie rápido.",
+          "desc": "Un salón de baile donde enseñan salsa caleña desde el primer paso: pies rápidos, vueltas y mucha sabrosura. No importa si nunca has bailado; aquí todo el mundo empieza igual.",
+          "model": "/models/ruta_cultura_casa-cultural.glb"
+        },
+        {
+          "id": "ceramica",
+          "name": "Taller de cerámica",
+          "location": {
+            "along": 10.4,
+            "across": 4.6
+          },
+          "note": "Te llevas tu propia taza.",
+          "desc": "Un taller de cerámica con tornos y mesas de trabajo. Moldeas tu propia taza o tu plato con barro, lo pintas y te lo llevas de recuerdo.",
+          "model": "/models/ruta_cultura_casa-cultural.glb"
+        },
+        {
+          "id": "grafiti",
+          "name": "Grafiti y muralismo",
+          "location": {
+            "along": 15.4,
+            "across": -3.45
+          },
+          "note": "Con artistas del barrio.",
+          "desc": "Un taller de grafiti y muralismo con artistas del barrio. Aprendes a bocetar, a mezclar colores y a pintar un pedazo de muro en equipo.",
+          "model": "/models/ruta_cultura_casa-cultural.glb"
+        },
+        {
+          "id": "fotografia",
+          "name": "Caminata fotográfica",
+          "location": {
+            "along": 5.4,
+            "across": -3.45
+          },
+          "note": "Cali de cerca y en buena luz.",
+          "desc": "El punto de partida de la caminata fotográfica: te dan consejos para encuadrar y sales a retratar el bulevar, el río y la gente con buena luz.",
+          "model": "/models/ruta_cultura_casa-cultural.glb"
+        }
+      ]
+    }
+  ],
+  "wallSeed": [
+    {
+      "id": "seed-1",
+      "name": "Domingo sin afán",
+      "author": "La Mona de San Antonio",
+      "stops": [
+        "champus",
+        "puente-ortiz",
+        "marranitas"
+      ]
+    },
+    {
+      "id": "seed-2",
+      "name": "Arte y salsa",
+      "author": "El del Peñón",
+      "stops": [
+        "tertulia",
+        "mucic",
+        "salsa"
+      ]
+    },
+    {
+      "id": "seed-3",
+      "name": "Ruta del antojo",
+      "author": "Juancho",
+      "stops": [
+        "marranitas",
+        "chontaduro",
+        "obelisco"
+      ]
+    }
+  ],
+  "hitos": [
+    {
+      "id": "ermita",
+      "name": "La Ermita",
+      "landmark": true,
+      "location": {
+        "along": -19.4,
+        "across": -4
+      },
+      "note": "La postal más caleña que hay.",
+      "desc": "La iglesia blanca de estilo neogótico, con sus torres puntudas a la orilla del río. Es una de las imágenes más reconocidas de la ciudad, y de noche, iluminada, se ve todavía más bonita."
+    }
+  ]
+}

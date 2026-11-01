@@ -1,0 +1,5 @@
+{
+  "_info": "Dónde van los pabellones de la Feria del Libro en la isla REAL (solo a lo largo del Bulevar peatonal): [x, z, giro, tipo] (tipo 0 = la carpa grande, 1 = la pequeña). Calculado con feriaSpots() de src/three/events/EventDecor.jsx. La isla clásica usa feria-layout-clasica.json. Después, lo que manda es el GLB: mueve las carpas en Blender.",
+  "scale": 0.045,
+  "spots": [[-2.325,1.968,2.8959,0],[-0.625,2.383,2.9144,1],[4.075,3.051,3.1066,0],[5.775,3.05,3.1748,1],[10.475,2.726,3.2033,0],[12.175,2.654,3.1622,1],[17.013,2.828,3.0752,0]]
+}

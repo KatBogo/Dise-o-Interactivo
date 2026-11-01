@@ -1,0 +1,5 @@
+{
+  "_info": "La esquina del Obelisco (frente a La Tertulia): su edificio de siempre — un edificio medio de la ciudad, como estaba (edificios_modelo_medio_005.001) —, donde dejaste la casa de las empanadas (ruta_obelisco); el punto de la ruta va sobre él. scripts/isla-acomodada.py lo pone en lugar de la casa.",
+  "model": "public/models/edificio_medio.glb",
+  "w": 1.25, "h": 1.9, "_tamaño": "más pequeño que el de antes (1.6 de ancho, 3.35 de alto), para que no tape la vista", "yaw": -2.8565
+}

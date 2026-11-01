@@ -1,0 +1,1866 @@
+{
+  "_info": "Colores reales de cada modelo de Assets/modelos, aplicados por scripts/prepare-place-model.py la PRIMERA vez que se prepara (el original queda en Assets/modelos/originales/ y el preparado reemplaza al de Assets/modelos, para editarlo en Blender). Cada regla: object = nombre del objeto en Blender (o un rango 'Cube.003..Cube.015'), material = el material que tiene en el original (null = cualquiera / sin material) → color (hex sRGB) o image (textura de scripts/textures, con normal = su relieve). box = solo las caras dentro de esa caja. Después la página le pone la textura de arcilla de Chonti encima.",
+  "mio_verde": {
+    "_ref": "El bus del MIO (alimentador verde): carrocería verde, la franja de ventanas oscura, llantas negras, una franja blanca y una amarilla a lo largo, letreros claros.",
+    "maxTris": 6000,
+    "rules": [
+      {
+        "object": "Cubo",
+        "material": null,
+        "color": "#6DB33F",
+        "name": "carroceria_verde"
+      },
+      {
+        "object": "Cubo",
+        "material": null,
+        "box": [
+          [
+            -2.37,
+            -8.3,
+            2.6
+          ],
+          [
+            -2.325,
+            8.75,
+            6
+          ]
+        ],
+        "color": "#1F2A2E",
+        "name": "franja_ventanas",
+        "_nota": "la franja oscura de las ventanas (la cara más afuera del costado, 2.33–2.36 del centro), que sube hacia el parabrisas"
+      },
+      {
+        "object": "Cubo",
+        "material": null,
+        "box": [
+          [
+            2.325,
+            -8.3,
+            2.6
+          ],
+          [
+            2.37,
+            8.75,
+            6
+          ]
+        ],
+        "color": "#1F2A2E",
+        "name": "franja_ventanas"
+      },
+      {
+        "object": "Cubo",
+        "material": null,
+        "box": [
+          [
+            -2.15,
+            7.7,
+            2.2
+          ],
+          [
+            2.15,
+            9.25,
+            5.25
+          ]
+        ],
+        "color": "#2F3B40",
+        "name": "parabrisas",
+        "_nota": "el vidrio de adelante, inclinado (el panel del frente)"
+      },
+      {
+        "object": "Cubo",
+        "material": null,
+        "box": [
+          [
+            -2.15,
+            -9,
+            3.75
+          ],
+          [
+            2.15,
+            -8.6,
+            6.1
+          ]
+        ],
+        "color": "#2F3B40",
+        "name": "ventana_trasera",
+        "_nota": "la ventana de atrás, arriba"
+      },
+      {
+        "object": "Cubo",
+        "material": null,
+        "box": [
+          [
+            -2.325,
+            -7.85,
+            3.62
+          ],
+          [
+            -2.265,
+            5.15,
+            5.65
+          ]
+        ],
+        "color": "#3A4C55",
+        "name": "vidrios",
+        "_nota": "los cuatro vidrios, un poco hundidos dentro de la franja"
+      },
+      {
+        "object": "Cubo",
+        "material": null,
+        "box": [
+          [
+            2.265,
+            -7.85,
+            3.62
+          ],
+          [
+            2.325,
+            5.15,
+            5.65
+          ]
+        ],
+        "color": "#3A4C55",
+        "name": "vidrios"
+      },
+      {
+        "object": "Círculo.001",
+        "material": null,
+        "color": "#262624",
+        "name": "llantas"
+      },
+      {
+        "object": "Plano.009",
+        "material": null,
+        "color": "#F4F4EE",
+        "name": "franja_blanca"
+      },
+      {
+        "object": "Plano.013",
+        "material": null,
+        "color": "#F4F4EE",
+        "name": "franja_blanca"
+      },
+      {
+        "object": "Plano.011",
+        "material": null,
+        "color": "#FAB045",
+        "name": "franja_amarilla"
+      },
+      {
+        "object": "Plano.010",
+        "material": null,
+        "color": "#E9F2D0",
+        "name": "letrero"
+      },
+      {
+        "object": "Plano.014",
+        "material": null,
+        "color": "#E9F2D0",
+        "name": "letrero"
+      }
+    ]
+  },
+  "carros": {
+    "_ref": "Los carros del tráfico: la carrocería clara (la página le pone a cada carro su color), los vidrios oscuros y las llantas negras.",
+    "rules": [
+      {
+        "object": "Auto",
+        "material": null,
+        "color": "#F4F1EA",
+        "name": "carroceria"
+      },
+      {
+        "object": "Auto",
+        "material": null,
+        "box": [
+          [
+            -19,
+            23,
+            2.55
+          ],
+          [
+            -14,
+            32,
+            3.4
+          ]
+        ],
+        "color": "#2B3438",
+        "name": "vidrios"
+      },
+      {
+        "object": "Llanta 1",
+        "material": null,
+        "color": "#262624",
+        "name": "llantas"
+      },
+      {
+        "object": "Llanta 2",
+        "material": null,
+        "color": "#262624",
+        "name": "llantas"
+      },
+      {
+        "object": "Llanta 3",
+        "material": null,
+        "color": "#262624",
+        "name": "llantas"
+      },
+      {
+        "object": "Llanta 4",
+        "material": null,
+        "color": "#262624",
+        "name": "llantas"
+      }
+    ]
+  },
+  "asientos_centro": {
+    "_ref": "El mueble del medio del Bulevar (como el real): la estructura café oscuro y donde uno se sienta café claro (madera); la columna de avisos; la matera redonda aparte, con un arbolito en el medio (lo pone la página) y su borde para sentarse, café claro.",
+    "rules": [
+      {
+        "object": "Cube",
+        "material": null,
+        "color": "#4A2B1B",
+        "name": "estructura_cafe_oscuro"
+      },
+      {
+        "object": "Plano",
+        "material": null,
+        "color": "#B9865A",
+        "name": "asiento_madera"
+      },
+      {
+        "object": "Plano.001",
+        "material": null,
+        "color": "#B9865A",
+        "name": "asiento_madera"
+      },
+      {
+        "object": "Cilindro",
+        "material": null,
+        "color": "#ECE7DD",
+        "name": "columna_avisos"
+      },
+      {
+        "object": "Cilindro",
+        "material": null,
+        "box": [
+          [
+            -3,
+            45,
+            7.2
+          ],
+          [
+            6,
+            58,
+            11.6
+          ]
+        ],
+        "color": "#E2A0C8",
+        "name": "aviso"
+      },
+      {
+        "object": "Círculo",
+        "material": null,
+        "color": "#B9865A",
+        "name": "asiento_madera"
+      },
+      {
+        "object": "Círculo",
+        "material": null,
+        "box": [
+          [
+            7,
+            30,
+            1.3
+          ],
+          [
+            16,
+            44,
+            2
+          ]
+        ],
+        "color": "#4E7A2A",
+        "name": "pasto_matera"
+      }
+    ]
+  },
+  "arbol": {
+    "_ref": "El árbol de la isla (tus colores: tronco café, copa verde). La página le da a la copa de cada árbol su verde (o el amarillo / rosado de los guayacanes). Va más liviano (maxTris por pieza): en la isla hay más de 400.",
+    "maxTris": 220,  "closed": true,
+    "rules": []
+  },
+  "Arbol2": {
+    "_ref": "Otro árbol de la isla (tus colores; la página le da a la copa el verde, amarillo o rosado de cada árbol, con tus tonos). Liviano.",
+    "maxTris": 240,  "closed": true,
+    "rules": []
+  },
+  "Arbol3": {
+    "_ref": "Otro árbol de la isla, el de copas redondas (como Arbol2). Liviano.",
+    "maxTris": 300,  "closed": true,
+    "rules": []
+  },
+  "Arbol4": {
+    "_ref": "Otro árbol de la isla, el de copas acolchadas (tenía 295 000 triángulos: queda liviano).",
+    "maxTris": 400,  "closed": true,
+    "rules": []
+  },
+  "Palmera": {
+    "_ref": "La palmera de la isla (las del Bulevar junto al río y las de los parques): el tronco como lo hiciste; las hojas, con el verde de cada palma.",
+    "maxTris": 1800,
+    "rules": []
+  },
+  "subway": {
+    "_ref": "El edificio Entreceibas, el del Subway (como la foto): la fachada beige arena, las ventanas oscuras, los locales de abajo oscuros con los toldos verdes encima. Tu archivo traía dos copias grises más (Cube, Cube.001): se quitan.",
+    "remove": [
+      "Cube",
+      "Cube.001"
+    ],
+    "rules": [
+      {
+        "object": "Cube.002",
+        "material": "Material.001",
+        "color": "#CDB892",
+        "name": "fachada_beige"
+      },
+      {
+        "object": "Cube.002",
+        "material": "Material",
+        "color": "#2F3B40",
+        "name": "ventanas"
+      },
+      {
+        "object": "Cube.002",
+        "material": null,
+        "box": [
+          [
+            -999,
+            -999,
+            -1
+          ],
+          [
+            999,
+            999,
+            2.46
+          ]
+        ],
+        "color": "#46504C",
+        "name": "locales_oscuros"
+      },
+      {
+        "object": "Cube.002",
+        "material": null,
+        "box": [
+          [
+            -999,
+            -999,
+            2.6
+          ],
+          [
+            999,
+            999,
+            3.6
+          ]
+        ],
+        "color": "#2E7A4C",
+        "name": "toldos_verdes"
+      }
+    ]
+  },
+  "sillas_centro_2": {
+    "_ref": "La banca larga del medio del Bulevar, la que va justo después de cada mueble con el arbolito (como los otros asientos): la jardinera café oscuro, donde uno se sienta café claro (madera), las matas verdes.",
+    "maxTris": 400,
+    "rules": [
+      {
+        "object": "Círculo.003",
+        "material": null,
+        "color": "#4A2B1B",
+        "name": "estructura_cafe_oscuro"
+      },
+      {
+        "object": "Círculo.003",
+        "material": null,
+        "facing": {
+          "up": 0.9,
+          "zMin": 1.2
+        },
+        "color": "#4E3A22",
+        "name": "tierra_jardinera"
+      },
+      {
+        "object": "Cubo.002..Cubo.004",
+        "material": null,
+        "color": "#B9865A",
+        "name": "asiento_madera"
+      },
+      {
+        "object": "Esfera.022..Esfera.029",
+        "material": null,
+        "color": "#5E8F33",
+        "name": "matas_verdes"
+      },
+      {
+        "object": "Esfera.023",
+        "material": null,
+        "color": "#4E7A2A",
+        "name": "matas_verde_oscuro"
+      },
+      {
+        "object": "Esfera.026",
+        "material": null,
+        "color": "#4E7A2A",
+        "name": "matas_verde_oscuro"
+      },
+      {
+        "object": "Esfera.028",
+        "material": null,
+        "color": "#4E7A2A",
+        "name": "matas_verde_oscuro"
+      }
+    ]
+  },
+  "Kiosko": {
+    "_ref": "El kiosco de La Retreta (como la foto): blanco — columnas, barandas, cornisa —, el techo rojo oscuro, el piso y las escaleras de piedra clara, la base de piedra y las matas verdes alrededor.",
+    "maxTris": 500,
+    "detail": {
+      "Cilindro": 6000,
+      "Círculo.001": 4000,
+      "Cilindro.001": 1000,
+      "Cilindro.002": 1000,
+      "Círculo.002": 2000,
+      "Círculo": 2000
+    },
+    "rules": [
+      {
+        "object": "Círculo.004",
+        "material": null,
+        "color": "#C9C1B5",
+        "name": "base_piedra"
+      },
+      {
+        "object": "Círculo",
+        "material": null,
+        "color": "#E8E3DA",
+        "name": "piso_piedra_clara"
+      },
+      {
+        "object": "Círculo",
+        "material": null,
+        "facing": {
+          "up": 0.3,
+          "upMax": 0.98,
+          "zMin": 4.6
+        },
+        "color": "#84483B",
+        "name": "techo_rojo_cafe"
+      },
+      {
+        "object": "Cilindro",
+        "material": null,
+        "color": "#F7F5F0",
+        "name": "blanco"
+      },
+      {
+        "object": "Cilindro.001..Cilindro.002",
+        "material": null,
+        "color": "#F7F5F0",
+        "name": "blanco"
+      },
+      {
+        "object": "Círculo.001",
+        "material": null,
+        "color": "#F7F5F0",
+        "name": "blanco"
+      },
+      {
+        "object": "Círculo.002",
+        "material": null,
+        "color": "#F7F5F0",
+        "name": "blanco"
+      },
+      {
+        "object": "Cubo",
+        "material": null,
+        "color": "#F7F5F0",
+        "name": "blanco"
+      },
+      {
+        "object": "Cubo.001",
+        "material": null,
+        "color": "#F7F5F0",
+        "name": "blanco"
+      },
+      {
+        "object": "Esfera.001..Esfera.021",
+        "material": null,
+        "color": "#5E8F33",
+        "name": "matas_verdes"
+      },
+      {
+        "object": "Esfera.003",
+        "material": null,
+        "color": "#4E7A2A",
+        "name": "matas_verde_oscuro"
+      },
+      {
+        "object": "Esfera.008",
+        "material": null,
+        "color": "#4E7A2A",
+        "name": "matas_verde_oscuro"
+      },
+      {
+        "object": "Esfera.013",
+        "material": null,
+        "color": "#4E7A2A",
+        "name": "matas_verde_oscuro"
+      },
+      {
+        "object": "Esfera.018",
+        "material": null,
+        "color": "#4E7A2A",
+        "name": "matas_verde_oscuro"
+      }
+    ]
+  },
+  "postes": {
+    "_ref": "El poste de luz: el metal oscuro como los de la página; la lámpara clara (de noche la página la enciende). Liviano (maxTris): en la isla hay más de 200.",
+    "maxTris": 400,
+    "rules": [
+      {
+        "object": "Cylinder",
+        "material": "Metal",
+        "color": "#2E2A22",
+        "name": "metal"
+      },
+      {
+        "object": "Cylinder",
+        "material": "Light",
+        "color": "#FFFDF5",
+        "name": "lampara"
+      }
+    ]
+  },
+  "semaforo": {
+    "_ref": "El semáforo: todo en metal oscuro (las luces que cambian las pone la página en la punta del brazo). Un poco más liviano (maxTris): con menos se rompe.",
+    "maxTris": 2000,
+    "rules": [
+      {
+        "object": "semaforo",
+        "material": null,
+        "color": "#2E2A22",
+        "name": "metal"
+      }
+    ]
+  },
+  "edificio_bajo": {
+    "_ref": "Edificio genérico bajo: la fachada clara (la página le da a cada edificio su color) y las ventanas oscuras (las caras hundidas).",
+    "rules": [
+      {
+        "object": "Cube.001",
+        "material": null,
+        "color": "#F4EFE6",
+        "name": "fachada"
+      },
+      {
+        "object": "Cube.001",
+        "material": null,
+        "recess": {
+          "depth": 0.3,
+          "maxDepth": 2,
+          "maxArea": 30
+        },
+        "color": "#2E3A3F",
+        "name": "ventanas"
+      }
+    ]
+  },
+  "edificio_medio": {
+    "_ref": "Edificio genérico medio: la fachada clara (cada uno con su color en la página) y las ventanas oscuras.",
+    "rules": [
+      {
+        "object": "Cube",
+        "material": null,
+        "color": "#F4EFE6",
+        "name": "fachada"
+      },
+      {
+        "object": "Cube",
+        "material": null,
+        "recess": {
+          "depth": 0.3,
+          "maxDepth": 2,
+          "maxArea": 30
+        },
+        "color": "#2E3A3F",
+        "name": "ventanas"
+      }
+    ]
+  },
+  "edificio_alto": {
+    "_ref": "Edificio genérico alto (la torre con retrocesos): la fachada clara (cada uno con su color) y las ventanas oscuras.",
+    "rules": [
+      {
+        "object": "Cube.003",
+        "material": null,
+        "color": "#F4EFE6",
+        "name": "fachada"
+      },
+      {
+        "object": "Cube.003",
+        "material": null,
+        "recess": {
+          "depth": 0.3,
+          "maxDepth": 2,
+          "maxArea": 30
+        },
+        "color": "#2E3A3F",
+        "name": "ventanas"
+      }
+    ]
+  },
+  "arbol_navidad": {
+    "_ref": "El árbol de Navidad del Alumbrado (tus colores y sus luces). Más liviano: tenía 120 000 triángulos (las bolas, de a 960 cada una).",
+    "maxTris": 120,
+    "detail": {
+      "Luces arbol": 3000,
+      "Arbol": 600
+    },
+    "rules": []
+  },
+  "decoracion_camino": {
+    "_ref": "Las estrellas del Alumbrado en el camino (la roja y la verde), tal cual.",
+    "rules": []
+  },
+  "decoracion_rio": {
+    "_ref": "Las flores de luz del río, tal cual (un poco más livianas; las líneas de luz azul conservan su detalle).",
+    "maxTris": 200,
+    "detail": {
+      "Curva_Bezier": 10000
+    },
+    "rules": []
+  },
+  "poste_estrella": {
+    "_ref": "El poste con la estrella, tal cual.",
+    "rules": []
+  },
+  "tira_luces": {
+    "_ref": "La tira de luces: el cable y su bombillo (la página lo repite colgando a lo largo del cable). El bombillo más liviano: va muchas veces.",
+    "maxTris": 90,
+    "detail": {
+      "Curva_Bezier.002": 400
+    },
+    "rules": []
+  },
+  "sillas_borde_rio": {
+    "_ref": "Las bancas largas del borde del río (como la foto): madera café claro donde uno se sienta, la estructura café oscuro, como los asientos del centro. (El archivo trae también otras piezas guardadas — el mueble del medio, un carro, el bus —: se quitan, solo quedan las bancas, Plano.002 y Plano.003.)",
+    "remove": [
+      "Cube",
+      "Plano",
+      "Cilindro",
+      "Plano.001",
+      "Círculo",
+      "Auto",
+      "Llanta 1",
+      "Llanta 2",
+      "Llanta 3",
+      "Llanta 4",
+      "Cubo",
+      "Círculo.001",
+      "Plano.009",
+      "Plano.010",
+      "Plano.011",
+      "Plano.013",
+      "Plano.014"
+    ],
+    "rules": [
+      {
+        "object": "Plano.002..Plano.003",
+        "material": null,
+        "color": "#4A2B1B",
+        "name": "estructura_cafe_oscuro"
+      },
+      {
+        "object": "Plano.002..Plano.003",
+        "material": null,
+        "facing": {
+          "up": 0.6
+        },
+        "color": "#B9865A",
+        "name": "asiento_madera"
+      }
+    ]
+  },
+  "iglesia_ermita": {
+    "_ref": "La Ermita (Cali), como las fotos: los muros azul claro, los pilares, pináculos, arcos y molduras blancos, el techo gris, la aguja azul muy claro, las puertas doradas en sus arcos blancos, las ventanas y vitrales oscuros, la cruz de hierro. Solo el edificio (sin base: la página tampoco le pone plaza).",
+    "rules": [
+      {
+        "object": "Cube.083",
+        "material": null,
+        "color": "#BCCFE0",
+        "name": "muro_azul_claro"
+      },
+      {
+        "object": "Cube.003",
+        "material": null,
+        "color": "#BCCFE0",
+        "name": "muro_azul_claro"
+      },
+      {
+        "object": "Cube.117",
+        "material": null,
+        "color": "#BCCFE0",
+        "name": "muro_azul_claro"
+      },
+      {
+        "object": "Cube.056",
+        "material": null,
+        "color": "#BCCFE0",
+        "name": "muro_azul_claro"
+      },
+      {
+        "object": "Cube.088",
+        "material": null,
+        "color": "#BCCFE0",
+        "name": "muro_azul_claro"
+      },
+      {
+        "object": "Círculo",
+        "material": null,
+        "color": "#BCCFE0",
+        "name": "muro_azul_claro"
+      },
+      {
+        "object": "Cube.043",
+        "material": null,
+        "color": "#D3DEE8",
+        "name": "aguja_azul_muy_claro"
+      },
+      {
+        "object": "Cube.090",
+        "material": null,
+        "color": "#F5F4EF",
+        "name": "pilares_blancos"
+      },
+      {
+        "object": "Cube.004",
+        "material": null,
+        "color": "#F5F4EF",
+        "name": "pilares_blancos"
+      },
+      {
+        "object": "Cube.036",
+        "material": null,
+        "color": "#F5F4EF",
+        "name": "molduras_blancas"
+      },
+      {
+        "object": "Cube.115",
+        "material": null,
+        "color": "#F5F4EF",
+        "name": "arcos_blancos"
+      },
+      {
+        "object": "Cube.083",
+        "material": null,
+        "facing": {
+          "up": 0.45,
+          "upMax": 0.97,
+          "zMin": 0.9
+        },
+        "color": "#737D86",
+        "name": "techo_gris"
+      },
+      {
+        "object": "Cube.003",
+        "material": null,
+        "facing": {
+          "up": 0.45,
+          "upMax": 0.97,
+          "zMin": 0.9
+        },
+        "color": "#737D86",
+        "name": "techo_gris"
+      },
+      {
+        "object": "Cube.117",
+        "material": null,
+        "facing": {
+          "up": 0.45,
+          "upMax": 0.97,
+          "zMin": 0.9
+        },
+        "color": "#737D86",
+        "name": "techo_gris"
+      },
+      {
+        "object": "Cube.056",
+        "material": null,
+        "facing": {
+          "up": 0.45,
+          "upMax": 0.97,
+          "zMin": 0.9
+        },
+        "color": "#737D86",
+        "name": "techo_gris"
+      },
+      {
+        "object": "Cube.088",
+        "material": null,
+        "facing": {
+          "up": 0.45,
+          "upMax": 0.97,
+          "zMin": 0.9
+        },
+        "color": "#737D86",
+        "name": "techo_gris"
+      },
+      {
+        "object": "Círculo",
+        "material": null,
+        "facing": {
+          "up": 0.45,
+          "upMax": 0.97,
+          "zMin": 0.9
+        },
+        "color": "#737D86",
+        "name": "techo_gris"
+      },
+      {
+        "object": "Cube.102",
+        "material": null,
+        "color": "#2F3B40",
+        "name": "ventanas"
+      },
+      {
+        "object": "Cube.102",
+        "material": null,
+        "box": [
+          [
+            -9,
+            -9,
+            -1
+          ],
+          [
+            9,
+            9,
+            0.75
+          ]
+        ],
+        "color": "#C9A04A",
+        "name": "puertas_doradas",
+        "_nota": "lo de abajo de Cube.102 son las puertas (dentro de los arcos de Cube.115)"
+      },
+      {
+        "object": "Cube.001",
+        "material": null,
+        "color": "#2F3B40",
+        "name": "ventanas"
+      },
+      {
+        "object": "Cube.005..Cube.006",
+        "material": null,
+        "color": "#2F3B40",
+        "name": "ventanas"
+      },
+      {
+        "object": "Cube.008",
+        "material": null,
+        "color": "#2F3B40",
+        "name": "ventanas"
+      },
+      {
+        "object": "Cylinder.013",
+        "material": null,
+        "color": "#3E4E66",
+        "name": "vitral"
+      },
+      {
+        "object": "Cylinder.001",
+        "material": null,
+        "color": "#3E4E66",
+        "name": "vitral"
+      },
+      {
+        "object": "Cube.002",
+        "material": null,
+        "color": "#C9A04A",
+        "name": "puertas_doradas"
+      },
+      {
+        "object": "Cube.007",
+        "material": null,
+        "color": "#C9A04A",
+        "name": "puertas_doradas"
+      },
+      {
+        "object": "Plane",
+        "material": null,
+        "color": "#1B1B1B",
+        "name": "negro"
+      },
+      {
+        "object": "Plane.001",
+        "material": null,
+        "color": "#1B1B1B",
+        "name": "negro"
+      },
+      {
+        "object": "Cube.035",
+        "material": null,
+        "color": "#4A4F55",
+        "name": "cruz_de_hierro"
+      }
+    ]
+  },
+  "boulevard_cafe": {
+    "_ref": "El edificio del Café Boulevard del Río (art déco, como la foto): la fachada crema, las columnas de la esquina redonda, la pérgola de arriba, el zócalo y los bordes de los balcones vinotinto; las ventanas oscuras.",
+    "rules": [
+      {
+        "object": "Cube",
+        "material": null,
+        "color": "#EBD9A4",
+        "name": "fachada_crema"
+      },
+      {
+        "object": "Cube",
+        "material": null,
+        "thin": {
+          "maxHeight": 0.3,
+          "zMin": 1.2
+        },
+        "color": "#8C2F2C",
+        "name": "franjas_vinotinto"
+      },
+      {
+        "object": "Cube",
+        "material": null,
+        "wallRecess": {
+          "min": 0.04,
+          "max": 0.72,
+          "maxArea": 1.2,
+          "zMin": 0.7,
+          "quadsOnly": true
+        },
+        "color": "#2F3B40",
+        "name": "ventanas",
+        "_nota": "max 0.72: los vidrios de la columna junto a la pilastra quedan 0.63 detrás de ella"
+      },
+      {
+        "object": "Cube",
+        "material": null,
+        "box": [
+          [
+            -3.95,
+            1,
+            1.85
+          ],
+          [
+            -3.9,
+            2.75,
+            2.7
+          ]
+        ],
+        "color": "#2F3B40",
+        "name": "ventanas",
+        "_nota": "la ventana grande de abajo del costado (más grande que maxArea)"
+      },
+      {
+        "object": "Cube",
+        "material": null,
+        "box": [
+          [
+            -3.2,
+            -2.2,
+            4.25
+          ],
+          [
+            -2.98,
+            -1.9,
+            5.6
+          ]
+        ],
+        "color": "#2F3B40",
+        "name": "ventanas",
+        "_nota": "dos vidrios de la esquina redonda"
+      },
+      {
+        "object": "Cube",
+        "material": null,
+        "box": [
+          [
+            -9,
+            -9,
+            -1
+          ],
+          [
+            9,
+            9,
+            1.1
+          ]
+        ],
+        "color": "#8C2F2C",
+        "name": "zocalo_vinotinto",
+        "_nota": "toda la base (hasta 1.07), no solo su cara de abajo"
+      },
+      {
+        "object": "Cylinder",
+        "material": null,
+        "color": "#8C2F2C",
+        "name": "columnas_vinotinto"
+      },
+      {
+        "object": "Cylinder.001",
+        "material": null,
+        "color": "#8C2F2C",
+        "name": "columnas_vinotinto"
+      },
+      {
+        "object": "Cylinder.002",
+        "material": null,
+        "color": "#8C2F2C",
+        "name": "columnas_vinotinto"
+      },
+      {
+        "object": "Circle",
+        "material": null,
+        "color": "#8C2F2C",
+        "name": "pergola_vinotinto"
+      },
+      {
+        "object": "Cube.003",
+        "material": null,
+        "color": "#8C2F2C",
+        "name": "pergola_vinotinto"
+      }
+    ]
+  },
+  "banco_bogota": {
+    "_ref": "El edificio del Banco de Bogotá (como las fotos): la torre de piedra blanca, la fachada de vidrio verde oscuro con su marco claro, la base y las columnas de piedra gris verdosa, el anexo blanco.",
+    "rules": [
+      {
+        "object": "Cube",
+        "material": null,
+        "color": "#EEECE7",
+        "name": "piedra_blanca"
+      },
+      {
+        "object": "Cube",
+        "material": null,
+        "box": [
+          [
+            -3,
+            -1.8,
+            -1
+          ],
+          [
+            3,
+            -1.7,
+            9.35
+          ]
+        ],
+        "color": "#2C4A44",
+        "name": "vidrio_verde_oscuro",
+        "_nota": "el frente de la torre detrás del marco: el vidrio (el marco no trae los vidrios del medio)"
+      },
+      {
+        "object": "Cube.001",
+        "material": "Material.001",
+        "color": "#3B5C54",
+        "name": "vidrio_verde",
+        "_nota": "la mitad de los vidrios y los parales: verde un poco más claro (como los reflejos de la foto)"
+      },
+      {
+        "object": "Cube.001",
+        "material": "Material.002",
+        "color": "#2C4A44",
+        "name": "vidrio_verde_oscuro"
+      },
+      {
+        "object": "Cube.003",
+        "material": "Material.001",
+        "color": "#2C4A44",
+        "name": "vidrio_verde_oscuro",
+        "_nota": "la fachada de atrás: vidrio también"
+      },
+      {
+        "object": "Cube.006",
+        "material": null,
+        "color": "#6F7771",
+        "name": "piedra_gris_verdosa"
+      },
+      {
+        "object": "Cube.009",
+        "material": null,
+        "color": "#7E857F",
+        "name": "columnas_piedra"
+      },
+      {
+        "object": "Cube.002",
+        "material": null,
+        "color": "#EEECE7",
+        "name": "piedra_blanca"
+      }
+    ]
+  },
+  "lugar_biblioteca-centenario": {
+    "_ref": "Biblioteca del Centenario (Cali): ladrillo a la vista, la sección del medio blanca, ventanas grises, balcón con baranda de vidrio y canto verde agua, alero oscuro.",
+    "rules": [
+      {
+        "object": "Cube.001",
+        "material": null,
+        "box": [
+          [
+            -1.78,
+            0.12,
+            0.1
+          ],
+          [
+            -1.64,
+            0.5,
+            1.1
+          ]
+        ],
+        "color": "#F1EDE4",
+        "name": "pañete_blanco",
+        "_nota": "el nicho de la sección del medio, con sus bordes: todo blanco como ella. Las reglas con box van antes de las que cambian el material completo"
+      },
+      {
+        "object": "Cube.001",
+        "material": "Material.044",
+        "color": "#F1EDE4",
+        "name": "pañete_blanco",
+        "_nota": "la sección del medio (sin mural)"
+      },
+      {
+        "object": "Cube.001",
+        "material": "Material.042",
+        "color": "#A85A3E",
+        "name": "ladrillo"
+      },
+      {
+        "object": "Cube.001",
+        "material": "Material.041",
+        "color": "#A85A3E",
+        "name": "ladrillo"
+      },
+      {
+        "object": "Cube.001",
+        "material": "Material.043",
+        "color": "#A85A3E",
+        "name": "ladrillo"
+      },
+      {
+        "object": "Cube.001",
+        "material": "Material.037",
+        "color": "#A85A3E",
+        "name": "ladrillo"
+      },
+      {
+        "object": "Cube.016",
+        "material": null,
+        "color": "#93492F",
+        "name": "ladrillo_pilastra"
+      },
+      {
+        "object": "Cube.017",
+        "material": null,
+        "color": "#93492F",
+        "name": "ladrillo_pilastra"
+      },
+      {
+        "object": "Cube.018",
+        "material": null,
+        "color": "#93492F",
+        "name": "ladrillo_pilastra"
+      },
+      {
+        "object": "muro",
+        "material": null,
+        "color": "#A85A3E",
+        "name": "ladrillo"
+      },
+      {
+        "object": "Cube.003..Cube.015",
+        "material": null,
+        "color": "#8E9194",
+        "name": "ventana_gris"
+      },
+      {
+        "object": "Cube.019..Cube.022",
+        "material": null,
+        "color": "#8E9194",
+        "name": "ventana_gris"
+      },
+      {
+        "object": "skp.042",
+        "railing": {
+          "from": [
+            -1.815,
+            -0.02,
+            0.6
+          ],
+          "to": [
+            -1.815,
+            0.64,
+            0.6
+          ],
+          "height": 0.17,
+          "every": 0.045,
+          "thick": 0.012,
+          "color": "#4F5357"
+        },
+        "name": "reja_gris",
+        "_nota": "la reja sobre la sección blanca: gris oscura (contraste) y un poco delante del muro"
+      },
+      {
+        "object": "Cube.025",
+        "material": null,
+        "color": "#4B4541",
+        "name": "alero_oscuro"
+      },
+      {
+        "object": "Cube.049",
+        "material": null,
+        "color": "#4B4541",
+        "name": "alero_oscuro"
+      },
+      {
+        "object": "Cube.050",
+        "material": null,
+        "color": "#4B4541",
+        "name": "alero_oscuro"
+      },
+      {
+        "object": "Cube.051",
+        "material": null,
+        "color": "#CEC7B9",
+        "name": "andén"
+      },
+      {
+        "object": "Cylinder",
+        "material": null,
+        "color": "#D9D5CC",
+        "name": "columna_concreto"
+      },
+      {
+        "object": "Cylinder.001",
+        "material": null,
+        "color": "#D9D5CC",
+        "name": "columna_concreto"
+      },
+      {
+        "object": "Cube.023",
+        "material": null,
+        "color": "#ECE9E2",
+        "name": "losa_balcon"
+      },
+      {
+        "object": "Cube.024",
+        "material": null,
+        "color": "#79B3A5",
+        "name": "canto_verde_agua"
+      },
+      {
+        "object": "Cube.037..Cube.048",
+        "material": null,
+        "color": "#A9D8CC",
+        "name": "baranda_vidrio"
+      },
+      {
+        "object": "Cube.026..Cube.036",
+        "material": null,
+        "color": "#3E4B4F",
+        "name": "vitrina"
+      },
+      {
+        "object": "Cube",
+        "material": null,
+        "color": "#EEEDE8",
+        "name": "caja_blanca"
+      }
+    ]
+  },
+  "lugar_gato-de-tejada": {
+    "_ref": "El Gato del Río (los colores del modelo) y sus novias: cinco gatas pintadas como las de verdad — la roja de púas, la mostaza de patas a rayas verdes y orejas negras, la dorada, la cebra con su franja roja (pedestal blanco como los demás) y la blanca escrita en rojo. Pedestales blancos, placas oscuras en dos postes y arbustos verdes bordeando los caminos.",
+    "maxTris": 6000,
+    "detail": {
+      "Cubo.001": 18000,
+      "Cubo.004": 18000,
+      "Cubo.006": 18000,
+      "Cubo.011": 18000,
+      "Cubo.013": 18000
+    },
+    "remove": [
+      "BézierCurve",
+      "Curva_Bezier",
+      "Curva_Bezier.001"
+    ],
+    "cats": [
+      {
+        "object": "Cubo.001",
+        "style": "puas",
+        "pins": true
+      },
+      {
+        "object": "Cubo.004",
+        "style": "rayas_patas",
+        "image": "gata-rayas.png"
+      },
+      {
+        "object": "Cubo.006",
+        "style": "dorada"
+      },
+      {
+        "object": "Cubo.011",
+        "style": "cebra",
+        "image": "gata-cebra.png"
+      },
+      {
+        "object": "Cubo.013",
+        "style": "letras",
+        "image": "gata-letras.png"
+      }
+    ],
+    "floor": {
+      "floor": "Cube.007",
+      "cell": 0.12,
+      "lift": 0.004,
+      "tile": 5,
+      "_nota": "donde están las gatas (dentro de los arbustos) es pasto; el sendero entre los arbustos, de piedra",
+      "lawnAround": {
+        "seeds": [
+          "Cubo",
+          "Cubo.003",
+          "Cubo.005",
+          "Cubo.012",
+          "Cubo.010"
+        ],
+        "walls": [
+          "Cubo.007",
+          "Cubo.008",
+          "Cubo.009"
+        ],
+        "radius": 3.2,
+        "thick": 0.3
+      },
+      "_nota2": "el modelo se deja tal cual, con su suelo: en la página se hunde en la isla (sink en island.json) sobre un parche del mismo piso. (Opciones que existen si algún día hacen falta: grassIsLawn, clip, dropFloor)"
+    },
+    "rules": [
+      {
+        "object": "Cubo",
+        "material": null,
+        "color": "#EFEEEA",
+        "name": "pedestal_blanco"
+      },
+      {
+        "object": "Cubo.003",
+        "material": null,
+        "color": "#EFEEEA",
+        "name": "pedestal_blanco"
+      },
+      {
+        "object": "Cubo.005",
+        "material": null,
+        "color": "#EFEEEA",
+        "name": "pedestal_blanco"
+      },
+      {
+        "object": "Cubo.012",
+        "material": null,
+        "color": "#EFEEEA",
+        "name": "pedestal_blanco"
+      },
+      {
+        "object": "Plano.001..Plano.005",
+        "material": null,
+        "color": "#2F3A45",
+        "name": "placa"
+      },
+      {
+        "object": "Cilindro",
+        "material": null,
+        "color": "#4A4D50",
+        "name": "poste"
+      },
+      {
+        "object": "Cilindro.001..Cilindro.009",
+        "material": null,
+        "color": "#4A4D50",
+        "name": "poste"
+      },
+      {
+        "object": "Cubo.010",
+        "material": null,
+        "color": "#EFEEEA",
+        "name": "pedestal_blanco"
+      },
+      {
+        "object": "Cubo.007..Cubo.009",
+        "material": null,
+        "color": "#5E9431",
+        "name": "arbustos"
+      }
+    ]
+  },
+  "lugar_museo-la-tertulia": {
+    "_ref": "Museo La Tertulia (Cali): muros enchapados en placas grandes de arenisca amarilla, cada una de su tono (crema a ocre), con juntas finas; el pabellón de columnas en crema liso; ventanales oscuros; plaza de losas y prado al frente con un camino que lo cruza.",
+    "_nota": "(el modelo nuevo, de oct. 2026: otra escala — 42 de ancho — y algunas piezas con otro nombre: el suelo es Cube.014, el ventanal Material.005)",
+    "rules": [
+      {
+        "object": "Cube.011",
+        "material": null,
+        "color": "#C9C0AE",
+        "name": "plaza_losas"
+      },
+      {
+        "object": "columas",
+        "material": null,
+        "name": "arenisca",
+        "image": "arenisca.png",
+        "project": "box",
+        "tile": 5,
+        "_nota": "el edificio de columnas: todo con la arenisca de los otros dos (columnas y techo también)"
+      },
+      {
+        "object": "columas.002",
+        "material": null,
+        "name": "arenisca",
+        "image": "arenisca.png",
+        "project": "box",
+        "tile": 5,
+        "_nota": "el edificio de columnas: todo con la arenisca de los otros dos (columnas y techo también)"
+      },
+      {
+        "object": "columnas",
+        "material": null,
+        "name": "arenisca",
+        "image": "arenisca.png",
+        "project": "box",
+        "tile": 5,
+        "_nota": "el edificio de columnas: todo con la arenisca de los otros dos (columnas y techo también)"
+      },
+      {
+        "object": "columnas.001..columnas.002",
+        "material": null,
+        "name": "arenisca",
+        "image": "arenisca.png",
+        "project": "box",
+        "tile": 5,
+        "_nota": "el edificio de columnas: todo con la arenisca de los otros dos (columnas y techo también)"
+      },
+      {
+        "object": "techo.001",
+        "material": null,
+        "name": "arenisca",
+        "image": "arenisca.png",
+        "project": "box",
+        "tile": 5,
+        "_nota": "el edificio de columnas: todo con la arenisca de los otros dos (columnas y techo también)"
+      },
+      {
+        "object": "Cube.020",
+        "material": "Material.004",
+        "name": "arenisca",
+        "image": "arenisca.png",
+        "project": "box",
+        "tile": 5,
+        "_nota": "el muro del edificio principal (el de columnas): la misma arenisca de los otros dos"
+      },
+      {
+        "object": "Cube.020",
+        "material": "Material.005",
+        "color": "#3F5357",
+        "name": "ventanal"
+      },
+      {
+        "object": "Cube.020",
+        "material": "Material.006",
+        "image": "arenisca.png",
+        "project": "box",
+        "tile": 5,
+        "name": "arenisca"
+      },
+      {
+        "object": "Cube",
+        "material": null,
+        "image": "arenisca.png",
+        "project": "box",
+        "tile": 5,
+        "name": "arenisca"
+      },
+      {
+        "object": "Cube.001..Cube.010",
+        "material": null,
+        "image": "arenisca.png",
+        "project": "box",
+        "tile": 5,
+        "name": "arenisca"
+      },
+      {
+        "object": "Cube.012..Cube.013",
+        "material": null,
+        "image": "arenisca.png",
+        "project": "box",
+        "tile": 5,
+        "name": "arenisca"
+      }
+    ],
+    "remove": [
+      "techo",
+      "piso"
+    ],
+    "floor": {
+      "floor": "Cube.014",
+      "cell": 0.3,
+      "lift": 0.008,
+      "tile": 3,
+      "_nota": "el frente (hacia la calle, -Y) es prado con un camino que lo cruza; atrás y entre los edificios, la plaza de losas",
+      "grass": [
+        [
+          [
+            -14.5,
+            -7.5
+          ],
+          [
+            13.6,
+            -1.9
+          ]
+        ],
+        [
+          [
+            -28.8,
+            -7.5
+          ],
+          [
+            -28.3,
+            15.3
+          ]
+        ]
+      ],
+      "paths": [
+        [
+          [
+            -3.8,
+            -7.5
+          ],
+          [
+            -0.7,
+            -1.9
+          ]
+        ],
+        [
+          [
+            -14.5,
+            -7.5
+          ],
+          [
+            13.6,
+            -7
+          ]
+        ]
+      ]
+    },
+    "_nota2": "sin la losa (piso) debajo del edificio de columnas: solo el edificio"
+  },
+  "lugar_mucic": {
+    "_ref": "Casona colonial (sin cambios de color: los del modelo).",
+    "rules": [
+      {
+        "object": "Cube.019..Cube.025",
+        "material": null,
+        "box": [
+          [
+            1.37,
+            -1.6,
+            0.2
+          ],
+          [
+            1.5,
+            1.4,
+            0.3
+          ]
+        ],
+        "use": "Material.023",
+        "name": "punta_piso",
+        "_nota": "los pisos rojos del patio (de su tamaño original) llegan a 2-3 mm de la cara de afuera del muro y se asomaban como una raya roja: sus puntas junto al muro llevan el material del muro"
+      },
+      {
+        "object": "Cube.019..Cube.025",
+        "material": null,
+        "box": [
+          [
+            -1.3,
+            -1.6,
+            0.2
+          ],
+          [
+            -1.18,
+            1.4,
+            0.3
+          ]
+        ],
+        "use": "Material.023",
+        "name": "punta_piso"
+      },
+      {
+        "object": "Cube.019..Cube.025",
+        "material": null,
+        "box": [
+          [
+            -1.3,
+            -1.6,
+            0.2
+          ],
+          [
+            1.5,
+            -1.48,
+            0.3
+          ]
+        ],
+        "use": "Material.023",
+        "name": "punta_piso"
+      },
+      {
+        "object": "Cube.019..Cube.025",
+        "material": null,
+        "box": [
+          [
+            -1.3,
+            1.3,
+            0.2
+          ],
+          [
+            1.5,
+            1.4,
+            0.3
+          ]
+        ],
+        "use": "Material.023",
+        "name": "punta_piso"
+      }
+    ]
+  },
+  "evento_feria_del_libro": {
+    "_ref": "Feria Internacional del Libro de Cali: pabellones de carpa blanca con el frontón rojo ('Pabellón de libros'), paneles naranja a los lados de la entrada, tótem rojo ('Libro Cali') al frente, piso claro y banderines de colores.",
+    "layout": "feria-layout.json",
+    "pennant": "Plane.006",
+    "pennantColors": [
+      "#F062A8",
+      "#8C5BD6",
+      "#F6C330",
+      "#4CC27E",
+      "#F28A2E",
+      "#3E8FE0",
+      "#E5482F"
+    ],
+    "rules": [
+      {
+        "object": "Cube",
+        "material": null,
+        "color": "#F4F2ED",
+        "name": "lona_blanca"
+      },
+      {
+        "object": "Cube.004",
+        "material": null,
+        "color": "#F4F2ED",
+        "name": "lona_blanca"
+      },
+      {
+        "object": "Plane",
+        "material": null,
+        "color": "#E5482F",
+        "name": "fronton_rojo"
+      },
+      {
+        "object": "Plane.005",
+        "material": null,
+        "color": "#E5482F",
+        "name": "fronton_rojo"
+      },
+      {
+        "object": "Plane.001..Plane.004",
+        "material": null,
+        "color": "#F0892B",
+        "name": "panel_naranja"
+      },
+      {
+        "object": "Cube.001",
+        "material": null,
+        "color": "#D3C8B4",
+        "name": "piso_claro"
+      },
+      {
+        "object": "Cube.002",
+        "material": null,
+        "color": "#D3C8B4",
+        "name": "piso_claro"
+      },
+      {
+        "object": "Cube.003",
+        "material": null,
+        "color": "#DD3B2C",
+        "name": "totem_rojo"
+      },
+      {
+        "object": "Cube.005",
+        "material": null,
+        "color": "#DD3B2C",
+        "name": "totem_rojo"
+      }
+    ]
+  },
+  "ruta_gastronomia_fonda": {
+    "_ref": "La casa de las paradas gastronómicas (tu modelo): fachada mango claro, el aviso rojo naranja sobre la puerta, la puerta de madera, las ventanas oscuras, cornisas y bordes crema, el techo claro.",
+    "rules": [
+      {
+        "object": "Building_Pizza",
+        "material": null,
+        "color": "#F6CF8E",
+        "name": "fachada_mango"
+      },
+      {
+        "object": "Building_Pizza",
+        "material": null,
+        "thin": {
+          "maxHeight": 0.5
+        },
+        "color": "#FFF6E6",
+        "name": "bordes_crema"
+      },
+      {
+        "object": "Building_Pizza",
+        "material": null,
+        "facing": {
+          "up": 0.95,
+          "zMin": 6.5
+        },
+        "color": "#E9E1D3",
+        "name": "techo_claro"
+      },
+      {
+        "object": "Building_Pizza",
+        "material": null,
+        "wallRecess": {
+          "min": 0.03,
+          "max": 0.6,
+          "maxArea": 20
+        },
+        "color": "#2F3B40",
+        "name": "ventanas"
+      },
+      {
+        "object": "Building_Pizza",
+        "material": null,
+        "box": [
+          [
+            -5.6,
+            -4.2,
+            1.5
+          ],
+          [
+            5.6,
+            -4.05,
+            4.6
+          ]
+        ],
+        "color": "#2F3B40",
+        "name": "ventanas"
+      },
+      {
+        "object": "Building_Pizza",
+        "material": null,
+        "box": [
+          [
+            -1.1,
+            -5,
+            0.4
+          ],
+          [
+            1.1,
+            -4.88,
+            4
+          ]
+        ],
+        "color": "#8A4B2C",
+        "name": "puerta_madera"
+      },
+      {
+        "object": "Building_Pizza",
+        "material": null,
+        "box": [
+          [
+            -2.4,
+            -4.9,
+            5.4
+          ],
+          [
+            2.4,
+            -4.7,
+            7.6
+          ]
+        ],
+        "color": "#E8553C",
+        "name": "aviso_rojo"
+      }
+    ]
+  },
+  "ruta_cultura_casa-cultural": {
+    "_ref": "La casa de las paradas de talleres (tu modelo, de dos pisos): fachada rosada suave, el toldo naranja, cornisas y franjas crema, ventanas y puerta oscuras, el techo claro.",
+    "rules": [
+      {
+        "object": "Building_Restaurant",
+        "material": null,
+        "color": "#F2B6A6",
+        "name": "fachada_rosada"
+      },
+      {
+        "object": "Building_Restaurant",
+        "material": null,
+        "thin": {
+          "maxHeight": 0.45
+        },
+        "color": "#FFF6E6",
+        "name": "franjas_crema"
+      },
+      {
+        "object": "Building_Restaurant",
+        "material": null,
+        "facing": {
+          "up": 0.95,
+          "zMin": 9.5
+        },
+        "color": "#E9E1D3",
+        "name": "techo_claro"
+      },
+      {
+        "object": "Building_Restaurant",
+        "material": null,
+        "wallRecess": {
+          "min": 0.03,
+          "max": 0.6,
+          "maxArea": 20
+        },
+        "color": "#2F3B40",
+        "name": "ventanas"
+      },
+      {
+        "object": "Building_Restaurant",
+        "material": null,
+        "box": [
+          [
+            32.9,
+            -110.4,
+            3.9
+          ],
+          [
+            39.6,
+            -108.8,
+            4.75
+          ]
+        ],
+        "color": "#FB8A44",
+        "name": "toldo_naranja"
+      }
+    ]
+  }
+}
