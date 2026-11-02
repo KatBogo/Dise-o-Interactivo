@@ -53,5 +53,14 @@ for (const file of walk(DEST)) {
 fs.writeFileSync(path.join(DEST, '.nojekyll'), '')
 fs.copyFileSync('scripts/github-README.md', path.join(DEST, 'README.md'))
 
+// 5. lighter: with your whole island (isla_bulevar-completa) the page never opens your separate
+// buildings and terrain — they stay out —; the other models packed without loss where it helps
+// (scripts/compress-models.mjs)
+const MODELOS = JSON.parse(fs.readFileSync('src/content/modelos.json', 'utf8'))
+if (MODELOS.models?.includes('isla_bulevar-completa'))
+    for (const name of ['isla_edificios.glb', 'isla_terreno.glb']) fs.rmSync(path.join(DEST, 'models', name), { force: true })
+const pack = spawnSync(`node scripts/compress-models.mjs ${path.join(DEST, 'models')} 100`, { stdio: 'inherit', shell: true })
+if (pack.status !== 0) process.exit(pack.status ?? 1)
+
 const files = walk(DEST).length
 console.log(`\n✔ ${DEST}/ lista: ${files} archivos (${changed} con rutas relativas). Seguí ${DEST}/README.md para publicarla.`)

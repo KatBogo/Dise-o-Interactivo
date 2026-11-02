@@ -5,6 +5,7 @@ import { PHASES } from '../../config.js'
 import { PALETTE } from '../../theme.js'
 import { useExperience } from '../../store/useExperience.js'
 import { skyState } from '../skyState.js'
+import { sound } from '../../audio/sound.js'
 import Chonti, { poseChonti } from './ChontiModel.jsx'
 import { walkGrid } from './walkGrid.js'
 
@@ -23,8 +24,9 @@ import { walkGrid } from './walkGrid.js'
 const SIZE = 0.22 // (Chonti is 2 units tall: on the island ~0.44 — small beside the buildings, but he reads)
 const SPEED = 0.42 // walking, units a second
 const PLAN = {
-    // (on the walk in front of the Empanadas del Obelisco — not on the street)
-    gastronomico: { at: [-12.6, 1.42], area: [-13.6, 0.6, -11.6, 2.4] },
+    // (on the walk in front of the Empanadas del Obelisco — not on the street —, a little to the side
+    // of its stop's marker: right under it, the marker took every touch meant for him)
+    gastronomico: { at: [-11.7, 1.42], area: [-13.6, 0.6, -10.6, 2.4] },
     talleres: { from: [-12.5, 1.42], to: [-17.4, 3.3], face: [-15.4, 4.0], area: [-18.6, 0.8, -11.8, 4.6] },
     culturales: { area: [-5.6, -4.0, -2.6, -1.4] },
 }
@@ -121,6 +123,61 @@ const along = (p, d) => {
 }
 const faceTo = (from, to) => Math.atan2(to[0] - from[0], to[1] - from[1])
 
+/**
+ * Found him! Touch the little Chonti on a route and he bursts into confetti and is gone (until that
+ * route is opened again). The confetti: little paper pieces in the palette's colours, flung out and
+ * up from where he stood, tumbling and fading as they fall (sizes in the island's units).
+ */
+const BITS = 90
+const CONFETTI_TIME = 1.8 // s
+const CONFETTI_COLORS = [PALETTE.naranja, PALETTE.mango, PALETTE.rosa, PALETTE.lima, PALETTE.crema, '#E8641C']
+function makeConfetti() {
+    const mat = new THREE.MeshBasicMaterial({ side: THREE.DoubleSide, transparent: true, depthWrite: false, toneMapped: false })
+    const mesh = new THREE.InstancedMesh(new THREE.PlaneGeometry(0.05, 0.03), mat, BITS)
+    mesh.name = 'chonti_confeti'
+    mesh.frustumCulled = false
+    mesh.visible = false
+    const color = new THREE.Color()
+    for (let i = 0; i < BITS; i++) mesh.setColorAt(i, color.set(CONFETTI_COLORS[i % CONFETTI_COLORS.length]))
+    const bits = Array.from({ length: BITS }, () => ({ p: new THREE.Vector3(), v: new THREE.Vector3(), r: new THREE.Euler(), spin: new THREE.Vector3() }))
+    return { mesh, bits, t: -1 }
+}
+const dummy = new THREE.Object3D()
+function popConfetti(c, at) {
+    c.t = 0
+    c.mesh.visible = true
+    for (const b of c.bits) {
+        const a = Math.random() * Math.PI * 2, out = 0.35 + Math.random() * 0.9
+        b.p.copy(at).add(new THREE.Vector3(0, 0.22 + Math.random() * 0.12, 0))
+        b.v.set(Math.cos(a) * out, 1.1 + Math.random() * 1.3, Math.sin(a) * out)
+        b.r.set(Math.random() * 6, Math.random() * 6, Math.random() * 6)
+        b.spin.set((Math.random() - 0.5) * 14, (Math.random() - 0.5) * 14, (Math.random() - 0.5) * 14)
+    }
+}
+function stepConfetti(c, dt) {
+    if (c.t < 0) return
+    c.t += dt
+    if (c.t > CONFETTI_TIME) {
+        c.t = -1
+        c.mesh.visible = false
+        return
+    }
+    for (let i = 0; i < BITS; i++) {
+        const b = c.bits[i]
+        // (paper: gravity, but the air holds it — it flutters down slowly once it has flown out)
+        b.v.y -= 3.2 * dt
+        b.v.multiplyScalar(Math.exp(-dt * 1.8))
+        b.p.addScaledVector(b.v, dt)
+        b.r.x += b.spin.x * dt, b.r.y += b.spin.y * dt, b.r.z += b.spin.z * dt
+        dummy.position.copy(b.p)
+        dummy.rotation.copy(b.r)
+        dummy.updateMatrix()
+        c.mesh.setMatrixAt(i, dummy.matrix)
+    }
+    c.mesh.instanceMatrix.needsUpdate = true
+    c.mesh.material.opacity = 1 - THREE.MathUtils.smoothstep(c.t, CONFETTI_TIME * 0.55, CONFETTI_TIME)
+}
+
 function Walker() {
     const { camera, scene } = useThree()
     const root = useRef()
@@ -129,6 +186,18 @@ function Walker() {
     const st = useRef({ route: null })
     const items = useMemo(props, [])
     const glow = useRef([])
+    const confetti = useMemo(makeConfetti, [])
+    // touched: confetti where he stood, and he is gone (st.popped, until the route changes)
+    const pop = (e) => {
+        e.stopPropagation()
+        const c = st.current
+        if (c.popped || !root.current?.visible) return
+        c.popped = true
+        root.current.visible = false
+        popConfetti(confetti, root.current.position)
+        sound.play('pop')
+        document.body.style.cursor = ''
+    }
 
     // dressed for nothing, with his props in his hands, without a shadow, and a little light of his own
     useEffect(() => {
@@ -155,6 +224,7 @@ function Walker() {
     }, [items])
 
     useFrame(({ clock }, dt) => {
+        stepConfetti(confetti, Math.min(dt, 0.05))
         const g = root.current
         if (!g || !rig.current?.bones) return
         const s = useExperience.getState()
@@ -164,6 +234,11 @@ function Walker() {
             st.current.route = null
             return
         }
+        // (found and gone in confetti: he comes back only when a route is opened again)
+        if (st.current.popped && st.current.route === name) {
+            g.visible = false
+            return
+        }
         const now = clock.elapsedTime
         const c = st.current
         const plan = PLAN[name]
@@ -171,7 +246,7 @@ function Walker() {
             // (a new route: where he can walk there is read first — a few frames —, then his story starts)
             const mine = new Set()
             g.traverse((o) => mine.add(o))
-            Object.assign(c, { route: name, grid: walkGrid(scene, plan.area, mine), ready: false, d: 0, station: 0, leg: null, yaw: undefined, at: null })
+            Object.assign(c, { route: name, grid: walkGrid(scene, plan.area, mine), ready: false, d: 0, station: 0, leg: null, yaw: undefined, at: null, popped: false })
             if (process.env.NODE_ENV !== 'production') window.__routeChonti = c // (dev: to look at where he can walk)
             Object.assign(pose.current, { walk: 0, read: 0, sit: 0, eat: 0, write: 0, lookDown: 0 })
         }
@@ -289,8 +364,25 @@ function Walker() {
     })
 
     return (
-        <group ref={root} scale={SIZE} visible={false} name="chonti_rutas">
-            <Chonti ref={rig} />
-        </group>
+        <>
+            <group
+                ref={root}
+                scale={SIZE}
+                visible={false}
+                name="chonti_rutas"
+                onClick={pop}
+                onPointerOver={(e) => (e.stopPropagation(), (document.body.style.cursor = 'pointer'))}
+                onPointerOut={() => (document.body.style.cursor = '')}
+            >
+                <Chonti ref={rig} />
+                {/* (where a touch finds him: he is tiny on the map — a few pixels —, so a bubble a bit
+                    bigger than him, invisible, catches it) */}
+                <mesh position-y={1.1} scale={[1.6, 1.9, 1.6]}>
+                    <sphereGeometry args={[1, 12, 8]} />
+                    <meshBasicMaterial visible={false} />
+                </mesh>
+            </group>
+            <primitive object={confetti.mesh} />
+        </>
     )
 }

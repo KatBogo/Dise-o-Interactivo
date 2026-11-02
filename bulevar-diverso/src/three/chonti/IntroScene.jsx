@@ -53,6 +53,7 @@ export default function IntroScene() {
     const fallTl = useRef(null) // the fall's gestures (paused: driven by fallClock)
     const fallClock = useRef(0) // s since the fall began, clamped per frame like the physics
     const fallFront = useRef(null) // where the camera was when the fall began
+    const fallFollow = useRef(null) // where the camera follows him: his path, eased (smooth, never jerky)
     const prevX = useRef(0)
     const lastSlot = useRef(-1)
     const pose = useRef({ step: 0, walk: 0, read: 0, flail: 0, lookDown: 0, excite: 0, think: 0, scratch: 0, expr: 'happy' })
@@ -154,6 +155,7 @@ export default function IntroScene() {
         fallTl.current = tl
         fallClock.current = 0
         fallFront.current = null
+        fallFollow.current = null
         // 1. a jump of surprise: something is going on with the floor! (arms up, he turns to us)
         tl.call(() => (p.expr = 'surprised'))
           .to(p, { read: 0, think: 0, scratch: 0, excite: 1, duration: 0.2, ease: 'back.out(3)' })
@@ -218,8 +220,12 @@ export default function IntroScene() {
             fallClock.current += step
             fallTl.current?.time(fallClock.current)
             const ft = fallClock.current
-            // inside the clouds he slows down, as if sinking into cotton, and they swallow him
-            if (sim.chonti.position.y < CLOUD_SEA.top) sim.chonti.velocity.y = Math.max(sim.chonti.velocity.y, -5)
+            // the air holds him: he never goes faster than a gentle top speed, and as he sinks into the
+            // clouds it eases down further, as if into cotton — little by little (the speed was cut
+            // from ~17 to 5 in one frame at the clouds' top: a jolt)
+            const inCloud = 1 - smooth(CLOUD_SEA.top - 3, CLOUD_SEA.top + 5, sim.chonti.position.y)
+            const topSpeed = lerp(-8, -4, inCloud)
+            if (sim.chonti.velocity.y < topSpeed) sim.chonti.velocity.y += (topSpeed - sim.chonti.velocity.y) * (1 - Math.exp(-step * 2.5))
             // the INTERPOLATED position: the physics runs at a fixed 60 steps a second, so on a 90 /
             // 120 Hz screen the raw position only changes every other frame → he seemed to vibrate
             r.position.copy(sim.chonti.interpolatedPosition)
@@ -262,12 +268,18 @@ export default function IntroScene() {
             // rotation can't drift apart — on tall phone screens they did, and Chonti shot up to the
             // top of the screen and came back down
             const blend = smooth(0, 1.2, since)
-            const b = r.position
+            // (the camera follows his path eased a little: following each physics step exactly, it
+            // trembled with them; a hair behind him, the whole fall glides)
+            if (!fallFollow.current) fallFollow.current = r.position.clone()
+            const b = fallFollow.current.lerp(r.position, 1 - Math.exp(-step * 10))
             // (where the camera was when the fall began: reading its own moving position every frame made
             // it glide differently on every screen rate)
             if (!fallFront.current) fallFront.current = new THREE.Vector3(camera.position.x, lowY, CAMERA.intro.position[2])
             tmp.front.copy(fallFront.current)
-            tmp.top.set(b.x, Math.max(b.y + 7.5, CLOUD_SEA.top + 8), b.z)
+            // (stays above the clouds' top — a soft floor: with a plain max it stopped dead the moment
+            // he went past it)
+            const over = b.y + 7.5 - (CLOUD_SEA.top + 8)
+            tmp.top.set(b.x, CLOUD_SEA.top + 8 + 1.5 * Math.log1p(Math.exp(over / 1.5)), b.z)
             camera.position.lerpVectors(tmp.front, tmp.top, blend)
             tmp.lookTop.lerpVectors(introState.lookTarget, b, blend)
             camera.up.set(0, 1 - blend, -blend).normalize()
