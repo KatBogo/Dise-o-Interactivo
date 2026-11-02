@@ -28,9 +28,10 @@ const W = 320
 const H = 420
 // feet, from the corner · phones: small, just above the bottom bar, beside "Volver al mapa"
 // — or standing on top of the open card (GuideChonti lifts the whole layer)
-// (a little bigger than before on both: 50 → 56 on phones, 72 → 80 on computers)
+// (80 on computers; phones and narrow windows 46 — small, so his bubble sits low, right above his
+// hat, and not up at the top of the screen)
 // (phones: far enough from the left edge that his hat / glasses / cap are never cut by it)
-const spot = (narrow) => ({ fx: narrow ? 68 : 112, fy: narrow ? 74 : 34, scale: narrow ? 56 : 80 })
+const spot = (narrow) => ({ fx: narrow ? 58 : 112, fy: narrow ? 74 : 34, scale: narrow ? 46 : 80 })
 const SHEETS = '.panel--right, .card--float, .card-pill'
 // his height (× scale) from the feet to the top of what he wears — measured on the model whenever
 // he changes outfit (the pompom of the Christmas hat goes well above his stem)
@@ -370,8 +371,8 @@ export default function GuideChonti() {
         return () => clearInterval(id)
     }, [mounted, narrow])
 
-    // where the top of his head is (hat included): on computers his bubble sits right above it, with
-    // room to spare, so it never covers his Christmas hat / cap — whatever he wears, it follows
+    // where the top of his head is (hat included): his bubble sits right above it — on phones too —,
+    // with room to spare, so it never covers his Christmas hat / cap — whatever he wears, it follows
     useEffect(() => {
         if (!mounted) return
         const html = document.documentElement.style
@@ -379,7 +380,7 @@ export default function GuideChonti() {
         const publish = () => {
             const { fy, scale } = spot(narrow)
             const top = fy + scale * height.units
-            const v = narrow ? '' : `${Math.round(top + BUBBLE_GAP)}px`
+            const v = `${Math.round(top + BUBBLE_GAP)}px`
             if (v === last) return
             last = v
             if (v) html.setProperty('--bubble-bottom', v)

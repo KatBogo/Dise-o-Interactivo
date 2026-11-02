@@ -2007,36 +2007,14 @@ export const userWindowLit = new THREE.MeshStandardMaterial({ color: '#2F3B40', 
 // (a matte finish: no shine, no clearcoat — the information panels of the Gato's park)
 const matteCache = new Map()
 const matteOf = (m) => matteCache.get(m.color.getHex()) ?? matteCache.set(m.color.getHex(), new THREE.MeshStandardMaterial({ color: m.color.clone(), roughness: 1, metalness: 0, side: THREE.DoubleSide })).get(m.color.getHex())
-// La Tertulia at night (UserPiece): every window of it lit, brighter than a home's; its walls washed
-// in warm light (the glow follows the picture of its sandstone); a warm pool of light on its plaza.
+// La Tertulia at night (UserPiece): only its windows lit, a little brighter than a home's — its walls
+// and its plaza stay as they are (lit whole, the building glowed orange from end to end).
 // (Only light: its shape is as it is in your island.)
 const tertuliaWindowLit = Object.assign(userWindowLit.clone(), { emissive: new THREE.Color('#FFCF7A') })
-const TERTULIA_WALLS = []
-const tertuliaPoolMat = new THREE.MeshBasicMaterial({ color: '#FFC27A', transparent: true, opacity: 0, depthWrite: false, blending: THREE.AdditiveBlending, toneMapped: false })
 function lightUpTertulia(clay) {
     clay.traverse((o) => {
-        if (!o.isMesh || Array.isArray(o.material)) return
-        if (o.material === userWindowLit) return void (o.material = tertuliaWindowLit)
-        const m = o.material
-        const c = m.color
-        // (its light walls and columns — not the lawn, nor the paving of the plaza)
-        if (!c || !('emissive' in m) || 0.2126 * c.r + 0.7152 * c.g + 0.0722 * c.b < 0.35 || o.geometry.boundingBox?.getSize(new THREE.Vector3()).y < 0.02) return
-        m.emissive.set('#FFB866')
-        m.emissiveMap = m.map ?? null
-        m.emissiveIntensity = 0
-        m.needsUpdate = true
-        if (!TERTULIA_WALLS.includes(m)) TERTULIA_WALLS.push(m)
+        if (o.isMesh && o.material === userWindowLit) o.material = tertuliaWindowLit
     })
-    // the pool: as big as the building, on its ground
-    const box = new THREE.Box3().setFromObject(clay)
-    const size = box.getSize(new THREE.Vector3()), mid = box.getCenter(new THREE.Vector3())
-    const pool = new THREE.Mesh(new THREE.PlaneGeometry(1, 1).rotateX(-Math.PI / 2), tertuliaPoolMat)
-    tertuliaPoolMat.map = glowTexture()
-    pool.position.set(mid.x, box.min.y + 0.09, mid.z)
-    pool.scale.set(size.x * 1.05, 1, size.z * 1.05)
-    pool.renderOrder = 2
-    pool.name = 'tertulia_luz_plaza'
-    clay.add(pool)
 }
 function clayBuilding(holder, { windows = true } = {}) {
     holder.traverse((o) => {
@@ -2152,12 +2130,30 @@ function paintErmita(clay) {
 }/** A building of your island (a place: it hops and grows when you choose it — Places.jsx), where it stands. */
 /**
  * Your whole island as it is in Assets/modelos/isla_bulevar-completa.glb (copied as it is to
- * public/models — scripts/sync-assets.mjs): RULE — nothing of it is changed: not a vertex, a normal, a
- * texture coordinate or a material of yours. The page only adds light: at night the windows of the
+ * public/models — scripts/sync-assets.mjs): RULE — nothing of its shape is changed: not a vertex, a
+ * normal or a texture coordinate, and every piece keeps its colour (in Chonti's clay finish —
+ * clayOfFile). The page only adds light: at night the windows of the
  * buildings, the lamps and the traffic lights light up (a lit copy of their material on those pieces),
  * and the panels of the Gato stay matte. Not drawn with it: the places (drawn where they hop and grow,
  * Places.jsx · UserPiece) and its water (the page's flows in the same place).
  */
+/**
+ * Chonti's clay on every piece of your island: the same soft matte finish, velvety sheen and warm
+ * rim as him — each piece in ITS colour (and its picture, if it has one). Smooth: no pores and no
+ * dimples (on a whole island they read as a texture); and not one polygon more — the faces are the
+ * ones of the file.
+ */
+const fileClay = new Map()
+function clayOfFile(m) {
+    if (!m || m.transparent || !m.isMeshStandardMaterial) return m
+    if (!fileClay.has(m.uuid)) {
+        const clay = clayMaterial({ color: m.color.clone(), map: m.map ?? null, vertexColors: !!m.vertexColors, speckle: 0, bump: 0, rim: 0.14, rimColor: '#FFE3C8', warmth: 0.02, sheen: 0.18, sheenColor: '#FFF1E2' })
+        clay.side = m.side
+        clay.name = m.name
+        fileClay.set(m.uuid, clay)
+    }
+    return fileClay.get(m.uuid)
+}
 const BUILDING_GROUPS = /^(edificios|lugares_e_hitos|casas_de_las_rutas)$/
 const luma = (c) => (c ? 0.2126 * c.r + 0.7152 * c.g + 0.0722 * c.b : 1)
 // (its window glass with the light on: a lit copy of your material — its colour stays, it glows)
@@ -2178,6 +2174,73 @@ const inBuilding = (o) => {
     for (let n = o.parent; n; n = n.parent) if (BUILDING_GROUPS.test(n.name)) return true
     return false
 }
+// (the building a piece belongs to: the child of its group — for the ground it stands on)
+const buildingOf = (o) => {
+    let b = o
+    while (b.parent && !BUILDING_GROUPS.test(b.parent.name)) b = b.parent
+    return b.parent ? b : null
+}
+/**
+ * At night only the panes set into the walls light up — what you see through the window holes —,
+ * never a dark roof, a whole dark glass front, a sign or a door. The dark piece is read as it is:
+ * its triangles, by the corners they share, make each pane; a pane is lit when it stands on a wall,
+ * is small (a window, not a facade) and doesn't touch the ground (a door). RULE kept: no vertex of
+ * the file moves — the lit panes are drawn by a second mesh that shares its vertices, the rest by the
+ * piece itself (only which triangles each draws changes).
+ */
+const PANE_MAX = 0.45 // (the biggest a window is, in the island's units: a whole facade is bigger)
+function lightPanes(o, lit, floorY) {
+    const g = o.geometry, p = g.attributes.position
+    const index = g.index ? g.index.array : Array.from({ length: p.count }, (_, i) => i)
+    const tris = index.length / 3
+    const key = (i) => `${p.getX(i).toFixed(4)},${p.getY(i).toFixed(4)},${p.getZ(i).toFixed(4)}`
+    const parent = Array.from({ length: tris }, (_, i) => i)
+    const find = (i) => (parent[i] === i ? i : (parent[i] = find(parent[i])))
+    const owner = new Map()
+    for (let t = 0; t < tris; t++) for (let k = 0; k < 3; k++) {
+        const c = key(index[t * 3 + k])
+        if (owner.has(c)) parent[find(t)] = find(owner.get(c))
+        else owner.set(c, t)
+    }
+    const panes = new Map()
+    for (let t = 0; t < tris; t++) {
+        const r = find(t)
+        if (!panes.has(r)) panes.set(r, [])
+        panes.get(r).push(t)
+    }
+    const a = new THREE.Vector3(), b = new THREE.Vector3(), c = new THREE.Vector3(), box = new THREE.Box3(), size = new THREE.Vector3()
+    const on = [], off = []
+    for (const list of panes.values()) {
+        box.makeEmpty()
+        let wall = 0, all = 0
+        for (const t of list) {
+            a.fromBufferAttribute(p, index[t * 3]).applyMatrix4(o.matrixWorld)
+            b.fromBufferAttribute(p, index[t * 3 + 1]).applyMatrix4(o.matrixWorld)
+            c.fromBufferAttribute(p, index[t * 3 + 2]).applyMatrix4(o.matrixWorld)
+            box.expandByPoint(a).expandByPoint(b).expandByPoint(c)
+            const n = b.sub(a).cross(c.sub(a)), area = n.length()
+            if (!area) continue
+            all += area
+            if (Math.abs(n.y) / area < 0.3) wall += area
+        }
+        box.getSize(size)
+        const pane = all > 0 && wall > all * 0.9 && Math.max(size.x, size.y, size.z) < PANE_MAX && box.min.y > floorY + 0.03
+        ;(pane ? on : off).push(...list)
+    }
+    if (!on.length) return
+    if (!off.length) return void (o.material = lit)
+    const drawing = (list) => {
+        const part = new THREE.BufferGeometry()
+        for (const name in g.attributes) part.setAttribute(name, g.attributes[name])
+        part.setIndex(list.flatMap((t) => [index[t * 3], index[t * 3 + 1], index[t * 3 + 2]]))
+        return part
+    }
+    o.geometry = drawing(off)
+    const glass = new THREE.Mesh(drawing(on), lit)
+    glass.name = `${o.name}_luz`
+    glass.receiveShadow = true
+    o.add(glass)
+}
 const flat = (o) => {
     if (!o.geometry.boundingBox) o.geometry.computeBoundingBox()
     const b = o.geometry.boundingBox
@@ -2190,8 +2253,18 @@ function WholeIsland() {
         copy.updateMatrixWorld(true)
         const out = []
         copy.traverse((o) => (DRAWN_BY_PAGE.has(o.name) || /^rio_agua/.test(o.name)) && out.push(o))
+        // (a tree crown left off the island in the file — arboles_copas_037_malla.002, past the east
+        // edge, with no trunk —: it hung in the air beside the island; any crown off the ground goes)
+        const ground = new THREE.Box3().setFromObject(copy.getObjectByName('terreno') ?? copy)
+        const mid = new THREE.Vector3()
+        copy.getObjectByName('arboles')?.traverse((o) => {
+            if (!o.isMesh) return
+            new THREE.Box3().setFromObject(o).getCenter(mid)
+            if (mid.x < ground.min.x || mid.x > ground.max.x || mid.z < ground.min.z || mid.z > ground.max.z) out.push(o)
+        })
         out.forEach((o) => o.removeFromParent())
         LAMP_HEADS.splice(0, LAMP_HEADS.length, ...fixUserLamps(copy))
+        const windows = []
         copy.traverse((o) => {
             if (!o.isMesh) return
             // (the ground casts no shadow on itself — it came out in stripes —; everything standing does)
@@ -2201,8 +2274,18 @@ function WholeIsland() {
             const m = o.material
             if (o.name.endsWith(LAMP_TAG)) o.material = lampHeadMat
             else if (within(o, /^semaforos_luces/) && m.emissive) o.material = LAMP_MATS.main[m.emissive.g > m.emissive.r ? 'green' : m.emissive.r > 0.5 ? 'red' : 'amber']
-            else if (inBuilding(o) && luma(m.color) <= 0.12) o.material = litWindow(m)
+            else {
+                o.material = clayOfFile(m)
+                if (inBuilding(o) && luma(m.color) <= 0.12) windows.push([o, m])
+            }
         })
+        // (its windows: only the panes in the walls — lightPanes; after the walk, it adds meshes)
+        const floors = new Map()
+        for (const [o, m] of windows) {
+            const b = buildingOf(o)
+            if (!floors.has(b)) floors.set(b, new THREE.Box3().setFromObject(b).min.y)
+            lightPanes(o, litWindow(m), floors.get(b))
+        }
         return copy
     }, [scene])
     return (
@@ -2214,26 +2297,32 @@ function WholeIsland() {
 }
 if (WHOLE_ISLAND) useGLTF.preload(WHOLE_URL)
 
-/** A place of your whole island, as it is in it (only light added: its windows, La Tertulia lit at night). */
+/** A place of your whole island, as it is in it (only light added: the panes of its windows at night). */
 function wholePiece(scene, name) {
     scene.updateMatrixWorld(true)
     const root = scene.getObjectByName(name.replace(/\./g, ''))
     if (!root) return null
     const copy = root.clone(true)
     const gato = /^lugar_gato/.test(name), tertulia = /^lugar_tertulia/.test(name)
+    const holder = new THREE.Group()
+    copy.position.set(0, 0, 0), copy.quaternion.identity(), copy.scale.set(1, 1, 1)
+    holder.add(copy)
+    holder.updateMatrixWorld(true)
+    const floorY = new THREE.Box3().setFromObject(copy).min.y
+    const windows = []
     copy.traverse((o) => {
         if (!o.isMesh || Array.isArray(o.material)) return
         o.castShadow = !flat(o)
         o.receiveShadow = true
-        // (its own materials, copied: lit at night without lighting another building that shares them)
-        o.material = o.material.clone()
-        if (luma(o.material.color) > 0.12) return
-        o.material = gato ? matteOf(o.material) : tertulia ? tertuliaWindowLit : litWindow(o.material)
+        const m = o.material
+        // (Chonti's clay, in its colour — clayOfFile; its glass lit at night)
+        o.material = clayOfFile(m)
+        if (luma(m.color) > 0.12) return
+        if (gato) o.material = matteOf(m)
+        else windows.push([o, m])
     })
-    const holder = new THREE.Group()
-    copy.position.set(0, 0, 0), copy.quaternion.identity(), copy.scale.set(1, 1, 1)
-    holder.add(copy)
-    if (tertulia) lightUpTertulia(holder)
+    // (only the panes in its walls: not its dark roofs, signs or doors — lightPanes)
+    for (const [o, m] of windows) lightPanes(o, tertulia ? tertuliaWindowLit : litWindow(m), floorY)
     root.matrixWorld.decompose(holder.position, holder.quaternion, holder.scale)
     return holder
 }
@@ -2356,10 +2445,8 @@ export default function Island() {
         lampHeadMat.emissiveIntensity = 0.08 + skyState.night * 2.4 // street lamps light up at night
         userWindowLit.emissiveIntensity = skyState.night * 1.9 // (the windows of your buildings with their lights on)
         for (const m of LIT_WINDOWS) m.emissiveIntensity = skyState.night * 1.9
-        // La Tertulia lit up at night: its windows brighter, its walls washed in warm light, its plaza glowing
+        // La Tertulia at night: only its windows, a little brighter
         tertuliaWindowLit.emissiveIntensity = skyState.night * 3.4
-        for (const m of TERTULIA_WALLS) m.emissiveIntensity = skyState.night * 0.34
-        tertuliaPoolMat.opacity = THREE.MathUtils.smoothstep(skyState.night, 0.2, 0.75) * 0.5
     })
     const palmTrunks = useMemo(() => city.trunks.filter((t) => !t.model), [city])
     const cityModels = useMemo(() => {

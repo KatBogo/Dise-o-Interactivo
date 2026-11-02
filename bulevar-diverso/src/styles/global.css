@@ -915,7 +915,7 @@ html[data-builder='true'] .panel--right { display: none; }
 }
 .guide-pill__open:hover { background: var(--lima); }
 .guide-pill__open:focus-visible { outline: 2px solid var(--naranja); outline-offset: 2px; }
-@media (max-width: 799px) { .guide-pill { top: var(--bubble-top, 104px); bottom: auto; left: 16px; } html[data-sheet='true'] .guide-pill { display: none; } }
+@media (max-width: 799px) { .guide-pill { left: 16px; } html[data-sheet='true'] .guide-pill { display: none; } }
 @keyframes bubble-in { from { opacity: 0; transform: translateY(10px) scale(0.96); } }
 /* leave room for Chonti + his bubble under the right-hand card */
 
@@ -928,7 +928,8 @@ html[data-builder='true'] .panel--right { display: none; }
     .hud__actions .btn { font-size: 11px; padding: 6px 10px; }
     .hud__long { display: none; }
     .hud__coords { display: none; }
-    .tl-stage { left: 48px; width: calc(100vw - 72px); }
+    /* (Chonti beside the column, a wide low window: it ends before him — IntroTimeline sets it) */
+    .tl-stage { left: 48px; width: var(--tl-narrow-width, calc(100vw - 72px)); }
     .tl-track { top: 14vh; }
     .intro-hint { white-space: nowrap; font-size: 11px; letter-spacing: 0.12em; }
     .tl-item__media { width: 100%; }
@@ -955,15 +956,16 @@ html[data-builder='true'] .panel--right { display: none; }
      *   20px   the three plans (one row)
      *   ~70px  "Volver al mapa" (centred) · Chonti small in the left corner, beside it
      *   106px  the card / sheet, low, right above "Volver al mapa" — Chonti stands on its top edge
-     *   top    brand + buttons · sky panel · Chonti's bubble (hidden while a sheet is open)
+     *   ~200px Chonti's bubble, right above his hat, as on computers (hidden while a sheet is open)
+     *   top    brand + buttons · sky panel
      *          → the island in the free gap between them (CameraRig)
      */
     :root { --sheet-bottom: 106px; }
     .hud__brand { font-size: 18px; }
     .hud__actions .btn { font-size: 10.5px; padding: 5px 9px; }
     .guide-bubble {
-        top: var(--bubble-top, 104px); bottom: auto; left: 16px; right: 16px; width: auto; padding: 8px 12px; font-size: 12.5px;
-        transition: opacity 0.45s var(--ease), translate 0.45s var(--ease), visibility 0.45s, top 0.4s var(--ease);
+        left: 16px; width: min(260px, calc(100vw - 32px)); padding: 8px 12px; font-size: 12.5px;
+        transition: opacity 0.45s var(--ease), translate 0.45s var(--ease), visibility 0.45s, bottom 0.4s var(--ease);
     }
     .guide-bubble__name { font-size: 16px; }
     /* with a sheet open the bubble would cover the island above it (his voice still says it) */

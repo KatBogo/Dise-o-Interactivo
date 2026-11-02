@@ -22,9 +22,9 @@ const isTouch = () => typeof window !== 'undefined' && window.matchMedia('(point
 // free to orbit all the way round, zoom in close and slide along it, and tilt down to a low,
 // almost street-level view. The only walls: it never goes under the island's surface nor into a
 // building, a tree or a monument (KeepAbove).
-// (minDistance: the closest the camera comes — about as close as a street with its buildings on both
-// sides of the river fills the screen; closer, it looked like a toy)
-const STAGE_LIMITS = { minDistance: 6.5, maxDistance: 120, minPolar: 0.05, maxPolar: Math.PI * 0.47 }
+// (minDistance: the closest the camera comes — the river street seen from above with its buildings on
+// both sides; closer, the buildings filled the screen and their low-poly faces showed)
+const STAGE_LIMITS = { minDistance: 16, maxDistance: 120, minPolar: 0.05, maxPolar: Math.PI * 0.47 }
 // where the orbit centre can be slid to (pan): over the island, never off it
 const PAN_BOUNDS = { x: [-19, 21], z: [-7, 7] }
 // the lowest the camera can be: a little above the street

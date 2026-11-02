@@ -37,15 +37,27 @@ const SKY_CLOUDS = [[-6, 8, 1.2, 0.5], [22, 18, 0.8, 0.3], [58, 6, 1.4, 0.6], [7
 // the bottom, IntroScene), so it neither hugs the top nor reaches him.
 const narrow = () => window.innerWidth < 800
 const BAND_TOP = 64 // under the brand and the buttons
-// Chonti's head (where IntroScene measures it — with the hat on —, or about there before it does)
-const bandBottom = () => (introState.chontiTop > 0 ? introState.chontiTop - 12 : window.innerHeight * 0.69)
+// (a wide, low window — a laptop at 125 % —: Chonti stands BESIDE the column, on the right, not under
+// it — only lying down and with room for a real column there; a phone held upright never)
+const beside = () => window.innerWidth > window.innerHeight && (introState.chontiLeft ?? 0) - 72 >= 360
+// Chonti's head (where IntroScene measures it — with the hat on —, or about there before it does);
+// beside the column he is in no card's way: the whole height is the band
+const bandBottom = () => (beside() ? window.innerHeight - 24 : introState.chontiTop > 0 ? introState.chontiTop - 12 : window.innerHeight * 0.69)
 /**
  * Phones: every date fits in the band above Chonti's head — if its photo, title and text are
- * taller than that band, the photo gets smaller (never under 124px wide), so he never stands on the
- * text. RULE: always 16:9 — it gets narrower, never squashed.
+ * taller than that band, the photo gets a little smaller (never under 80 % of the column), so he
+ * never stands on the text. Chonti beside the column: the column ends before him and the photo
+ * takes its whole width. RULE: the photo always big and always 16:9 — narrower, never squashed.
  */
 function fitCards(root) {
     let changed = false
+    const html = document.documentElement.style
+    const width = narrow() && beside() ? `${Math.round(introState.chontiLeft - 48 - 24)}px` : ''
+    if (html.getPropertyValue('--tl-narrow-width') !== width) {
+        if (width) html.setProperty('--tl-narrow-width', width)
+        else html.removeProperty('--tl-narrow-width')
+        changed = true
+    }
     root?.querySelectorAll('.tl-item__inner').forEach((inner) => {
         const media = inner.querySelector('.tl-item__media')
         if (!media) return
@@ -54,7 +66,7 @@ function fitCards(root) {
         let w = ''
         if (narrow()) {
             const over = inner.offsetHeight - (bandBottom() - BAND_TOP - 8)
-            if (over > 0) w = `${Math.max(124, Math.round(((media.offsetHeight - over) * 16) / 9))}px`
+            if (over > 0) w = `${Math.max(Math.round(inner.offsetWidth * 0.8), Math.round(((media.offsetHeight - over) * 16) / 9))}px`
         }
         media.style.width = w
         if (w !== before) changed = true
@@ -108,7 +120,7 @@ export default function IntroTimeline() {
         let last = ''
         const check = () => {
             // (his head in steps of 24px: while the camera settles it moves a little every frame)
-            const key = `${window.innerWidth}x${window.innerHeight}:${Math.round((introState.chontiTop ?? 0) / 24)}`
+            const key = `${window.innerWidth}x${window.innerHeight}:${Math.round((introState.chontiTop ?? 0) / 24)}:${Math.round((introState.chontiLeft ?? 0) / 24)}`
             if (key === last) return
             last = key
             if (fitCards(scope.current)) ScrollTrigger.refresh() // (the column's length changed)

@@ -4,7 +4,8 @@ import { useEffect } from 'react'
  * Phones: nothing on top of anything, whatever the size of the screen and of what is open. Every
  * piece is measured and stacked, with room between them so no shadow falls on the next one:
  *   from the bottom up · the hint text · the plans + "Volver al mapa" · the card / sheet
- *   from the top down  · the island clock · Chonti's bubble · the card of a route stop
+ *   from the top down  · the island clock · the card of a route stop
+ *   (Chonti's bubble sits by him, above his hat — GuideChonti publishes --bubble-bottom)
  * (Chonti stands on the highest of the bottom pieces and gets smaller when the room above it is
  * short: GuideChonti. The island fits in the gap that is left: CameraRig.)
  * Published as CSS variables: --bubble-top, --filters-bottom, --sheet-bottom, --top-free.
@@ -28,8 +29,7 @@ export default function ScreenLayout() {
                 for (const name of ['--filters-bottom', '--sheet-bottom', '--top-free']) html.style.removeProperty(name)
                 return
             }
-            const bubble = document.querySelector('.guide-bubble, .guide-pill')
-            if (visible(bubble)) top = Math.max(top, bubble.getBoundingClientRect().bottom)
+            // (Chonti's bubble is down by him, above his hat — it no longer takes room at the top)
             set('--top-free', `${Math.round(top + STACK_GAP)}px`)
             // the hint text at the very bottom: the plans sit right above whatever height it has
             const hint = document.querySelector('.stage-hint')

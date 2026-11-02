@@ -79,13 +79,16 @@ export default function IntroScene() {
         // · the timeline: the camera rises so he stands at the very BOTTOM of the screen (his feet
         //   at ~6% from the edge) — the cards rest above him and he is never on top of them
         //   (the view centre is 0.3 under the camera: feet at NDC −0.88)
-        // (phones: he stands a little higher — feet at ~11% from the edge — and is a bit bigger)
+        // (phones: he stands a little higher — feet at ~11% from the edge; a phone held upright: small,
+        // so the dates have the whole width and room above him — a narrow window lying down: a bit
+        // smaller than on a computer)
+        const portrait = size.height > size.width
         return {
             startX: -halfW * 0.8,
             endX: halfW * (narrow ? 0.66 : 0.74),
             camLift: narrow ? halfH * 0.5 : 0,
             lowY: INTRO_Y + 0.3 + (narrow ? 0.78 : 0.88) * halfH,
-            big: narrow ? 1.16 : 1.08,
+            big: narrow ? (portrait ? 0.72 : 0.95) : 1.08,
         }
         // camera.fov is set from the aspect ratio (CameraRig), so size is the real dependency
         // eslint-disable-next-line react-hooks/exhaustive-deps

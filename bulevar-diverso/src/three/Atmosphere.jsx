@@ -407,8 +407,10 @@ export default function Atmosphere() {
                 intensity={2.6}
                 castShadow
                 shadow-mapSize={[1024, 1024]}
-                shadow-bias={-0.0003}
-                shadow-normalBias={0.02}
+                // (with less, every wall, the lawn's sides and the cliff came out in thin stripes —
+                // shadow acne, worst where the light grazes them)
+                shadow-bias={-0.0008}
+                shadow-normalBias={0.2}
                 shadow-camera-left={-27}
                 shadow-camera-right={27}
                 shadow-camera-top={20}
