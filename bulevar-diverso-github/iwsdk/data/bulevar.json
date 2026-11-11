@@ -1,0 +1,763 @@
+{
+  "_info": "Escrito por src/three/IwsdkExport.jsx (/?iwsdk-export) desde los datos de la web (src/content/*.json): no se edita a mano.",
+  "island": {
+    "top": 0.3,
+    "halfLength": 23,
+    "halfWidth": 7,
+    "tallest": 7.672,
+    "rim": [
+      [
+        0,
+        7.323
+      ],
+      [
+        5.882,
+        7.838
+      ],
+      [
+        8.31,
+        7.659
+      ],
+      [
+        10.159,
+        7.479
+      ],
+      [
+        11.701,
+        7.347
+      ],
+      [
+        13.04,
+        7.259
+      ],
+      [
+        14.228,
+        7.198
+      ],
+      [
+        15.296,
+        7.148
+      ],
+      [
+        16.263,
+        7.092
+      ],
+      [
+        17.143,
+        7.02
+      ],
+      [
+        17.945,
+        6.922
+      ],
+      [
+        18.676,
+        6.795
+      ],
+      [
+        19.341,
+        6.635
+      ],
+      [
+        19.943,
+        6.443
+      ],
+      [
+        20.486,
+        6.219
+      ],
+      [
+        20.973,
+        5.964
+      ],
+      [
+        21.404,
+        5.677
+      ],
+      [
+        21.782,
+        5.36
+      ],
+      [
+        22.107,
+        5.009
+      ],
+      [
+        22.381,
+        4.623
+      ],
+      [
+        22.605,
+        4.192
+      ],
+      [
+        22.778,
+        3.703
+      ],
+      [
+        22.901,
+        3.126
+      ],
+      [
+        22.975,
+        2.378
+      ],
+      [
+        23,
+        0.585
+      ],
+      [
+        22.975,
+        -1.202
+      ],
+      [
+        22.901,
+        -1.932
+      ],
+      [
+        22.778,
+        -2.48
+      ],
+      [
+        22.605,
+        -2.93
+      ],
+      [
+        22.381,
+        -3.315
+      ],
+      [
+        22.107,
+        -3.651
+      ],
+      [
+        21.782,
+        -3.951
+      ],
+      [
+        21.404,
+        -4.222
+      ],
+      [
+        20.973,
+        -4.472
+      ],
+      [
+        20.486,
+        -4.704
+      ],
+      [
+        19.943,
+        -4.925
+      ],
+      [
+        19.341,
+        -5.137
+      ],
+      [
+        18.676,
+        -5.345
+      ],
+      [
+        17.945,
+        -5.548
+      ],
+      [
+        17.143,
+        -5.746
+      ],
+      [
+        16.263,
+        -5.936
+      ],
+      [
+        15.296,
+        -6.111
+      ],
+      [
+        14.228,
+        -6.258
+      ],
+      [
+        13.04,
+        -6.365
+      ],
+      [
+        11.701,
+        -6.413
+      ],
+      [
+        10.159,
+        -6.386
+      ],
+      [
+        8.31,
+        -6.281
+      ],
+      [
+        5.882,
+        -6.147
+      ],
+      [
+        0,
+        -6.677
+      ],
+      [
+        -5.882,
+        -8
+      ],
+      [
+        -8.31,
+        -8.204
+      ],
+      [
+        -10.159,
+        -8.125
+      ],
+      [
+        -11.701,
+        -7.918
+      ],
+      [
+        -13.04,
+        -7.659
+      ],
+      [
+        -14.228,
+        -7.39
+      ],
+      [
+        -15.296,
+        -7.129
+      ],
+      [
+        -16.263,
+        -6.884
+      ],
+      [
+        -17.143,
+        -6.654
+      ],
+      [
+        -17.945,
+        -6.437
+      ],
+      [
+        -18.676,
+        -6.226
+      ],
+      [
+        -19.341,
+        -6.016
+      ],
+      [
+        -19.943,
+        -5.801
+      ],
+      [
+        -20.486,
+        -5.575
+      ],
+      [
+        -20.973,
+        -5.333
+      ],
+      [
+        -21.404,
+        -5.071
+      ],
+      [
+        -21.782,
+        -4.784
+      ],
+      [
+        -22.107,
+        -4.466
+      ],
+      [
+        -22.381,
+        -4.111
+      ],
+      [
+        -22.605,
+        -3.709
+      ],
+      [
+        -22.778,
+        -3.243
+      ],
+      [
+        -22.901,
+        -2.684
+      ],
+      [
+        -22.975,
+        -1.947
+      ],
+      [
+        -23,
+        -0.157
+      ],
+      [
+        -22.975,
+        1.634
+      ],
+      [
+        -22.901,
+        2.374
+      ],
+      [
+        -22.778,
+        2.94
+      ],
+      [
+        -22.605,
+        3.414
+      ],
+      [
+        -22.381,
+        3.827
+      ],
+      [
+        -22.107,
+        4.195
+      ],
+      [
+        -21.782,
+        4.527
+      ],
+      [
+        -21.404,
+        4.828
+      ],
+      [
+        -20.973,
+        5.102
+      ],
+      [
+        -20.486,
+        5.348
+      ],
+      [
+        -19.943,
+        5.567
+      ],
+      [
+        -19.341,
+        5.756
+      ],
+      [
+        -18.676,
+        5.913
+      ],
+      [
+        -17.945,
+        6.033
+      ],
+      [
+        -17.143,
+        6.112
+      ],
+      [
+        -16.263,
+        6.145
+      ],
+      [
+        -15.296,
+        6.129
+      ],
+      [
+        -14.228,
+        6.067
+      ],
+      [
+        -13.04,
+        5.964
+      ],
+      [
+        -11.701,
+        5.842
+      ],
+      [
+        -10.159,
+        5.74
+      ],
+      [
+        -8.31,
+        5.736
+      ],
+      [
+        -5.882,
+        5.985
+      ]
+    ]
+  },
+  "timeline": {
+    "eyebrow": "Línea de tiempo",
+    "title": "La historia del Bulevar",
+    "lead": "Baja despacio y descubre con Chonti cómo nació el Bulevar.",
+    "items": [
+      {
+        "year": "1835 – 1845",
+        "name": "El Puente Ortiz",
+        "title": "Nace la primera conexión sobre el río",
+        "text": "Fray José Ignacio Ortiz lideró la construcción del primer puente de mampostería sobre el río Cali. Esta estructura conectó por primera vez el centro histórico con el norte de la ciudad, convirtiéndose en el cimiento del patrimonio urbano.",
+        "image": "timeline/01_puente-ortiz.jpg",
+        "imageAlt": "Vista histórica del Puente Ortiz"
+      },
+      {
+        "year": "1950 – 2010",
+        "name": "La Avenida Colombia",
+        "title": "La era vehicular y el tráfico pesado",
+        "text": "La Avenida Colombia se convirtió en una de las calles más transitadas de Cali. Durante décadas, el flujo constante de vehículos creó una barrera de ruido y congestión que separó a los ciudadanos de la ribera del río.",
+        "image": "timeline/02_avenida-colombia.jpg",
+        "imageAlt": "Avenida Colombia y Puente Ortiz"
+      },
+      {
+        "year": "2011 – 2012",
+        "name": "Las Obras y los Hallazgos",
+        "title": "El redescubrimiento del patrimonio",
+        "text": "Diseñado por la arquitecta Elly Burckhardt, arrancó el proyecto de hundimiento vial. Durante las excavaciones para el túnel se redescubrieron los muros y cimientos originales del Puente Ortiz de 1840 junto a vestigios arqueológicos de la Cali antigua.",
+        "image": "timeline/03_obras-y-hallazgos.jpg",
+        "imageAlt": "Excavaciones y vestigios del Puente Ortiz"
+      },
+      {
+        "year": "2013",
+        "name": "Inauguración del Bulevar",
+        "title": "De vía congestionada a paseo peatonal",
+        "text": "El 16 de mayo de 2013 se inauguró el Bulevar del Río junto al Túnel Mundialista. El espacio sobre la Avenida Colombia se transformó en un paseo peatonal abierto, devolviéndole a la ciudad la brisa y el encuentro ciudadano junto al agua.",
+        "image": "timeline/04_inauguracion-bulevar.jpg",
+        "imageAlt": "Vista general del Bulevar del Río Cali"
+      },
+      {
+        "year": "2014 – 2023",
+        "name": "Corredor Festivo y Cultural",
+        "title": "El epicentro de la cultura caleña",
+        "text": "El Bulevar se consolidó como el escenario al aire libre para los eventos más representativos de la ciudad: el Alumbrado Navideño, la Feria Internacional del Libro (CaliLee) y el festival urbano Sucursal Fest.",
+        "image": "timeline/05_corredor-festivo.jpg",
+        "imageAlt": "Bulevar del Río iluminado"
+      },
+      {
+        "year": "2024",
+        "name": "La COP16",
+        "title": "Pabellón global de la biodiversidad",
+        "text": "El Bulevar fue elegido como el corazón de la Zona Verde durante la Cumbre de Biodiversidad COP16. El paseo peatonal albergó emprendimientos sostenibles, pedagogía ambiental y cultura comunitaria ante visitantes de todo el mundo.",
+        "image": "timeline/06_cop16-zona-verde.jpg",
+        "imageAlt": "Zona Verde en el Bulevar del Río"
+      }
+    ]
+  },
+  "places": [
+    {
+      "id": "mucic",
+      "name": "MUCIC",
+      "tag": "Museo",
+      "guide": "Este es el MUCIC. Pasa con calma, que aquí la ciudad se cuenta sola.",
+      "position": [
+        5.084,
+        6.576
+      ],
+      "top": 0.946,
+      "storyParts": [
+        [
+          "El MUCIC es de esos lugares que uno pasa caminando por el bulevar sin imaginar todo lo que guarda. Su nombre lo dice: es el museo de la cultura y la identidad de Cali.",
+          "Adentro la ciudad se cuenta desde sus objetos, sus oficios y sus fiestas, como quien abre el álbum familiar de Cali y va reconociendo caras, calles y costumbres."
+        ],
+        [
+          "Las salas se recorren sin afán. Hay piezas que hablan del río, de los barrios que crecieron a su orilla y de la gente que llegó de todas partes a darle a Cali su ritmo.",
+          "Las exposiciones temporales van cambiando, así que cada visita trae algo distinto: fotografía, música, artes populares y la memoria de las fiestas de la ciudad."
+        ],
+        [
+          "Lo mejor es ir entre semana por la mañana, cuando está más tranquilo, y preguntar en la entrada por las visitas guiadas y las actividades para niños.",
+          "Al salir quedas a pocos pasos del agua. Un champús en la mano, una caminada por el bulevar y sigues el recorrido hacia el Gato del Río o hacia La Ermita."
+        ]
+      ],
+      "model": "/models/lugar_mucic.glb"
+    },
+    {
+      "id": "gato",
+      "name": "Gato de Tejada",
+      "tag": "Escultura",
+      "guide": "Mira quién está aquí: el Gato del Río. Salúdalo, que es el anfitrión del bulevar.",
+      "position": [
+        -4.125,
+        -2.886
+      ],
+      "top": 0.814,
+      "storyParts": [
+        [
+          "El Gato del Río es obra del maestro Hernando Tejada, uno de los artistas más queridos de Cali. Es una escultura de bronce de más de tres metros que mira tranquila hacia el agua.",
+          "Lo instalaron en 1996 a la orilla del Río Cali y desde entonces se volvió punto de encuentro, referencia para dar direcciones y la foto obligada de quien visita la ciudad."
+        ],
+        [
+          "Con los años le llegaron sus novias: esculturas de gatas intervenidas por diferentes artistas, cada una con su propio estilo, que se repartieron por la ribera del río.",
+          "Buscarlas todas se volvió un plan de tarde. Algunas cambiaron de lugar con el tiempo, así que encontrarlas es casi como un juego del tesoro por el bulevar."
+        ],
+        [
+          "El gato es más que una escultura: es la forma en que la ciudad se apropió de su río y de su arte público. Mucha gente lo saluda y hasta lo visten en fechas especiales.",
+          "El mejor momento para visitarlo es al final de la tarde, cuando la luz se pone naranja, el río brilla detrás y la brisa empieza a bajar de los cerros."
+        ]
+      ],
+      "model": "/models/lugar_gato-de-tejada.glb"
+    },
+    {
+      "id": "biblioteca",
+      "name": "Biblioteca Centenario",
+      "tag": "Biblioteca",
+      "guide": "Llegamos a la Biblioteca Centenario. Aquí se lee con brisa de río.",
+      "position": [
+        -9.598,
+        2.099
+      ],
+      "top": 0.984,
+      "storyParts": [
+        [
+          "La Biblioteca Centenario es un rincón de silencio en medio del centro de Cali. Por fuera conserva un aire republicano, con su pórtico y sus columnas mirando hacia el río.",
+          "Las mesas junto a las ventanas y la brisa que sube del agua hacen que leer aquí se sienta distinto: el ruido de la ciudad se queda afuera y el tiempo pasa más despacio."
+        ],
+        [
+          "Además de prestar libros, tiene programación cultural durante todo el año: clubes de lectura, talleres de escritura, charlas con autores y actividades para niños.",
+          "Vale la pena preguntar por la agenda del mes. Muchas actividades son gratuitas y son una buena forma de conocer gente que también anda buscando qué leer."
+        ],
+        [
+          "Es un buen lugar para estudiar, hacer tareas o simplemente sentarse un rato a hojear algo nuevo antes de seguir caminando por el bulevar.",
+          "El plan perfecto es sencillo: un libro prestado, una banca a la orilla del río y una lulada bien fría para acompañar la lectura."
+        ]
+      ],
+      "model": "/models/lugar_biblioteca-centenario.glb"
+    },
+    {
+      "id": "tertulia",
+      "name": "Museo La Tertulia",
+      "tag": "Museo de arte",
+      "guide": "Este es La Tertulia. Arte, cine y teatro al aire libre, todo en el mismo lugar.",
+      "position": [
+        -17.248,
+        3.858
+      ],
+      "top": 1.467,
+      "storyParts": [
+        [
+          "El Museo La Tertulia nació en 1956 como un lugar de encuentro de artistas y amigos del arte. Con los años se convirtió en una casa fundamental del arte moderno en Cali.",
+          "Sus salas reciben exposiciones de artistas locales, nacionales e internacionales, y su colección permite recorrer buena parte de la historia del arte en la región."
+        ],
+        [
+          "La cinemateca es un clásico de la ciudad: cine de autor, ciclos temáticos y películas que no se ven en el centro comercial, con un público que conversa a la salida.",
+          "El teatro al aire libre, escalonado sobre la ladera, recibe conciertos, obras y funciones bajo el cielo caleño. Llevar algo para sentarse nunca sobra."
+        ],
+        [
+          "Llega con tiempo y recorre las salas sin afán: el edificio de ladrillo y sus galerías también son parte de la obra.",
+          "Y quédate al atardecer: la vista hacia el río y los cerros, con la luz naranja de las seis, es parte de la experiencia de La Tertulia."
+        ]
+      ],
+      "model": "/models/lugar_museo-la-tertulia.glb"
+    }
+  ],
+  "events": [
+    {
+      "id": "feria",
+      "name": "Feria del libro",
+      "when": "CaliLee",
+      "dates": "Mediados de octubre, suele durar 11 días",
+      "place": "Bulevar del Río",
+      "body": "Carpas, autores y libros a la orilla del río. Lleva bolso grande.",
+      "guide": "Se armó la Feria del Libro: pabellones de libros a lo largo del bulevar, banderines de colores y hojas volando.",
+      "position": [
+        -2.4,
+        1.95
+      ]
+    },
+    {
+      "id": "alumbrado",
+      "name": "Alumbrado",
+      "when": "Diciembre",
+      "dates": "De principios de diciembre a principios de enero",
+      "place": "Bulevar del Río",
+      "body": "En diciembre el río se prende. Camínalo de noche y déjate deslumbrar.",
+      "guide": "Se hizo de noche y prendieron el alumbrado. ¡Tutaina tuturumá! Mira cómo brilla el río.",
+      "position": [
+        0.6,
+        2.15
+      ]
+    },
+    {
+      "id": "sucursal",
+      "name": "Sucursal Fest",
+      "when": "Fin de semana",
+      "dates": "Un fin de semana de fiesta (fecha por confirmar)",
+      "place": "La Retreta (Paseo Bolívar), junto al Puente Ortiz",
+      "body": "Salsa, luces y gente bailando en la calle. Lleva zapatos cómodos.",
+      "guide": "¡Llegó el Sucursal Fest! Tarimas con luces, salsa y baile hasta que el cuerpo aguante.",
+      "position": [
+        20.6,
+        -1.74
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "id": "gastronomico",
+      "name": "Gastronómicas",
+      "guide": "Ruta gastronómica activada. Ven con hambre, que esto es de picar en picar.",
+      "stops": [
+        {
+          "id": "champus",
+          "name": "Champús y lulada",
+          "note": "Pa' arrancar fresquito.",
+          "desc": "Una fonda de toda la vida donde sirven champús —maíz, lulo, piña y canela— y lulada bien fría. Es la bebida más vallecaucana que hay y la mejor forma de arrancar el recorrido.",
+          "position": [
+            8.454,
+            4.97
+          ],
+          "base": 0.442
+        },
+        {
+          "id": "marranitas",
+          "name": "Empanadas y marranitas",
+          "note": "Con ají, obvio.",
+          "desc": "Empanadas de maíz recién fritas y marranitas, bolitas de plátano verde rellenas de chicharrón. Se comen calienticas, con ají y limón, de pie en el mostrador.",
+          "position": [
+            1.258,
+            4.845
+          ],
+          "base": 0.444
+        },
+        {
+          "id": "chontaduro",
+          "name": "Chontaduro con sal y miel",
+          "note": "El de la casa. Ni se pregunta.",
+          "desc": "El chontaduro es la fruta de una palma del Pacífico que se come cocinada, con sal y miel. Dicen que da energía pa todo el día; aquí se prueba al lado del río, como manda la tradición.",
+          "position": [
+            14.56,
+            4.904
+          ],
+          "base": 0.476
+        },
+        {
+          "id": "obelisco",
+          "name": "Empanadas del Obelisco",
+          "note": "Las empanadas más famosas de Cali.",
+          "desc": "En la esquina del Obelisco, frente a La Tertulia, se venden las famosas empanadas: crocantes, de maíz, con ají y limón. Se comen de pie y calienticas.",
+          "position": [
+            -12.63,
+            2.122
+          ],
+          "base": 1.9
+        }
+      ]
+    },
+    {
+      "id": "culturales",
+      "name": "Culturales",
+      "guide": "Ruta cultural. Te voy mostrando los rincones con historia del bulevar.",
+      "stops": [
+        {
+          "id": "tertulia",
+          "name": "Museo La Tertulia",
+          "note": "Arte moderno a la orilla del río.",
+          "desc": "El museo de arte moderno de Cali, entre árboles y con su teatrino al aire libre. Exposiciones, cine y tardes de cultura a pocos pasos del río.",
+          "position": [
+            -17.248,
+            3.858
+          ],
+          "base": 0
+        },
+        {
+          "id": "mucic",
+          "name": "MUCIC",
+          "note": "La historia de Cali en una casona.",
+          "desc": "El Museo de la Ciudad de Cali, en una casona colonial: la historia de la ciudad contada en sus salas y su patio.",
+          "position": [
+            5.084,
+            6.576
+          ],
+          "base": 0
+        },
+        {
+          "id": "biblioteca",
+          "name": "Biblioteca Centenario",
+          "note": "Libros con vista al río.",
+          "desc": "Una biblioteca pública junto al río, de ladrillo y con salas para leer, estudiar y quedarse un rato en silencio.",
+          "position": [
+            -9.598,
+            2.099
+          ],
+          "base": 0
+        },
+        {
+          "id": "gato",
+          "name": "El Gato del Río",
+          "note": "El gato de Tejada y sus novias.",
+          "desc": "La escultura de Hernando Tejada, el gato que se volvió símbolo de Cali, acompañado de sus novias pintadas por artistas de la ciudad.",
+          "position": [
+            -4.125,
+            -2.886
+          ],
+          "base": 0
+        },
+        {
+          "id": "puente-ortiz",
+          "name": "Puente Ortiz",
+          "note": "El clásico pa' cruzar el río.",
+          "desc": "Uno de los puentes más antiguos de Cali, de ladrillo y con arcos sobre el río. Hoy es peatonal: perfecto para cruzar despacio y quedarse un rato mirando el agua.",
+          "position": [
+            18.2,
+            0.7
+          ],
+          "base": 0
+        }
+      ]
+    },
+    {
+      "id": "talleres",
+      "name": "Talleres",
+      "guide": "Talleres y experiencias. Aquí no se mira: aquí se hace.",
+      "stops": [
+        {
+          "id": "salsa",
+          "name": "Clase de salsa caleña",
+          "note": "Un, dos, tres… y el pie rápido.",
+          "desc": "Un salón de baile donde enseñan salsa caleña desde el primer paso: pies rápidos, vueltas y mucha sabrosura. No importa si nunca has bailado; aquí todo el mundo empieza igual.",
+          "position": [
+            -4.041,
+            -5.654
+          ],
+          "base": 0.815
+        },
+        {
+          "id": "ceramica",
+          "name": "Taller de cerámica",
+          "note": "Te llevas tu propia taza.",
+          "desc": "Un taller de cerámica con tornos y mesas de trabajo. Moldeas tu propia taza o tu plato con barro, lo pintas y te lo llevas de recuerdo.",
+          "position": [
+            9.388,
+            4.903
+          ],
+          "base": 0.995
+        },
+        {
+          "id": "grafiti",
+          "name": "Grafiti y muralismo",
+          "note": "Con artistas del barrio.",
+          "desc": "Un taller de grafiti y muralismo con artistas del barrio. Aprendes a bocetar, a mezclar colores y a pintar un pedazo de muro en equipo.",
+          "position": [
+            15.846,
+            -2.518
+          ],
+          "base": 1.07
+        },
+        {
+          "id": "fotografia",
+          "name": "Caminata fotográfica",
+          "note": "Cali de cerca y en buena luz.",
+          "desc": "El punto de partida de la caminata fotográfica: te dan consejos para encuadrar y sales a retratar el bulevar, el río y la gente con buena luz.",
+          "position": [
+            4.581,
+            -2.091
+          ],
+          "base": 0.903
+        }
+      ]
+    }
+  ]
+}
