@@ -565,6 +565,35 @@
       "position": [
         -2.4,
         1.95
+      ],
+      "hitos": [
+        {
+          "id": "pabellones",
+          "name": "Pabellones de libros",
+          "guide": "¡Los pabellones! Mira su ficha.",
+          "body": "Editoriales, librerías y bibliotecas sacan sus libros a la calle. ¿Por qué aquí? El Bulevar del Río es espacio público: cualquiera que pase puede detenerse a hojear.",
+          "position": [-4.8, 2.3],
+          "base": 0.58,
+          "zone": [1.1, 0.58]
+        },
+        {
+          "id": "libros-gigantes",
+          "name": "Libros gigantes",
+          "guide": "¡Un libro del tamaño de una banca!",
+          "body": "Libros abiertos del tamaño de una banca invitan a sentarse a leer junto al río. La feria quiere que la lectura salga de las bibliotecas y se tome la ciudad.",
+          "position": [-3.2, 2.4],
+          "base": 0.17,
+          "zone": [1.0, 0.2]
+        },
+        {
+          "id": "carpa-encuentros",
+          "name": "Carpa de encuentros",
+          "guide": "Aquí se conversa con los autores.",
+          "body": "Bajo las carpas hay charlas con autores, lecturas en voz alta y talleres para niños. Es el corazón de la feria: hablar de libros con quien los escribe.",
+          "position": [-1.5, 2.6],
+          "base": 0.32,
+          "zone": [1.2, 0.32]
+        }
       ]
     },
     {
@@ -578,6 +607,35 @@
       "position": [
         0.6,
         2.15
+      ],
+      "hitos": [
+        {
+          "id": "gran-arbol",
+          "name": "El gran árbol de luces",
+          "guide": "¡El gran árbol! ¿Sabes por qué lo prenden?",
+          "body": "¿Por qué el alumbrado? En diciembre Cali celebra la Navidad llenando de luces sus calles y el río. Los árboles gigantes son el punto de encuentro: las familias salen de noche a caminar el Bulevar y a tomarse fotos.",
+          "position": [4.67, 2.88],
+          "base": 1.13,
+          "zone": [1.2, 1.13]
+        },
+        {
+          "id": "cascada",
+          "name": "Cascada de luces",
+          "guide": "Bombillos que caen como agua.",
+          "body": "Cortinas de bombillos que caen como agua. De noche se reflejan en el río Cali y convierten el paseo en un túnel de luz.",
+          "position": [9.4, 4.95],
+          "base": 0.22,
+          "zone": [0.9, 0.22]
+        },
+        {
+          "id": "flores-rio",
+          "name": "Flores sobre el río",
+          "guide": "¡Mira, el río se prendió!",
+          "body": "Figuras de luz flotan sobre el río Cali. Por eso se dice que en diciembre «el río se prende»: el agua refleja todo el alumbrado.",
+          "position": [3.0, 0.7],
+          "base": 0.05,
+          "zone": [1.2, 0.1]
+        }
       ]
     },
     {
@@ -591,6 +649,35 @@
       "position": [
         20.6,
         -1.74
+      ],
+      "hitos": [
+        {
+          "id": "tarima",
+          "name": "Tarima principal",
+          "guide": "¡Aquí suenan las orquestas!",
+          "body": "Aquí suenan las orquestas. A Cali le dicen la «Sucursal del cielo» y es tierra de salsa: de ahí el nombre del festival.",
+          "position": [20.7, -1.7],
+          "base": 0.79,
+          "zone": [2.0, 0.79]
+        },
+        {
+          "id": "kiosco",
+          "name": "Kiosco de La Retreta",
+          "guide": "El kiosco de La Retreta, de fiesta.",
+          "body": "El kiosco de La Retreta, en el Paseo Bolívar junto al Puente Ortiz, es el punto de encuentro: a su alrededor se arma la pista y la gente baila en plena calle.",
+          "position": [19.6, -1.1],
+          "base": 0.52,
+          "zone": [0.6, 0.52]
+        },
+        {
+          "id": "pantalla",
+          "name": "Pantalla de luces",
+          "guide": "Luces que bailan con la música.",
+          "body": "Luces LED que cambian al ritmo de la música. De noche la tarima brilla y se ve desde el otro lado del río.",
+          "position": [19.7, -2.46],
+          "base": 0.37,
+          "zone": [0.9, 0.37]
+        }
       ]
     }
   ],
