@@ -35,13 +35,13 @@
       .entrada .entrada__loading { font-size: 12px; font-weight: 600; color: #fb8a44; }
       .entrada .entrada__version { margin: 10px 0 0; font-size: 11px; color: #769f13; }
     </style>
-    <script type="module" crossorigin src="./assets/index-C_GV0OnS.js"></script>
+    <script type="module" crossorigin src="./assets/index-DCYVQKN1.js"></script>
     <link rel="modulepreload" crossorigin href="./assets/physicsShape-BE6-XHbE.js">
-    <link rel="modulepreload" crossorigin href="./assets/world-initializer-D2oXNQwA.js">
+    <link rel="modulepreload" crossorigin href="./assets/world-initializer-BA6CBPJs.js">
     <link rel="modulepreload" crossorigin href="./assets/physics-worker-protocol-aWIUlu-J.js">
     <link rel="modulepreload" crossorigin href="./assets/physics-system-BLEFdcbQ.js">
-    <link rel="modulepreload" crossorigin href="./assets/dist-BjDIefg6.js">
-    <link rel="modulepreload" crossorigin href="./assets/index-CYUZW9FI.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-grJBm55C.js">
+    <link rel="modulepreload" crossorigin href="./assets/index-9WMFOLRb.js">
   </head>
   <body>
     <div id="scene-container"></div>
@@ -57,7 +57,7 @@
       <button id="entrar" type="button" hidden>Entrar en realidad aumentada</button>
       <button id="reintentar" type="button" hidden>Reintentar</button>
       <!-- (which build this is: the Quest's browser can keep an old one — if this date is old, reload) -->
-      <p class="entrada__version">Versión 8 del 19 de noviembre · guía con los gestos ilustrados · hitos en los eventos · el menú solo responde cuando lo miras</p>
+      <p class="entrada__version">Versión 9 del 19 de noviembre · isla con palmas arriba · Historia en los dos sentidos · dibujos completos · menú que se oculta</p>
       <p id="sin-ar" class="entrada__note" hidden>
         Este navegador no abre realidad aumentada: abre esta página en el Quest Browser de las Meta Quest 3. Aquí puedes
         explorar la maqueta con el mouse.
@@ -68,7 +68,7 @@
       // Is this page the last one published? (The Quest's browser keeps old pages.) version.json is
       // asked without the cache; if its stamp is another, the page reloads itself to the new build.
       ;(function () {
-        var mine = '202611191949'
+        var mine = '202611192036'
         if (mine.indexOf('BUILD') > -1) return // (the dev server: no stamp)
         fetch('version.json?t=' + Date.now(), { cache: 'no-store' })
           .then(function (r) { return r.ok ? r.json() : null })
