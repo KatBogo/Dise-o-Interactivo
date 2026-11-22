@@ -17,58 +17,78 @@
         background: #fffdf5; color: #2c3b07; border: 1px solid #2c3b07; font-size: 13px; text-decoration: none;
       }
       .back:hover { background: #c1d653; }
-      .entrada {
-        position: fixed; left: 16px; top: 16px; z-index: 10; width: min(360px, calc(100vw - 32px)); box-sizing: border-box;
-        padding: 18px 20px; border-radius: 22px; background: #fffdf5; color: #2c3b07; border: 1px solid #2c3b07;
-        box-shadow: 0 14px 30px -12px rgba(0, 0, 0, 0.35);
+      /* the welcome screen (19 nov: «Chonti como guía, la isla como protagonista, el botón al centro»):
+         the island big in the middle and Chonti at the bottom left are the 3D scene (IslandSystem ·
+         placeFor2D, UISystem · placeDock); over them, only the title, Chonti's bubble and the button */
+      .entrada { position: fixed; inset: 0; z-index: 10; pointer-events: none; color: #2c3b07; }
+      .entrada[hidden], .entrada [hidden] { display: none !important; }
+      .entrada__head { position: absolute; top: clamp(14px, 3vh, 34px); left: 50%; transform: translateX(-50%); text-align: center; width: min(92vw, 720px); }
+      .entrada__eyebrow { font-size: 12px; font-weight: 600; letter-spacing: 0.1em; color: #fb8a44; }
+      .entrada h1 { margin: 4px 0 0; font: 400 clamp(38px, 6.4vw, 68px)/0.95 'Bebas Neue', Impact, sans-serif; color: #769f13; }
+      .entrada__bubble {
+        position: fixed; left: 26vw; top: 62vh; transform: translateY(-50%); max-width: min(330px, 40vw); box-sizing: border-box;
+        padding: 14px 18px; border-radius: 20px; background: #fffdf5; border: 1.5px solid #2c3b07; font-size: clamp(13px, 1.5vw, 16px);
+        line-height: 1.45; box-shadow: 0 14px 30px -14px rgba(0, 0, 0, 0.35);
       }
-      .entrada[hidden], .entrada [hidden] { display: none; }
-      .entrada__eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: #fb8a44; }
-      .entrada h1 { margin: 4px 0 8px; font: 400 40px/1 'Bebas Neue', Impact, sans-serif; color: #769f13; }
-      .entrada p { margin: 0 0 12px; font-size: 13px; line-height: 1.5; }
+      .entrada__bubble::before {
+        content: ''; position: absolute; left: -9px; top: 50%; width: 16px; height: 16px; background: #fffdf5;
+        border-left: 1.5px solid #2c3b07; border-bottom: 1.5px solid #2c3b07; transform: translateY(-50%) rotate(45deg);
+      }
+      .entrada__actions {
+        position: absolute; left: 50%; bottom: clamp(16px, 4vh, 40px); transform: translateX(-50%); width: min(92vw, 520px);
+        display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center;
+      }
+      .entrada__actions > * { pointer-events: auto; }
       .entrada button {
-        font: 600 14px 'Poppins', system-ui, sans-serif; padding: 10px 18px; border-radius: 999px; border: 0;
-        background: #fb8a44; color: #fffdf5; cursor: pointer;
+        font: 600 clamp(17px, 2vw, 21px) 'Poppins', system-ui, sans-serif; padding: 16px 36px; border-radius: 999px; border: 0;
+        background: #fb8a44; color: #fffdf5; cursor: pointer; box-shadow: 0 16px 30px -12px rgba(180, 83, 42, 0.7);
+        transition: transform 0.2s, background 0.2s;
       }
-      .entrada button:hover { background: #769f13; }
-      .entrada__note { font-size: 12px; color: #b4532a; font-weight: 600; }
-      .entrada .entrada__loading { font-size: 12px; font-weight: 600; color: #fb8a44; }
-      .entrada .entrada__version { margin: 10px 0 0; font-size: 11px; color: #769f13; }
-    </style>
-    <script type="module" crossorigin src="./assets/index-DCYVQKN1.js"></script>
+      .entrada button:hover { background: #769f13; transform: translateY(-2px); }
+      .entrada p { margin: 0; }
+      .entrada__note { font-size: 13px; color: #b4532a; font-weight: 600; background: rgba(255, 253, 245, 0.92); padding: 8px 12px; border-radius: 12px; }
+      .entrada .entrada__loading { font-size: 13px; font-weight: 600; color: #fb8a44; }
+      .entrada .entrada__version { font-size: 11px; color: #769f13; }
+      .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }    </style>
+    <script type="module" crossorigin src="./assets/index-DPvkT6TL.js"></script>
     <link rel="modulepreload" crossorigin href="./assets/physicsShape-BE6-XHbE.js">
-    <link rel="modulepreload" crossorigin href="./assets/world-initializer-BA6CBPJs.js">
+    <link rel="modulepreload" crossorigin href="./assets/world-initializer-BUAT8wkj.js">
     <link rel="modulepreload" crossorigin href="./assets/physics-worker-protocol-aWIUlu-J.js">
     <link rel="modulepreload" crossorigin href="./assets/physics-system-BLEFdcbQ.js">
-    <link rel="modulepreload" crossorigin href="./assets/dist-grJBm55C.js">
-    <link rel="modulepreload" crossorigin href="./assets/index-9WMFOLRb.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-DesjywWz.js">
+    <link rel="modulepreload" crossorigin href="./assets/index-BIxes5oq.js">
   </head>
   <body>
     <div id="scene-container"></div>
     <section id="entrada" class="entrada" aria-label="Realidad aumentada">
-      <div class="entrada__eyebrow">META QUEST 3 · REALIDAD AUMENTADA</div>
-      <h1>El Bulevar en tu cuarto</h1>
-      <p>
-        La isla del Bulevar del Río aparece frente a ti, sobre su exhibidor. Señala y pellizca para abrir Historia,
-        Lugares, Eventos o Rutas. Agarra la isla con las dos manos: muévela, gírala como un volante y abre los brazos
-        para agrandarla. Agarra a Chonti, estíralo con las dos manos, apriétalo, o llévalo a un lugar de la isla.
+      <header class="entrada__head">
+        <div class="entrada__eyebrow">META QUEST 3 · REALIDAD AUMENTADA</div>
+        <h1>El Bulevar en tu cuarto</h1>
+      </header>
+      <!-- (what Chonti says, beside him: UISystem · placeWelcomeBubble) -->
+      <p id="chonti-dice" class="entrada__bubble" role="status">¡Hola, soy Chonti! Ponte las Meta Quest 3, abre esta página en su navegador y toca «Entrar en realidad aumentada»: la isla aparecerá en tu cuarto.</p>
+      <p class="sr-only">
+        En la realidad aumentada, la isla del Bulevar del Río aparece frente a ti. Señala y pellizca para abrir Historia,
+        Lugares, Eventos o Rutas; agarra la isla con las dos manos para moverla, girarla y agrandarla.
       </p>
-      <p id="cargando" class="entrada__loading">Cargando la isla… (puede tardar un poco)</p>
-      <button id="entrar" type="button" hidden>Entrar en realidad aumentada</button>
-      <button id="reintentar" type="button" hidden>Reintentar</button>
-      <!-- (which build this is: the Quest's browser can keep an old one — if this date is old, reload) -->
-      <p class="entrada__version">Versión 9 del 19 de noviembre · isla con palmas arriba · Historia en los dos sentidos · dibujos completos · menú que se oculta</p>
-      <p id="sin-ar" class="entrada__note" hidden>
-        Este navegador no abre realidad aumentada: abre esta página en el Quest Browser de las Meta Quest 3. Aquí puedes
-        explorar la maqueta con el mouse.
-      </p>
+      <div class="entrada__actions">
+        <p id="cargando" class="entrada__loading">Cargando la isla… (puede tardar un poco)</p>
+        <button id="entrar" type="button" hidden>Entrar en realidad aumentada</button>
+        <button id="reintentar" type="button" hidden>Reintentar</button>
+        <p id="sin-ar" class="entrada__note" hidden>
+          Este navegador no abre realidad aumentada: abre esta página en el Quest Browser de las Meta Quest 3. Aquí puedes
+          explorar la maqueta con el mouse.
+        </p>
+        <!-- (which build this is: the Quest's browser can keep an old one — if this date is old, reload) -->
+        <p class="entrada__version">Versión 11 del 22 de noviembre · fichas al alcance de la mano · lectura completa de la mano · exhibidor señalando el piso</p>
+      </div>
     </section>
     <a class="back" href="../?web">← Volver a la web</a>
     <script>
       // Is this page the last one published? (The Quest's browser keeps old pages.) version.json is
       // asked without the cache; if its stamp is another, the page reloads itself to the new build.
       ;(function () {
-        var mine = '202611192036'
+        var mine = '202611222120'
         if (mine.indexOf('BUILD') > -1) return // (the dev server: no stamp)
         fetch('version.json?t=' + Date.now(), { cache: 'no-store' })
           .then(function (r) { return r.ok ? r.json() : null })
