@@ -50,13 +50,13 @@
       .entrada .entrada__loading { font-size: 13px; font-weight: 600; color: #fb8a44; }
       .entrada .entrada__version { font-size: 11px; color: #769f13; }
       .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }    </style>
-    <script type="module" crossorigin src="./assets/index-CvEHmbvI.js"></script>
+    <script type="module" crossorigin src="./assets/index-BXq08J1a.js"></script>
     <link rel="modulepreload" crossorigin href="./assets/physicsShape-BE6-XHbE.js">
-    <link rel="modulepreload" crossorigin href="./assets/world-initializer-BUAT8wkj.js">
+    <link rel="modulepreload" crossorigin href="./assets/world-initializer-_vlFQV0O.js">
     <link rel="modulepreload" crossorigin href="./assets/physics-worker-protocol-aWIUlu-J.js">
     <link rel="modulepreload" crossorigin href="./assets/physics-system-BLEFdcbQ.js">
-    <link rel="modulepreload" crossorigin href="./assets/dist-DesjywWz.js">
-    <link rel="modulepreload" crossorigin href="./assets/index-BIxes5oq.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-9Gmif2zx.js">
+    <link rel="modulepreload" crossorigin href="./assets/index-REPLzeIV.js">
   </head>
   <body>
     <div id="scene-container"></div>
@@ -80,7 +80,7 @@
           explorar la maqueta con el mouse.
         </p>
         <!-- (which build this is: the Quest's browser can keep an old one — if this date is old, reload) -->
-        <p class="entrada__version">Versión 12 del 25 de noviembre · barra que se mueve y se queda · Chonti abajo a la derecha · textos completos · rutas por los caminos</p>
+        <p class="entrada__version">Versión 13 del 25 de noviembre · clic con pinza (pulgar + índice) · gestos solo a la vista · un gesto, una acción</p>
       </div>
     </section>
     <a class="back" href="../?web">← Volver a la web</a>
@@ -88,7 +88,7 @@
       // Is this page the last one published? (The Quest's browser keeps old pages.) version.json is
       // asked without the cache; if its stamp is another, the page reloads itself to the new build.
       ;(function () {
-        var mine = '202611260105'
+        var mine = '202611260133'
         if (mine.indexOf('BUILD') > -1) return // (the dev server: no stamp)
         fetch('version.json?t=' + Date.now(), { cache: 'no-store' })
           .then(function (r) { return r.ok ? r.json() : null })
