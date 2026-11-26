@@ -473,7 +473,11 @@
         ]
       ],
       "model": "/models/lugar_mucic.glb",
-      "photo": null
+      "photo": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Calle_de_La_Escopeta%2C_Cali%2C_Colombia_01.jpg/960px-Calle_de_La_Escopeta%2C_Cali%2C_Colombia_01.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Calle_de_La_Escopeta,_Cali,_Colombia_01.jpg",
+        "credit": "Calle de La Escopeta · Diego Carrejo Murillo · CC BY-SA 3.0 · Wikimedia Commons"
+      }
     },
     {
       "id": "gato",
@@ -502,8 +506,8 @@
       "model": "/models/lugar_gato-de-tejada.glb",
       "photo": {
         "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/El_Gato_del_R%C3%ADo-Cali.jpg/960px-El_Gato_del_R%C3%ADo-Cali.jpg",
-        "credit": "Juan Espinosa · CC BY-SA 2.0 · Wikimedia Commons",
-        "page": "https://commons.wikimedia.org/wiki/File:El_Gato_del_R%C3%ADo-Cali.jpg"
+        "page": "https://commons.wikimedia.org/wiki/File:El_Gato_del_R%C3%ADo-Cali.jpg",
+        "credit": "Juan Espinosa · CC BY-SA 2.0 · Wikimedia Commons"
       }
     },
     {
@@ -533,8 +537,8 @@
       "model": "/models/lugar_biblioteca-centenario.glb",
       "photo": {
         "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Biblioteca_del_Centenario_7-05-2015_01.JPG/960px-Biblioteca_del_Centenario_7-05-2015_01.JPG",
-        "credit": "Leidy Estefani Mielguteto Sandoval · CC BY-SA 4.0 · Wikimedia Commons",
-        "page": "https://commons.wikimedia.org/wiki/File:Biblioteca_del_Centenario_7-05-2015_01.JPG"
+        "page": "https://commons.wikimedia.org/wiki/File:Biblioteca_del_Centenario_7-05-2015_01.JPG",
+        "credit": "Leidy Estefani Mielguteto Sandoval · CC BY-SA 4.0 · Wikimedia Commons"
       }
     },
     {
@@ -564,8 +568,8 @@
       "model": "/models/lugar_museo-la-tertulia.glb",
       "photo": {
         "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Museo_La_Tertulia_Cali%2C_Colombia.jpg/960px-Museo_La_Tertulia_Cali%2C_Colombia.jpg",
-        "credit": "Juanes016 · CC0 · Wikimedia Commons",
-        "page": "https://commons.wikimedia.org/wiki/File:Museo_La_Tertulia_Cali,_Colombia.jpg"
+        "page": "https://commons.wikimedia.org/wiki/File:Museo_La_Tertulia_Cali,_Colombia.jpg",
+        "credit": "Juanes016 · CC0 · Wikimedia Commons"
       }
     }
   ],
@@ -777,81 +781,96 @@
       "guide": "Ruta gastronómica activada. Ven con hambre, que esto es de picar en picar.",
       "stops": [
         {
-          "id": "champus",
-          "name": "Champús y lulada",
-          "note": "Pa' arrancar fresquito.",
-          "desc": "Doña Evergista Gómez Balanta prepara en su casa el champús tradicional, con una receta que lleva más de seis décadas en su familia. Una parada de sabor caleño de verdad.",
-          "position": [
-            8.454,
-            4.97
-          ],
-          "base": 0.442,
-          "place": null,
+          "note": "",
+          "id": "pizzaron",
+          "name": "El Pizzarón · Pizza pantalón",
+          "realName": "El Pizzarón",
+          "address": "Calle 11 # 1-07, sede Bulevar del Río",
+          "desc": "Una parada para probar la pizza pantalón y compartir pizza artesanal durante tu recorrido por el Bulevar.",
           "photo": null,
-          "realName": "Champús de doña Evergista Gómez",
-          "address": "Carrera 12 # 21-34, barrio Obrero (sábados y domingos, 9 a.m. a 4 p.m.)",
-          "external": true,
+          "verified": "partial",
+          "pending": "Foto con licencia libre o autorizada; comprobar en la carta la denominación «pizza pantalón».",
           "sources": [
-            "https://www.cali.gov.co/turismo/publicaciones/177191/el-champus-una-joya-culinaria-resguardada-en-el-corazon-de-cali/"
+            "https://elpizzaron.com/contacto/",
+            "https://elpizzaron.com/menu/"
           ],
-          "verified": true,
-          "pending": "Foto con licencia libre.",
-          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Champ%C3%BAs%20de%20do%C3%B1a%20Evergista%20G%C3%B3mez%2C%20Carrera%2012%20%23%2021-34%2C%20barrio%20Obrero%2C%20Cali%2C%20Colombia"
-        },
-        {
-          "id": "marranitas",
-          "name": "Empanadas y marranitas",
-          "note": "Con ají, obvio.",
-          "desc": "Empanadas de maíz recién fritas y marranitas, bolitas de plátano verde rellenas de chicharrón. Se comen calienticas, con ají y limón, de pie en el mostrador.",
-          "position": [
-            1.258,
-            4.845
-          ],
-          "base": 0.444,
-          "place": null,
-          "photo": null,
-          "realName": null,
-          "address": null,
-          "verified": false,
-          "pending": "Parada genérica: falta un local real verificado, su dirección y foto."
-        },
-        {
-          "id": "chontaduro",
-          "name": "Chontaduro con sal y miel",
-          "note": "El de la casa. Ni se pregunta.",
-          "desc": "El chontaduro es la fruta de una palma del Pacífico que se come cocinada, con sal y miel. Dicen que da energía pa todo el día; aquí se prueba al lado del río, como manda la tradición.",
           "position": [
             14.56,
             4.904
           ],
           "base": 0.476,
           "place": null,
-          "photo": null,
-          "realName": null,
-          "address": null,
-          "verified": false,
-          "pending": "Parada genérica: falta un puesto real verificado (posible: Galería Alameda), su dirección y foto."
+          "external": false
         },
         {
+          "note": "",
+          "id": "retreta-raspados",
+          "name": "La Retreta · Raspados y cholados",
+          "realName": "La Retreta · raspados y cholados",
+          "address": "Parque de La Retreta, junto al Puente Ortiz, margen norte del río Cali (zona de venta, disponibilidad variable)",
+          "desc": "Haz una pausa para disfrutar un raspado o cholado en el entorno de La Retreta.",
+          "position": [
+            20,
+            -2.25
+          ],
+          "base": 0,
+          "photo": {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Quisko_de_la_Retreta.jpg/960px-Quisko_de_la_Retreta.jpg",
+            "page": "https://commons.wikimedia.org/wiki/File:Quisko_de_la_Retreta.jpg",
+            "credit": "Kiosco de La Retreta · Sahaquiel9102 · CC BY-SA 3.0 · Wikimedia Commons"
+          },
+          "verified": true,
+          "pending": "Foto propia o autorizada de los puestos o del producto (la foto es del kiosco del parque).",
+          "sources": [
+            "https://web1.cali.gov.co/cultura/publicaciones/parques_pub"
+          ],
+          "place": null,
+          "external": false
+        },
+        {
+          "note": "",
+          "id": "tarantella",
+          "name": "Tarantella Coffee & Drinks · Café y postres",
+          "realName": "Tarantella Coffee & Drinks",
+          "address": "Calle 11 # 1-7, sede Bulevar del Río (dirección de directorios: coincide con la de El Pizzarón — por confirmar)",
+          "desc": "Disfruta un café y un postre mientras haces una pausa junto al Bulevar del Río.",
+          "position": [
+            15.35,
+            4.95
+          ],
+          "base": 0,
+          "photo": null,
+          "verified": "partial",
+          "pending": "Confirmar la sede y su dirección (coincide con El Pizzarón) y una foto con licencia libre o autorizada.",
+          "sources": [
+            "https://www.instagram.com/tarantella.coffee/",
+            "https://es.restaurantguru.com/Tarantella-coffee-and-Drinks-Cali"
+          ],
+          "place": null,
+          "external": false
+        },
+        {
+          "note": "",
           "id": "obelisco",
-          "name": "Empanadas del Obelisco",
-          "note": "Las empanadas más famosas de Cali.",
-          "desc": "En la esquina del Obelisco, frente a La Tertulia, se venden las famosas empanadas: crocantes, de maíz, con ají y limón. Se comen de pie y calienticas.",
+          "name": "Empanaditas del Obelisco",
+          "realName": "Empanaditas del Obelisco",
+          "address": "Avenida Colombia # 4 Oeste-49, El Peñón",
+          "desc": "Comparte unas tradicionales empanaditas del Obelisco durante tu recorrido junto al río.",
+          "photo": null,
+          "verified": true,
+          "pending": "Foto con licencia libre o autorizada.",
+          "sources": [
+            "https://www.hotelobeliscocali.com/es/contact-us.html",
+            "https://www.hotelobeliscocali.com/es/index.html",
+            "https://www.spiwak.com/es/blog/guia-callejera-del-fast-food-valluno-para-celebrar-el-aniversario-de-cali/"
+          ],
           "position": [
             -12.63,
             2.122
           ],
           "base": 1.9,
           "place": null,
-          "photo": null,
-          "realName": "Empanadas del Obelisco",
-          "address": "Av. Colombia, El Peñón, frente al río Cali (número por confirmar: las fuentes dan «Av. Colombia No. 4» y «4 Oeste-49 Av. Colombia»)",
-          "sources": [
-            "https://www.fodors.com/world/south-america/colombia/southwest-colombia/restaurants/reviews/empanadas-obelisco--449042",
-            "https://wanderlog.com/place/details/12137069/empanadas-obelisco"
-          ],
-          "verified": "partial",
-          "pending": "Foto con licencia libre y número exacto de la dirección."
+          "external": false
         }
       ]
     },
@@ -861,116 +880,126 @@
       "guide": "Ruta cultural. Te voy mostrando los rincones con historia del bulevar.",
       "stops": [
         {
+          "note": "",
           "id": "tertulia",
           "name": "Museo La Tertulia",
-          "note": "Arte moderno a la orilla del río.",
-          "desc": "El museo de arte moderno de Cali, entre árboles y con su teatrino al aire libre. Exposiciones, cine y tardes de cultura a pocos pasos del río.",
+          "realName": "Museo La Tertulia",
+          "place": "tertulia",
+          "address": "Avenida Colombia # 5-105 Oeste",
+          "desc": "Arte, exposiciones y cine junto al río. Descubre sus salas y jardines.",
+          "photo": {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Museo_La_Tertulia_Cali%2C_Colombia.jpg/960px-Museo_La_Tertulia_Cali%2C_Colombia.jpg",
+            "page": "https://commons.wikimedia.org/wiki/File:Museo_La_Tertulia_Cali,_Colombia.jpg",
+            "credit": "Juanes016 · CC0 · Wikimedia Commons"
+          },
+          "verified": true,
+          "sources": [
+            "https://museolatertulia.com/"
+          ],
           "position": [
             -17.248,
             3.858
           ],
           "base": 0,
-          "place": "tertulia",
-          "photo": {
-            "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Museo_La_Tertulia_Cali%2C_Colombia.jpg/960px-Museo_La_Tertulia_Cali%2C_Colombia.jpg",
-            "credit": "Juanes016 · CC0 · Wikimedia Commons",
-            "page": "https://commons.wikimedia.org/wiki/File:Museo_La_Tertulia_Cali,_Colombia.jpg"
-          },
-          "realName": "Museo La Tertulia",
-          "address": "Av. Colombia # 5-105 Oeste",
-          "sources": [
-            "https://www.cali.gov.co/salud/publicaciones/1423/museos/",
-            "https://en.wikipedia.org/wiki/La_Tertulia_Museum"
-          ],
-          "verified": true
+          "external": false
         },
         {
+          "note": "",
           "id": "mucic",
-          "name": "MUCIC",
-          "note": "La historia de Cali en una casona.",
-          "desc": "El Museo de la Ciudad de Cali, en una casona colonial: la historia de la ciudad contada en sus salas y su patio.",
+          "name": "MUCIC · Museo de la Ciudad de Cali",
+          "realName": "MUCIC · Museo de la Ciudad de Cali",
+          "place": "mucic",
+          "address": "Carrera 4 # 5-50, frente a la Calle de la Escopeta (casa vinculada al proyecto del museo, Sociedad de Mejoras Públicas de Cali)",
+          "desc": "Una casa patrimonial vinculada al proyecto del Museo de la Ciudad, dedicado a conservar la memoria y las historias de Cali.",
+          "photo": {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Calle_de_La_Escopeta%2C_Cali%2C_Colombia_01.jpg/960px-Calle_de_La_Escopeta%2C_Cali%2C_Colombia_01.jpg",
+            "page": "https://commons.wikimedia.org/wiki/File:Calle_de_La_Escopeta,_Cali,_Colombia_01.jpg",
+            "credit": "Calle de La Escopeta · Diego Carrejo Murillo · CC BY-SA 3.0 · Wikimedia Commons"
+          },
+          "verified": "partial",
+          "pending": "Verificar el estado actual (apertura, salas, visitas) y una foto de la casa misma.",
+          "sources": [
+            "https://smpcali.org/casa-museo-de-la-ciudad/",
+            "https://smpcali.org/nuestra-sede/"
+          ],
           "position": [
             5.084,
             6.576
           ],
           "base": 0,
-          "place": "mucic",
-          "photo": null,
-          "realName": null,
-          "address": null,
-          "verified": false,
-          "pending": "No encontré un museo llamado «MUCIC» en fuentes oficiales: falta su nombre completo, dirección y foto."
+          "external": false
         },
         {
+          "note": "",
           "id": "biblioteca",
-          "name": "Biblioteca Centenario",
-          "note": "Libros con vista al río.",
-          "desc": "Una biblioteca pública junto al río, de ladrillo y con salas para leer, estudiar y quedarse un rato en silencio.",
+          "name": "Biblioteca Pública Patrimonial Centenario",
+          "realName": "Biblioteca Pública Patrimonial Centenario",
+          "place": "biblioteca",
+          "address": "Calle 4 Oeste # 1-16, El Peñón",
+          "desc": "Un espacio de lectura y memoria que conserva libros y patrimonio cultural de los caleños.",
+          "photo": {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Biblioteca_del_Centenario_7-05-2015_01.JPG/960px-Biblioteca_del_Centenario_7-05-2015_01.JPG",
+            "page": "https://commons.wikimedia.org/wiki/File:Biblioteca_del_Centenario_7-05-2015_01.JPG",
+            "credit": "Leidy Estefani Mielguteto Sandoval · CC BY-SA 4.0 · Wikimedia Commons"
+          },
+          "verified": true,
+          "sources": [
+            "https://www.cali.gov.co/cultura/publicaciones/156298/biblioteca-publica-patrimonial-centenario/"
+          ],
           "position": [
             -9.598,
             2.099
           ],
           "base": 0,
-          "place": "biblioteca",
-          "photo": {
-            "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Biblioteca_del_Centenario_7-05-2015_01.JPG/960px-Biblioteca_del_Centenario_7-05-2015_01.JPG",
-            "credit": "Leidy Estefani Mielguteto Sandoval · CC BY-SA 4.0 · Wikimedia Commons",
-            "page": "https://commons.wikimedia.org/wiki/File:Biblioteca_del_Centenario_7-05-2015_01.JPG"
-          },
-          "realName": "Biblioteca Pública Patrimonial Centenario",
-          "address": "Calle 4 Oeste # 1-16, El Peñón (Av. Colombia con Calle 4 Oeste)",
-          "sources": [
-            "https://www.cali.gov.co/cultura/publicaciones/156298/biblioteca-publica-patrimonial-centenario/",
-            "https://idesc.cali.gov.co/download/bic_2014/BICM1-82.pdf"
-          ],
-          "verified": true
+          "external": false
         },
         {
+          "note": "",
           "id": "gato",
-          "name": "El Gato del Río",
-          "note": "El gato de Tejada y sus novias.",
-          "desc": "La escultura de Hernando Tejada, el gato que se volvió símbolo de Cali, acompañado de sus novias pintadas por artistas de la ciudad.",
+          "name": "Gato del Río",
+          "realName": "Gato del Río",
+          "place": "gato",
+          "address": "Avenida 4 Norte con Calle 1B Oeste, sector del río Cali",
+          "desc": "La escultura de Hernando Tejada es un símbolo de Cali, acompañada por sus famosas gatas.",
+          "photo": {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/El_Gato_del_R%C3%ADo-Cali.jpg/960px-El_Gato_del_R%C3%ADo-Cali.jpg",
+            "page": "https://commons.wikimedia.org/wiki/File:El_Gato_del_R%C3%ADo-Cali.jpg",
+            "credit": "Juan Espinosa · CC BY-SA 2.0 · Wikimedia Commons"
+          },
+          "verified": true,
+          "sources": [
+            "https://idesc.cali.gov.co/download/bibliotecas/hitos/el_gato_del_rio.pdf"
+          ],
           "position": [
             -4.125,
             -2.886
           ],
           "base": 0,
-          "place": "gato",
-          "photo": {
-            "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/El_Gato_del_R%C3%ADo-Cali.jpg/960px-El_Gato_del_R%C3%ADo-Cali.jpg",
-            "credit": "Juan Espinosa · CC BY-SA 2.0 · Wikimedia Commons",
-            "page": "https://commons.wikimedia.org/wiki/File:El_Gato_del_R%C3%ADo-Cali.jpg"
-          },
-          "realName": "El Gato del Río (Hernando Tejada)",
-          "address": "Av. 4 Norte Oeste, margen izquierda del río Cali",
-          "sources": [
-            "https://www.cali.gov.co/turista/publicaciones/1392/el_gato_del_ro/"
-          ],
-          "verified": true
+          "external": false
         },
         {
+          "note": "",
           "id": "puente-ortiz",
           "name": "Puente Ortiz",
-          "note": "El clásico pa' cruzar el río.",
-          "desc": "Uno de los puentes más antiguos de Cali, de ladrillo y con arcos sobre el río. Hoy es peatonal: perfecto para cruzar despacio y quedarse un rato mirando el agua.",
+          "realName": "Puente Ortiz",
+          "address": "Calle 12 con Carrera 1, sobre el río Cali",
+          "desc": "Cruza este puente histórico y descubre un punto de encuentro entre el centro de Cali y la ribera del río.",
+          "photo": {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Puente_Ortiz_Cali.jpg/960px-Puente_Ortiz_Cali.jpg",
+            "page": "https://commons.wikimedia.org/wiki/File:Puente_Ortiz_Cali.jpg",
+            "credit": "Franciscokarriere · CC BY-SA 4.0 · Wikimedia Commons"
+          },
+          "verified": true,
+          "sources": [
+            "https://web1.cali.gov.co/turista/publicaciones.php?dPrint=1&id=118780"
+          ],
           "position": [
             18.2,
             0.7
           ],
           "base": 0,
           "place": null,
-          "photo": {
-            "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Puente_Ortiz_Cali.jpg/960px-Puente_Ortiz_Cali.jpg",
-            "credit": "Franciscokarriere · CC BY-SA 4.0 · Wikimedia Commons",
-            "page": "https://commons.wikimedia.org/wiki/File:Puente_Ortiz_Cali.jpg"
-          },
-          "realName": "Puente Ortiz",
-          "address": "Sobre el río Cali, entre La Ermita y el CAM (centro). Sin nomenclatura oficial en las fuentes.",
-          "sources": [
-            "https://www.cali.gov.co/publicaciones/184891/la-administracion-distrital-de-cali-activo-todas-las-acciones-y-medidas-para-preservar-los-vestigios-del-puente-ortiz-y-el-bulevar-del-rio/",
-            "https://idesc.cali.gov.co/download/bic_2014/BICN-28.pdf"
-          ],
-          "verified": true
+          "external": false
         }
       ]
     },
@@ -980,80 +1009,115 @@
       "guide": "Talleres y experiencias. Aquí no se mira: aquí se hace.",
       "stops": [
         {
-          "id": "salsa",
-          "name": "Clase de salsa caleña",
-          "note": "Un, dos, tres… y el pie rápido.",
-          "desc": "Un centro para la formación, la investigación y la difusión de la cultura salsera, en el corazón del barrio Obrero: el lugar para aprender salsa caleña.",
-          "position": [
-            -4.041,
-            -5.654
-          ],
-          "base": 0.815,
-          "place": null,
-          "photo": null,
-          "realName": "Centro Cultural de la Salsa",
-          "address": "Calle 22 # 11D-62, barrio Obrero",
+          "note": "",
+          "id": "topa-tolondra",
+          "name": "La Topa Tolondra · Salsa",
+          "realName": "La Topa Tolondra",
+          "address": "Calle 5 # 13-27",
           "external": true,
+          "desc": "Aprende pasos de salsa y disfruta un espacio dedicado al baile. Consulta su programación de clases.",
+          "position": [
+            12,
+            7.5
+          ],
+          "base": 0,
+          "photo": {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/La_Topa_Tolondra_01.jpg/960px-La_Topa_Tolondra_01.jpg",
+            "page": "https://commons.wikimedia.org/wiki/File:La_Topa_Tolondra_01.jpg",
+            "credit": "ProtoplasmaKid · CC BY 4.0 · Wikimedia Commons"
+          },
+          "verified": true,
           "sources": [
-            "https://www.cali.gov.co/cultura/publicaciones/101910/escuelas_de_salsa/",
-            "https://www.cali.gov.co/publicaciones/112137/escuelas-de-salsacali/"
+            "https://www.instagram.com/latopatolondraoficial/",
+            "https://brhotels.com.co/lugares/la-topa-tolondra/"
           ],
+          "place": null,
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=La%20Topa%20Tolondra%2C%20Calle%205%20%23%2013-27%2C%20Cali%2C%20Colombia"
+        },
+        {
+          "note": "",
+          "id": "pintando-ando",
+          "name": "Pintando Ando · Pintura sobre cerámica",
+          "realName": "Pintando Ando",
+          "address": "Carrera 2 Oeste # 2-11 (dirección publicada)",
+          "external": true,
+          "desc": "Escoge una pieza de cerámica, píntala y comparte un café mientras creas algo propio.",
+          "position": [
+            -11.5,
+            7.5
+          ],
+          "base": 0,
+          "photo": null,
           "verified": "partial",
-          "pending": "Confirmar que el centro ya está abierto (anuncio de marzo de 2025) y una foto con licencia libre.",
-          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Centro%20Cultural%20de%20la%20Salsa%2C%20Calle%2022%20%23%2011D-62%2C%20barrio%20Obrero%2C%20Cali%2C%20Colombia"
+          "pending": "Confirmar la dirección (publicada en un directorio) y una foto con licencia libre o autorizada.",
+          "sources": [
+            "https://www.instagram.com/pintandoando.cali/",
+            "https://www.findglocal.com/CO/Santiago-de-Cali/119943341032263/Pintando-Ando"
+          ],
+          "place": null,
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Pintando%20Ando%2C%20Carrera%202%20Oeste%20%23%202-11%2C%20Cali%2C%20Colombia"
         },
         {
-          "id": "ceramica",
-          "name": "Taller de cerámica",
-          "note": "Te llevas tu propia taza.",
-          "desc": "Un taller de cerámica con tornos y mesas de trabajo. Moldeas tu propia taza o tu plato con barro, lo pintas y te lo llevas de recuerdo.",
+          "note": "",
+          "id": "muli",
+          "name": "Museo MULI · Arte urbano",
+          "realName": "Museo MULI · recorrido de arte urbano",
+          "address": "Calle 25 Norte # 2F-136, Antigua Estación del Ferrocarril (dirección publicada de contacto)",
+          "external": true,
+          "desc": "Descubre murales y las historias de sus comunidades en un recorrido por el arte público de Cali.",
           "position": [
-            9.388,
-            4.903
+            6,
+            -9
           ],
-          "base": 0.995,
+          "base": 0,
+          "photo": {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Fachada_principal_Estacion_del_Ferrocarril_Cali.jpg/960px-Fachada_principal_Estacion_del_Ferrocarril_Cali.jpg",
+            "page": "https://commons.wikimedia.org/wiki/File:Fachada_principal_Estacion_del_Ferrocarril_Cali.jpg",
+            "credit": "Estación del Ferrocarril · Cathetovar · CC BY-SA 4.0 · Wikimedia Commons"
+          },
+          "verified": "partial",
+          "pending": "Un taller participativo requiere confirmar su programación; foto del museo mismo.",
+          "sources": [
+            "https://sites.google.com/view/museomuli/como-visitar-el-museo-muli",
+            "https://sites.google.com/view/museomuli/contactenos"
+          ],
           "place": null,
-          "photo": null,
-          "realName": null,
-          "address": null,
-          "verified": false,
-          "pending": "Parada genérica: falta un taller real verificado, su dirección y foto."
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Museo%20MULI%20%C2%B7%20recorrido%20de%20arte%20urbano%2C%20Calle%2025%20Norte%20%23%202F-136%2C%20Antigua%20Estaci%C3%B3n%20del%20Ferrocarril%2C%20Cali%2C%20Colombia"
         },
         {
-          "id": "grafiti",
-          "name": "Grafiti y muralismo",
-          "note": "Con artistas del barrio.",
-          "desc": "Un taller de grafiti y muralismo con artistas del barrio. Aprendes a bocetar, a mezclar colores y a pintar un pedazo de muro en equipo.",
-          "position": [
-            15.846,
-            -2.518
+          "note": "Actividad libre propuesta por la experiencia.",
+          "id": "caminata-ortiz",
+          "name": "Puente Ortiz · Caminata fotográfica",
+          "realName": "Caminata fotográfica desde el Puente Ortiz",
+          "address": "Punto de partida: Calle 12 con Carrera 1",
+          "desc": "Empieza un recorrido libre para fotografiar el puente, el río y los detalles del Bulevar.",
+          "photo": {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Puente_Ortiz_y_Bandera_de_Cali_01.jpg/960px-Puente_Ortiz_y_Bandera_de_Cali_01.jpg",
+            "page": "https://commons.wikimedia.org/wiki/File:Puente_Ortiz_y_Bandera_de_Cali_01.jpg",
+            "credit": "Remux · CC BY-SA 4.0 · Wikimedia Commons"
+          },
+          "verified": true,
+          "sources": [
+            "https://web1.cali.gov.co/turista/publicaciones.php?dPrint=1&id=118780"
           ],
-          "base": 1.07,
-          "place": null,
-          "photo": null,
-          "realName": null,
-          "address": null,
-          "verified": false,
-          "pending": "Parada genérica: falta un taller o recorrido real verificado, su dirección y foto."
-        },
-        {
-          "id": "fotografia",
-          "name": "Caminata fotográfica",
-          "note": "Cali de cerca y en buena luz.",
-          "desc": "El punto de partida de la caminata fotográfica: te dan consejos para encuadrar y sales a retratar el bulevar, el río y la gente con buena luz.",
           "position": [
-            4.581,
-            -2.091
+            18.7,
+            -0.20000000000000007
           ],
-          "base": 0.903,
+          "base": 0,
           "place": null,
-          "photo": null,
-          "realName": null,
-          "address": null,
-          "verified": false,
-          "pending": "Parada genérica: falta un recorrido real verificado, su punto de partida y foto."
+          "external": false
         }
       ]
     }
-  ]
+  ],
+  "stopAliases": {
+    "champus": "retreta-raspados",
+    "marranitas": "pizzaron",
+    "chontaduro": "tarantella",
+    "salsa": "topa-tolondra",
+    "ceramica": "pintando-ando",
+    "grafiti": "muli",
+    "fotografia": "caminata-ortiz"
+  }
 }
