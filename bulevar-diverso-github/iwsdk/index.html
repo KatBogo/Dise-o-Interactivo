@@ -50,7 +50,7 @@
       .entrada .entrada__loading { font-size: 13px; font-weight: 600; color: #fb8a44; }
       .entrada .entrada__version { font-size: 11px; color: #769f13; }
       .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }    </style>
-    <script type="module" crossorigin src="./assets/index-DPvkT6TL.js"></script>
+    <script type="module" crossorigin src="./assets/index-CvEHmbvI.js"></script>
     <link rel="modulepreload" crossorigin href="./assets/physicsShape-BE6-XHbE.js">
     <link rel="modulepreload" crossorigin href="./assets/world-initializer-BUAT8wkj.js">
     <link rel="modulepreload" crossorigin href="./assets/physics-worker-protocol-aWIUlu-J.js">
@@ -80,7 +80,7 @@
           explorar la maqueta con el mouse.
         </p>
         <!-- (which build this is: the Quest's browser can keep an old one — if this date is old, reload) -->
-        <p class="entrada__version">Versión 11 del 22 de noviembre · fichas al alcance de la mano · lectura completa de la mano · exhibidor señalando el piso</p>
+        <p class="entrada__version">Versión 12 del 25 de noviembre · barra que se mueve y se queda · Chonti abajo a la derecha · textos completos · rutas por los caminos</p>
       </div>
     </section>
     <a class="back" href="../?web">← Volver a la web</a>
@@ -88,7 +88,7 @@
       // Is this page the last one published? (The Quest's browser keeps old pages.) version.json is
       // asked without the cache; if its stamp is another, the page reloads itself to the new build.
       ;(function () {
-        var mine = '202611222120'
+        var mine = '202611260105'
         if (mine.indexOf('BUILD') > -1) return // (the dev server: no stamp)
         fetch('version.json?t=' + Date.now(), { cache: 'no-store' })
           .then(function (r) { return r.ok ? r.json() : null })

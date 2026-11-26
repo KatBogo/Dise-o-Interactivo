@@ -572,16 +572,16 @@
           "name": "Pabellones de libros",
           "guide": "¡Los pabellones! Mira su ficha.",
           "body": "Editoriales, librerías y bibliotecas sacan sus libros a la calle. ¿Por qué aquí? El Bulevar del Río es espacio público: cualquiera que pase puede detenerse a hojear.",
-          "position": [-4.8, 2.3],
-          "base": 0.58,
-          "zone": [1.1, 0.58]
+          "position": [6.4, 2.5],
+          "base": 0.71,
+          "zone": [1.4, 0.71]
         },
         {
           "id": "libros-gigantes",
           "name": "Libros gigantes",
           "guide": "¡Un libro del tamaño de una banca!",
           "body": "Libros abiertos del tamaño de una banca invitan a sentarse a leer junto al río. La feria quiere que la lectura salga de las bibliotecas y se tome la ciudad.",
-          "position": [-3.2, 2.4],
+          "position": [1.5, 2.4],
           "base": 0.17,
           "zone": [1.0, 0.2]
         },
@@ -590,9 +590,9 @@
           "name": "Carpa de encuentros",
           "guide": "Aquí se conversa con los autores.",
           "body": "Bajo las carpas hay charlas con autores, lecturas en voz alta y talleres para niños. Es el corazón de la feria: hablar de libros con quien los escribe.",
-          "position": [-1.5, 2.6],
-          "base": 0.32,
-          "zone": [1.2, 0.32]
+          "position": [9.6, 2.2],
+          "base": 0.51,
+          "zone": [1.0, 0.51]
         }
       ]
     },
@@ -623,18 +623,18 @@
           "name": "Cascada de luces",
           "guide": "Bombillos que caen como agua.",
           "body": "Cortinas de bombillos que caen como agua. De noche se reflejan en el río Cali y convierten el paseo en un túnel de luz.",
-          "position": [9.4, 4.95],
-          "base": 0.22,
-          "zone": [0.9, 0.22]
+          "position": [-6.4, 3.6],
+          "base": 1.36,
+          "zone": [1.3, 1.36]
         },
         {
           "id": "flores-rio",
           "name": "Flores sobre el río",
           "guide": "¡Mira, el río se prendió!",
           "body": "Figuras de luz flotan sobre el río Cali. Por eso se dice que en diciembre «el río se prende»: el agua refleja todo el alumbrado.",
-          "position": [3.0, 0.7],
+          "position": [0.0, -0.2],
           "base": 0.05,
-          "zone": [1.2, 0.1]
+          "zone": [2.4, 0.1]
         }
       ]
     },
