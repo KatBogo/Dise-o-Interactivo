@@ -1,5 +1,5 @@
 {
-  "_info": "Escrito por src/three/IwsdkExport.jsx (/?iwsdk-export) desde los datos de la web (src/content/*.json): no se edita a mano.",
+  "_info": "Escrito por src/three/IwsdkExport.jsx (/?iwsdk-export) desde los datos de la web (src/content/*.json): no se edita a mano. (los hitos de los eventos, `place` y `photo` de las paradas y `photo` de los lugares se editan aquí, a mano: no vienen de la web.)",
   "island": {
     "top": 0.3,
     "halfLength": 23,
@@ -472,7 +472,8 @@
           "Al salir quedas a pocos pasos del agua. Un champús en la mano, una caminada por el bulevar y sigues el recorrido hacia el Gato del Río o hacia La Ermita."
         ]
       ],
-      "model": "/models/lugar_mucic.glb"
+      "model": "/models/lugar_mucic.glb",
+      "photo": null
     },
     {
       "id": "gato",
@@ -498,7 +499,8 @@
           "El mejor momento para visitarlo es al final de la tarde, cuando la luz se pone naranja, el río brilla detrás y la brisa empieza a bajar de los cerros."
         ]
       ],
-      "model": "/models/lugar_gato-de-tejada.glb"
+      "model": "/models/lugar_gato-de-tejada.glb",
+      "photo": null
     },
     {
       "id": "biblioteca",
@@ -524,7 +526,8 @@
           "El plan perfecto es sencillo: un libro prestado, una banca a la orilla del río y una lulada bien fría para acompañar la lectura."
         ]
       ],
-      "model": "/models/lugar_biblioteca-centenario.glb"
+      "model": "/models/lugar_biblioteca-centenario.glb",
+      "photo": null
     },
     {
       "id": "tertulia",
@@ -550,7 +553,8 @@
           "Y quédate al atardecer: la vista hacia el río y los cerros, con la luz naranja de las seis, es parte de la experiencia de La Tertulia."
         ]
       ],
-      "model": "/models/lugar_museo-la-tertulia.glb"
+      "model": "/models/lugar_museo-la-tertulia.glb",
+      "photo": null
     }
   ],
   "events": [
@@ -558,7 +562,7 @@
       "id": "feria",
       "name": "Feria del libro",
       "when": "CaliLee",
-      "dates": "Mediados de octubre, suele durar 11 días",
+      "dates": "Edición 2025: del 24 de octubre al 3 de noviembre",
       "place": "Bulevar del Río",
       "body": "Carpas, autores y libros a la orilla del río. Lleva bolso grande.",
       "guide": "Se armó la Feria del Libro: pabellones de libros a lo largo del bulevar, banderines de colores y hojas volando.",
@@ -568,39 +572,63 @@
       ],
       "hitos": [
         {
-          "id": "pabellones",
-          "name": "Pabellones de libros",
-          "guide": "¡Los pabellones! Mira su ficha.",
-          "body": "Editoriales, librerías y bibliotecas sacan sus libros a la calle. ¿Por qué aquí? El Bulevar del Río es espacio público: cualquiera que pase puede detenerse a hojear.",
-          "position": [6.4, 2.5],
+          "id": "libros-rio",
+          "name": "Libros junto al río",
+          "edition": "2025",
+          "guide": "Libros a la orilla del río.",
+          "body": "El Bulevar del Río y el Paseo Bolívar acogieron la Feria Internacional del Libro de Cali 2025, con espacios para descubrir libros y encontrarse con sus autores.",
+          "position": [
+            6.4,
+            2.5
+          ],
           "base": 0.71,
-          "zone": [1.4, 0.71]
+          "zone": [
+            1.4,
+            0.71
+          ]
         },
         {
-          "id": "libros-gigantes",
-          "name": "Libros gigantes",
-          "guide": "¡Un libro del tamaño de una banca!",
-          "body": "Libros abiertos del tamaño de una banca invitan a sentarse a leer junto al río. La feria quiere que la lectura salga de las bibliotecas y se tome la ciudad.",
-          "position": [1.5, 2.4],
+          "id": "once-dias",
+          "name": "Once días de historias",
+          "edition": "2025",
+          "guide": "¡Once días de feria!",
+          "body": "La décima edición se realizó del 24 de octubre al 3 de noviembre de 2025. Colombia fue el país homenajeado.",
+          "position": [
+            1.5,
+            2.4
+          ],
           "base": 0.17,
-          "zone": [1.0, 0.2]
+          "zone": [
+            1,
+            0.2
+          ]
         },
         {
-          "id": "carpa-encuentros",
-          "name": "Carpa de encuentros",
-          "guide": "Aquí se conversa con los autores.",
-          "body": "Bajo las carpas hay charlas con autores, lecturas en voz alta y talleres para niños. Es el corazón de la feria: hablar de libros con quien los escribe.",
-          "position": [9.6, 2.2],
+          "id": "encuentro-leer",
+          "name": "Un encuentro para leer",
+          "guide": "Aquí se conversa sobre libros.",
+          "body": "La feria acerca la literatura al público mediante conversaciones, presentaciones y actividades culturales que celebran las historias y la diversidad del país.",
+          "position": [
+            9.6,
+            2.2
+          ],
           "base": 0.51,
-          "zone": [1.0, 0.51]
+          "zone": [
+            1,
+            0.51
+          ]
         }
-      ]
+      ],
+      "source": {
+        "label": "rtvc.gov.co",
+        "url": "https://www.rtvc.gov.co/noticias/feria-del-libro-cali-senal-colombia-radio-nacional-medios-aliados"
+      }
     },
     {
       "id": "alumbrado",
       "name": "Alumbrado",
       "when": "Diciembre",
-      "dates": "De principios de diciembre a principios de enero",
+      "dates": "Edición 2025: encendido oficial el 7 de diciembre",
       "place": "Bulevar del Río",
       "body": "En diciembre el río se prende. Camínalo de noche y déjate deslumbrar.",
       "guide": "Se hizo de noche y prendieron el alumbrado. ¡Tutaina tuturumá! Mira cómo brilla el río.",
@@ -610,75 +638,124 @@
       ],
       "hitos": [
         {
-          "id": "gran-arbol",
-          "name": "El gran árbol de luces",
-          "guide": "¡El gran árbol! ¿Sabes por qué lo prenden?",
-          "body": "¿Por qué el alumbrado? En diciembre Cali celebra la Navidad llenando de luces sus calles y el río. Los árboles gigantes son el punto de encuentro: las familias salen de noche a caminar el Bulevar y a tomarse fotos.",
-          "position": [4.67, 2.88],
-          "base": 1.13,
-          "zone": [1.2, 1.13]
-        },
-        {
-          "id": "cascada",
-          "name": "Cascada de luces",
-          "guide": "Bombillos que caen como agua.",
-          "body": "Cortinas de bombillos que caen como agua. De noche se reflejan en el río Cali y convierten el paseo en un túnel de luz.",
-          "position": [-6.4, 3.6],
-          "base": 1.36,
-          "zone": [1.3, 1.36]
-        },
-        {
-          "id": "flores-rio",
-          "name": "Flores sobre el río",
-          "guide": "¡Mira, el río se prendió!",
-          "body": "Figuras de luz flotan sobre el río Cali. Por eso se dice que en diciembre «el río se prende»: el agua refleja todo el alumbrado.",
-          "position": [0.0, -0.2],
+          "id": "navidad-rio",
+          "name": "Navidad junto al río",
+          "guide": "En diciembre, todos al río.",
+          "body": "En diciembre, el Bulevar del Río y el entorno de La Ermita se convierten en puntos de encuentro para recorrer el alumbrado navideño de Cali.",
+          "position": [
+            0,
+            -0.2
+          ],
           "base": 0.05,
-          "zone": [2.4, 0.1]
+          "zone": [
+            2.4,
+            0.1
+          ]
+        },
+        {
+          "id": "luces-identidad",
+          "name": "Luces con identidad",
+          "edition": "2025",
+          "guide": "Estas luces cuentan cosas del Valle.",
+          "body": "La edición 2025 se inspiró en la biodiversidad del Valle del Cauca, su fauna, su flora y las tradiciones de la región.",
+          "position": [
+            -6.4,
+            3.6
+          ],
+          "base": 1.36,
+          "zone": [
+            1.3,
+            1.36
+          ]
+        },
+        {
+          "id": "muchas-manos",
+          "name": "Trabajo de muchas manos",
+          "edition": "2025",
+          "guide": "¡Cuántas manos para prender esto!",
+          "body": "El alumbrado reúne el trabajo de artesanos y equipos de instalación. En 2025, su encendido oficial se celebró el 7 de diciembre.",
+          "position": [
+            4.67,
+            2.88
+          ],
+          "base": 1.13,
+          "zone": [
+            1.2,
+            1.13
+          ]
         }
-      ]
+      ],
+      "source": {
+        "label": "cali.gov.co",
+        "url": "https://www.cali.gov.co/boletines/publicaciones/190474/cali-la-sucursal-de-la-navidad-el-alumbrado-navideno-2025-da-inicio-a-la-temporada-decembrina-en-la-ciudad/"
+      }
     },
     {
       "id": "sucursal",
       "name": "Sucursal Fest",
       "when": "Fin de semana",
-      "dates": "Un fin de semana de fiesta (fecha por confirmar)",
+      "dates": "Edición 2024: agenda desde el 28 de junio",
       "place": "La Retreta (Paseo Bolívar), junto al Puente Ortiz",
-      "body": "Salsa, luces y gente bailando en la calle. Lleva zapatos cómodos.",
-      "guide": "¡Llegó el Sucursal Fest! Tarimas con luces, salsa y baile hasta que el cuerpo aguante.",
+      "body": "Música, arte y cultura urbana en un encuentro de la diversidad, con presentaciones de acceso libre.",
+      "guide": "¡Llegó el Sucursal Fest! Música, arte y cultura urbana: aquí cabe toda la diversidad de Cali.",
       "position": [
         20.6,
         -1.74
       ],
       "hitos": [
         {
-          "id": "tarima",
-          "name": "Tarima principal",
-          "guide": "¡Aquí suenan las orquestas!",
-          "body": "Aquí suenan las orquestas. A Cali le dicen la «Sucursal del cielo» y es tierra de salsa: de ahí el nombre del festival.",
-          "position": [20.7, -1.7],
-          "base": 0.79,
-          "zone": [2.0, 0.79]
-        },
-        {
-          "id": "kiosco",
-          "name": "Kiosco de La Retreta",
-          "guide": "El kiosco de La Retreta, de fiesta.",
-          "body": "El kiosco de La Retreta, en el Paseo Bolívar junto al Puente Ortiz, es el punto de encuentro: a su alrededor se arma la pista y la gente baila en plena calle.",
-          "position": [19.6, -1.1],
+          "id": "retreta-escenario",
+          "name": "La Retreta como escenario",
+          "edition": "2024",
+          "guide": "La Retreta se volvió escenario.",
+          "body": "En la edición 2024, La Retreta acogió el escenario Plur. El festival reunió música, arte y expresiones de la cultura urbana en Cali.",
+          "position": [
+            19.6,
+            -1.1
+          ],
           "base": 0.52,
-          "zone": [0.6, 0.52]
+          "zone": [
+            0.6,
+            0.52
+          ]
         },
         {
-          "id": "pantalla",
-          "name": "Pantalla de luces",
-          "guide": "Luces que bailan con la música.",
-          "body": "Luces LED que cambian al ritmo de la música. De noche la tarima brilla y se ve desde el otro lado del río.",
-          "position": [19.7, -2.46],
+          "id": "agenda-diversidad",
+          "name": "Una agenda de diversidad",
+          "edition": "2024",
+          "guide": "También se habló, no solo se bailó.",
+          "body": "La edición 2024 comenzó su agenda académica el 28 de junio en el Centro Cultural de Cali, con temas de género, salud mental y memoria colectiva.",
+          "position": [
+            19.7,
+            -2.46
+          ],
           "base": 0.37,
-          "zone": [0.9, 0.37]
+          "zone": [
+            0.9,
+            0.37
+          ]
+        },
+        {
+          "id": "encuentro-abierto",
+          "name": "Encuentro abierto",
+          "edition": "2024",
+          "guide": "Entrada libre para todo el mundo.",
+          "body": "Las presentaciones de Sucursal Fest 2024 fueron de acceso libre y reunieron invitados locales, nacionales e internacionales.",
+          "position": [
+            20.7,
+            -1.7
+          ],
+          "base": 0.79,
+          "zone": [
+            2,
+            0.79
+          ]
         }
-      ]
+      ],
+      "source": {
+        "label": "cali.gov.co",
+        "url": "https://www.cali.gov.co/cultura/publicaciones/181836/sucursal-fest-todo-listo-para-el-encuentro-de-la-diversidad-mas-grande-de-cali/"
+      }
     }
   ],
   "routes": [
@@ -696,7 +773,9 @@
             8.454,
             4.97
           ],
-          "base": 0.442
+          "base": 0.442,
+          "place": null,
+          "photo": null
         },
         {
           "id": "marranitas",
@@ -707,7 +786,9 @@
             1.258,
             4.845
           ],
-          "base": 0.444
+          "base": 0.444,
+          "place": null,
+          "photo": null
         },
         {
           "id": "chontaduro",
@@ -718,7 +799,9 @@
             14.56,
             4.904
           ],
-          "base": 0.476
+          "base": 0.476,
+          "place": null,
+          "photo": null
         },
         {
           "id": "obelisco",
@@ -729,7 +812,9 @@
             -12.63,
             2.122
           ],
-          "base": 1.9
+          "base": 1.9,
+          "place": null,
+          "photo": null
         }
       ]
     },
@@ -747,7 +832,9 @@
             -17.248,
             3.858
           ],
-          "base": 0
+          "base": 0,
+          "place": "tertulia",
+          "photo": null
         },
         {
           "id": "mucic",
@@ -758,7 +845,9 @@
             5.084,
             6.576
           ],
-          "base": 0
+          "base": 0,
+          "place": "mucic",
+          "photo": null
         },
         {
           "id": "biblioteca",
@@ -769,7 +858,9 @@
             -9.598,
             2.099
           ],
-          "base": 0
+          "base": 0,
+          "place": "biblioteca",
+          "photo": null
         },
         {
           "id": "gato",
@@ -780,7 +871,9 @@
             -4.125,
             -2.886
           ],
-          "base": 0
+          "base": 0,
+          "place": "gato",
+          "photo": null
         },
         {
           "id": "puente-ortiz",
@@ -791,7 +884,12 @@
             18.2,
             0.7
           ],
-          "base": 0
+          "base": 0,
+          "place": null,
+          "photo": {
+            "src": "timeline/01_puente-ortiz.jpg",
+            "caption": "Puente Ortiz · foto de la línea de tiempo (Historia)"
+          }
         }
       ]
     },
@@ -809,7 +907,9 @@
             -4.041,
             -5.654
           ],
-          "base": 0.815
+          "base": 0.815,
+          "place": null,
+          "photo": null
         },
         {
           "id": "ceramica",
@@ -820,7 +920,9 @@
             9.388,
             4.903
           ],
-          "base": 0.995
+          "base": 0.995,
+          "place": null,
+          "photo": null
         },
         {
           "id": "grafiti",
@@ -831,7 +933,9 @@
             15.846,
             -2.518
           ],
-          "base": 1.07
+          "base": 1.07,
+          "place": null,
+          "photo": null
         },
         {
           "id": "fotografia",
@@ -842,7 +946,9 @@
             4.581,
             -2.091
           ],
-          "base": 0.903
+          "base": 0.903,
+          "place": null,
+          "photo": null
         }
       ]
     }
