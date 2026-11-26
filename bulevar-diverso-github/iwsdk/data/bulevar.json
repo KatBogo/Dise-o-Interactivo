@@ -500,7 +500,11 @@
         ]
       ],
       "model": "/models/lugar_gato-de-tejada.glb",
-      "photo": null
+      "photo": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/El_Gato_del_R%C3%ADo-Cali.jpg/960px-El_Gato_del_R%C3%ADo-Cali.jpg",
+        "credit": "Juan Espinosa · CC BY-SA 2.0 · Wikimedia Commons",
+        "page": "https://commons.wikimedia.org/wiki/File:El_Gato_del_R%C3%ADo-Cali.jpg"
+      }
     },
     {
       "id": "biblioteca",
@@ -527,7 +531,11 @@
         ]
       ],
       "model": "/models/lugar_biblioteca-centenario.glb",
-      "photo": null
+      "photo": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Biblioteca_del_Centenario_7-05-2015_01.JPG/960px-Biblioteca_del_Centenario_7-05-2015_01.JPG",
+        "credit": "Leidy Estefani Mielguteto Sandoval · CC BY-SA 4.0 · Wikimedia Commons",
+        "page": "https://commons.wikimedia.org/wiki/File:Biblioteca_del_Centenario_7-05-2015_01.JPG"
+      }
     },
     {
       "id": "tertulia",
@@ -554,7 +562,11 @@
         ]
       ],
       "model": "/models/lugar_museo-la-tertulia.glb",
-      "photo": null
+      "photo": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Museo_La_Tertulia_Cali%2C_Colombia.jpg/960px-Museo_La_Tertulia_Cali%2C_Colombia.jpg",
+        "credit": "Juanes016 · CC0 · Wikimedia Commons",
+        "page": "https://commons.wikimedia.org/wiki/File:Museo_La_Tertulia_Cali,_Colombia.jpg"
+      }
     }
   ],
   "events": [
@@ -768,14 +780,23 @@
           "id": "champus",
           "name": "Champús y lulada",
           "note": "Pa' arrancar fresquito.",
-          "desc": "Una fonda de toda la vida donde sirven champús —maíz, lulo, piña y canela— y lulada bien fría. Es la bebida más vallecaucana que hay y la mejor forma de arrancar el recorrido.",
+          "desc": "Doña Evergista Gómez Balanta prepara en su casa el champús tradicional, con una receta que lleva más de seis décadas en su familia. Una parada de sabor caleño de verdad.",
           "position": [
             8.454,
             4.97
           ],
           "base": 0.442,
           "place": null,
-          "photo": null
+          "photo": null,
+          "realName": "Champús de doña Evergista Gómez",
+          "address": "Carrera 12 # 21-34, barrio Obrero (sábados y domingos, 9 a.m. a 4 p.m.)",
+          "external": true,
+          "sources": [
+            "https://www.cali.gov.co/turismo/publicaciones/177191/el-champus-una-joya-culinaria-resguardada-en-el-corazon-de-cali/"
+          ],
+          "verified": true,
+          "pending": "Foto con licencia libre.",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Champ%C3%BAs%20de%20do%C3%B1a%20Evergista%20G%C3%B3mez%2C%20Carrera%2012%20%23%2021-34%2C%20barrio%20Obrero%2C%20Cali%2C%20Colombia"
         },
         {
           "id": "marranitas",
@@ -788,7 +809,11 @@
           ],
           "base": 0.444,
           "place": null,
-          "photo": null
+          "photo": null,
+          "realName": null,
+          "address": null,
+          "verified": false,
+          "pending": "Parada genérica: falta un local real verificado, su dirección y foto."
         },
         {
           "id": "chontaduro",
@@ -801,7 +826,11 @@
           ],
           "base": 0.476,
           "place": null,
-          "photo": null
+          "photo": null,
+          "realName": null,
+          "address": null,
+          "verified": false,
+          "pending": "Parada genérica: falta un puesto real verificado (posible: Galería Alameda), su dirección y foto."
         },
         {
           "id": "obelisco",
@@ -814,7 +843,15 @@
           ],
           "base": 1.9,
           "place": null,
-          "photo": null
+          "photo": null,
+          "realName": "Empanadas del Obelisco",
+          "address": "Av. Colombia, El Peñón, frente al río Cali (número por confirmar: las fuentes dan «Av. Colombia No. 4» y «4 Oeste-49 Av. Colombia»)",
+          "sources": [
+            "https://www.fodors.com/world/south-america/colombia/southwest-colombia/restaurants/reviews/empanadas-obelisco--449042",
+            "https://wanderlog.com/place/details/12137069/empanadas-obelisco"
+          ],
+          "verified": "partial",
+          "pending": "Foto con licencia libre y número exacto de la dirección."
         }
       ]
     },
@@ -834,7 +871,18 @@
           ],
           "base": 0,
           "place": "tertulia",
-          "photo": null
+          "photo": {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Museo_La_Tertulia_Cali%2C_Colombia.jpg/960px-Museo_La_Tertulia_Cali%2C_Colombia.jpg",
+            "credit": "Juanes016 · CC0 · Wikimedia Commons",
+            "page": "https://commons.wikimedia.org/wiki/File:Museo_La_Tertulia_Cali,_Colombia.jpg"
+          },
+          "realName": "Museo La Tertulia",
+          "address": "Av. Colombia # 5-105 Oeste",
+          "sources": [
+            "https://www.cali.gov.co/salud/publicaciones/1423/museos/",
+            "https://en.wikipedia.org/wiki/La_Tertulia_Museum"
+          ],
+          "verified": true
         },
         {
           "id": "mucic",
@@ -847,7 +895,11 @@
           ],
           "base": 0,
           "place": "mucic",
-          "photo": null
+          "photo": null,
+          "realName": null,
+          "address": null,
+          "verified": false,
+          "pending": "No encontré un museo llamado «MUCIC» en fuentes oficiales: falta su nombre completo, dirección y foto."
         },
         {
           "id": "biblioteca",
@@ -860,7 +912,18 @@
           ],
           "base": 0,
           "place": "biblioteca",
-          "photo": null
+          "photo": {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Biblioteca_del_Centenario_7-05-2015_01.JPG/960px-Biblioteca_del_Centenario_7-05-2015_01.JPG",
+            "credit": "Leidy Estefani Mielguteto Sandoval · CC BY-SA 4.0 · Wikimedia Commons",
+            "page": "https://commons.wikimedia.org/wiki/File:Biblioteca_del_Centenario_7-05-2015_01.JPG"
+          },
+          "realName": "Biblioteca Pública Patrimonial Centenario",
+          "address": "Calle 4 Oeste # 1-16, El Peñón (Av. Colombia con Calle 4 Oeste)",
+          "sources": [
+            "https://www.cali.gov.co/cultura/publicaciones/156298/biblioteca-publica-patrimonial-centenario/",
+            "https://idesc.cali.gov.co/download/bic_2014/BICM1-82.pdf"
+          ],
+          "verified": true
         },
         {
           "id": "gato",
@@ -873,7 +936,17 @@
           ],
           "base": 0,
           "place": "gato",
-          "photo": null
+          "photo": {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/El_Gato_del_R%C3%ADo-Cali.jpg/960px-El_Gato_del_R%C3%ADo-Cali.jpg",
+            "credit": "Juan Espinosa · CC BY-SA 2.0 · Wikimedia Commons",
+            "page": "https://commons.wikimedia.org/wiki/File:El_Gato_del_R%C3%ADo-Cali.jpg"
+          },
+          "realName": "El Gato del Río (Hernando Tejada)",
+          "address": "Av. 4 Norte Oeste, margen izquierda del río Cali",
+          "sources": [
+            "https://www.cali.gov.co/turista/publicaciones/1392/el_gato_del_ro/"
+          ],
+          "verified": true
         },
         {
           "id": "puente-ortiz",
@@ -887,9 +960,17 @@
           "base": 0,
           "place": null,
           "photo": {
-            "src": "timeline/01_puente-ortiz.jpg",
-            "caption": "Puente Ortiz · foto de la línea de tiempo (Historia)"
-          }
+            "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Puente_Ortiz_Cali.jpg/960px-Puente_Ortiz_Cali.jpg",
+            "credit": "Franciscokarriere · CC BY-SA 4.0 · Wikimedia Commons",
+            "page": "https://commons.wikimedia.org/wiki/File:Puente_Ortiz_Cali.jpg"
+          },
+          "realName": "Puente Ortiz",
+          "address": "Sobre el río Cali, entre La Ermita y el CAM (centro). Sin nomenclatura oficial en las fuentes.",
+          "sources": [
+            "https://www.cali.gov.co/publicaciones/184891/la-administracion-distrital-de-cali-activo-todas-las-acciones-y-medidas-para-preservar-los-vestigios-del-puente-ortiz-y-el-bulevar-del-rio/",
+            "https://idesc.cali.gov.co/download/bic_2014/BICN-28.pdf"
+          ],
+          "verified": true
         }
       ]
     },
@@ -902,14 +983,24 @@
           "id": "salsa",
           "name": "Clase de salsa caleña",
           "note": "Un, dos, tres… y el pie rápido.",
-          "desc": "Un salón de baile donde enseñan salsa caleña desde el primer paso: pies rápidos, vueltas y mucha sabrosura. No importa si nunca has bailado; aquí todo el mundo empieza igual.",
+          "desc": "Un centro para la formación, la investigación y la difusión de la cultura salsera, en el corazón del barrio Obrero: el lugar para aprender salsa caleña.",
           "position": [
             -4.041,
             -5.654
           ],
           "base": 0.815,
           "place": null,
-          "photo": null
+          "photo": null,
+          "realName": "Centro Cultural de la Salsa",
+          "address": "Calle 22 # 11D-62, barrio Obrero",
+          "external": true,
+          "sources": [
+            "https://www.cali.gov.co/cultura/publicaciones/101910/escuelas_de_salsa/",
+            "https://www.cali.gov.co/publicaciones/112137/escuelas-de-salsacali/"
+          ],
+          "verified": "partial",
+          "pending": "Confirmar que el centro ya está abierto (anuncio de marzo de 2025) y una foto con licencia libre.",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Centro%20Cultural%20de%20la%20Salsa%2C%20Calle%2022%20%23%2011D-62%2C%20barrio%20Obrero%2C%20Cali%2C%20Colombia"
         },
         {
           "id": "ceramica",
@@ -922,7 +1013,11 @@
           ],
           "base": 0.995,
           "place": null,
-          "photo": null
+          "photo": null,
+          "realName": null,
+          "address": null,
+          "verified": false,
+          "pending": "Parada genérica: falta un taller real verificado, su dirección y foto."
         },
         {
           "id": "grafiti",
@@ -935,7 +1030,11 @@
           ],
           "base": 1.07,
           "place": null,
-          "photo": null
+          "photo": null,
+          "realName": null,
+          "address": null,
+          "verified": false,
+          "pending": "Parada genérica: falta un taller o recorrido real verificado, su dirección y foto."
         },
         {
           "id": "fotografia",
@@ -948,7 +1047,11 @@
           ],
           "base": 0.903,
           "place": null,
-          "photo": null
+          "photo": null,
+          "realName": null,
+          "address": null,
+          "verified": false,
+          "pending": "Parada genérica: falta un recorrido real verificado, su punto de partida y foto."
         }
       ]
     }
